@@ -184,3 +184,29 @@ for (const button of followButtons) {
     }
   });
 }
+/* ---------- NEWSLETTER FORM ---------- */
+/* When the user submits the newsletter form,
+   we stop the page from reloading (the default
+   form behavior), show a success message,
+   and clear the input. */
+
+const newsletterForm    = document.getElementById('newsletterForm');
+const newsletterInput   = document.getElementById('newsletterEmailInput');
+const newsletterSuccess = document.getElementById('newsletterSuccessMessage');
+
+newsletterForm.addEventListener('submit', function (event) {
+  // Forms reload the page by default when submitted.
+  // preventDefault() stops that so we can handle it ourselves.
+  event.preventDefault();
+
+  // Show the success message
+  newsletterSuccess.classList.add('newsletter-success--visible');
+
+  // Clear the input field
+  newsletterInput.value = '';
+
+  // Hide the success message again after 4 seconds
+  setTimeout(function () {
+    newsletterSuccess.classList.remove('newsletter-success--visible');
+  }, 4000);
+});

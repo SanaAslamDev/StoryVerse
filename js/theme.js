@@ -46,5 +46,11 @@ function toggleTheme() {
 // Run on page load
 loadSavedTheme();
 
-// Toggle when button is clicked
+// Toggle when navbar button is clicked
 themeToggleBtn.addEventListener('click', toggleTheme);
+
+// Toggle when footer button is clicked (if it exists on this page)
+const footerThemeToggleBtn = document.getElementById('footerThemeToggleBtn');
+if (footerThemeToggleBtn) {
+  footerThemeToggleBtn.addEventListener('click', toggleTheme);
+}

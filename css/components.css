@@ -1,0 +1,207 @@
+/* ============================================
+   STORYVERSE — REUSABLE COMPONENTS
+   Buttons, badges, and layout utilities
+   used across every page.
+   ============================================ */
+
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1.5px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple effect base */
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: inherit;
+}
+
+.btn:active::after {
+  opacity: 1;
+}
+
+/* ── PRIMARY BUTTON ── */
+.btn--primary {
+  background: var(--gradient-primary);
+  color: var(--color-text-inverse);
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+  color: var(--color-text-inverse);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+}
+
+/* ── SECONDARY BUTTON ── */
+.btn--secondary {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-bg-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── GHOST BUTTON ── */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+.btn--ghost:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-hover);
+}
+
+/* ── OUTLINE PRIMARY ── */
+.btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+/* ── SIZES ── */
+.btn--sm {
+  font-size: var(--font-size-xs);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.btn--lg {
+  font-size: var(--font-size-base);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-lg);
+}
+
+.btn--xl {
+  font-size: var(--font-size-md);
+  padding: var(--space-5) var(--space-10);
+  border-radius: var(--radius-xl);
+}
+
+/* Full width button */
+.btn--full {
+  width: 100%;
+}
+
+/* Icon-only button */
+.btn--icon {
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+
+/* ── BADGES / TAGS ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.badge--primary {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.badge--secondary {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.badge--accent {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+.badge--success {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.badge--warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+
+/* ── LAYOUT UTILITIES ── */
+
+/* Centers content with max width */
+.container {
+  max-width: var(--max-width-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.container--sm  { max-width: var(--max-width-sm);  margin: 0 auto; padding: 0 var(--space-6); }
+.container--md  { max-width: var(--max-width-md);  margin: 0 auto; padding: 0 var(--space-6); }
+.container--lg  { max-width: var(--max-width-lg);  margin: 0 auto; padding: 0 var(--space-6); }
+
+/* Offset content below the fixed navbar */
+.main-content {
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+}
+
+/* Flexbox helpers */
+.flex         { display: flex; }
+.flex-center  { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-col     { display: flex; flex-direction: column; }
+
+/* Grid helpers */
+.grid         { display: grid; }
+
+/* Spacing helpers */
+.mt-auto      { margin-top: auto; }
+.mx-auto      { margin-left: auto; margin-right: auto; }
+
+/* Divider line */
+.divider {
+  height: 1px;
+  background-color: var(--color-border);
+  border: none;
+  margin: var(--space-8) 0;
+}

@@ -1,0 +1,404 @@
+/* ============================================
+   STORYVERSE — NAVBAR
+   Sticky top navigation with:
+   - Frosted glass on scroll
+   - Smooth transitions
+   - Mobile hamburger menu
+   - Search overlay trigger
+   ============================================ */
+
+
+/* ── NAVBAR BASE ── */
+.navbar {
+  position: fixed;           /* Stays at top while scrolling */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  z-index: var(--z-sticky);
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid transparent;
+  transition: var(--transition-base);
+}
+
+/* When user scrolls down, JS adds this class */
+.navbar--scrolled {
+  background-color: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(20px);            /* frosted glass */
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: var(--color-border);
+  box-shadow: var(--shadow-navbar);
+}
+
+/* Dark mode scrolled state */
+[data-theme="dark"] .navbar--scrolled {
+  background-color: rgba(15, 23, 42, 0.85);
+}
+
+
+/* ── NAVBAR CONTAINER ── */
+.navbar-container {
+  max-width: var(--max-width-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+
+/* ── LOGO ── */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;       /* Never let the logo shrink */
+  text-decoration: none;
+}
+
+.navbar-logo-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-primary);
+  transition: var(--transition-bounce);
+}
+
+.navbar-logo:hover .navbar-logo-icon {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+.navbar-logo-text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+
+/* ── CENTER NAV LINKS ── */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;                    /* Takes up available center space */
+  justify-content: center;
+}
+
+.navbar-link {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-hover);
+}
+
+/* Active page link */
+.navbar-link--active {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+/* The "Write" link has a special gradient style */
+.navbar-link--write {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.navbar-link--write:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+
+/* ── RIGHT SIDE ACTIONS ── */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* Small icon-only buttons (search, theme) */
+.navbar-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.navbar-icon-btn:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+
+/* ── THEME ICON SWITCHING ── */
+/* In light mode: show moon. In dark mode: show sun. */
+.theme-icon--sun { display: none; }
+.theme-icon--moon { display: block; }
+
+[data-theme="dark"] .theme-icon--sun { display: block; }
+[data-theme="dark"] .theme-icon--moon { display: none; }
+
+
+/* ── AUTH BUTTONS ── */
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+
+/* ── USER AVATAR ── */
+.navbar-avatar-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  background: transparent;
+  border: none;
+}
+
+.navbar-avatar-btn:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.navbar-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 2px solid var(--color-primary-light);
+}
+
+.navbar-username {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+
+/* ── HAMBURGER (mobile only) ── */
+.navbar-hamburger {
+  display: none;          /* Hidden on desktop */
+  flex-direction: column;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  background: transparent;
+  border: none;
+}
+
+.navbar-hamburger:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.hamburger-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text-secondary);
+  border-radius: 2px;
+  transition: var(--transition-base);
+  transform-origin: center;
+}
+
+/* Animate hamburger into X when menu is open */
+.navbar-hamburger--open .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-hamburger--open .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.navbar-hamburger--open .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ── MOBILE MENU DRAWER ── */
+.navbar-mobile-menu {
+  display: none;            /* Hidden by default */
+  padding: var(--space-4) var(--space-6) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg-primary);
+  animation: slideDown 0.25s ease;
+}
+
+.navbar-mobile-menu--open {
+  display: block;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.mobile-nav-link {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+  display: block;
+}
+
+.mobile-nav-link:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+.mobile-nav-auth {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* ── SEARCH OVERLAY ── */
+.search-overlay {
+  position: fixed;
+  inset: 0;                 /* covers the entire screen */
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: var(--z-overlay);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 120px;
+  opacity: 0;
+  pointer-events: none;    /* Can't click through when hidden */
+  transition: opacity 0.25s ease;
+}
+
+/* JS adds this class to show the overlay */
+.search-overlay--open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.search-overlay-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 var(--space-6);
+}
+
+.search-overlay-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-2xl);
+  color: var(--color-text-muted);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.search-overlay--open .search-overlay-box {
+  transform: translateY(0);  /* Slides down into view */
+}
+
+.search-overlay-input {
+  flex: 1;
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.search-overlay-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.search-overlay-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.search-overlay-close:hover {
+  color: var(--color-text-primary);
+}
+
+.search-overlay-hint {
+  margin-top: var(--space-3);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.5);
+  max-width: none;
+}
+
+.search-overlay-hint kbd {
+  background: rgba(255,255,255,0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+}
+
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;   /* Hidden — replaced by mobile drawer */
+  }
+
+  .navbar-auth {
+    display: none;   /* Hidden — moved into mobile drawer */
+  }
+
+  .navbar-hamburger {
+    display: flex;   /* Show hamburger on mobile */
+  }
+
+  .navbar-mobile-menu {
+    /* Height is controlled by --open class */
+  }
+}

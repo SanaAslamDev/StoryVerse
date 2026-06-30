@@ -1,0 +1,84 @@
+/* ============================================
+   STORYVERSE — CSS RESET
+   Removes inconsistent browser default styles
+   so our design looks the same everywhere.
+   Based on modern best practices (2024).
+   ============================================ */
+
+/* Remove default margin and padding from everything */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;   /* padding doesn't expand element width */
+  margin: 0;
+  padding: 0;
+}
+
+/* Allow percentage-based heights */
+html,
+body {
+  height: 100%;
+}
+
+/* Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Images behave like blocks, not inline text */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Remove list styles (we'll add our own when needed) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default anchor styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make headings not bold by default (we control this) */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Remove button cursor inconsistencies */
+button {
+  cursor: pointer;
+}
+
+/* Prevent text size inflation on mobile */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}

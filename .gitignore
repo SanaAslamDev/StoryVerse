@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.log
+
+# Node (we'll need this in Phase 3)
+node_modules/
+.env

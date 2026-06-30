@@ -1,0 +1,644 @@
+/* ============================================
+   STORYVERSE — HOME PAGE STYLES
+   Built section by section.
+   This file currently contains: HERO SECTION
+   ============================================ */
+
+
+/* ── HERO SECTION CONTAINER ── */
+.hero-section {
+  position: relative;       /* Needed so the floating blobs can be positioned inside it */
+  min-height: 90vh;         /* Takes up most of the screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;         /* Keeps the blobs from spilling outside */
+  padding: var(--space-20) var(--space-6);
+}
+
+
+/* ── FLOATING BACKGROUND BLOBS ──
+   These are large, blurry, colored circles
+   that slowly float around behind the text.
+   They create the "premium SaaS" atmosphere.
+------------------------------------------------ */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);      /* Heavy blur makes it look like soft light, not a hard circle */
+  opacity: 0.35;
+  z-index: var(--z-below); /* Sits behind the text content */
+}
+
+.hero-blob--1 {
+  width: 450px;
+  height: 450px;
+  background: var(--color-primary);
+  top: -100px;
+  left: -100px;
+  animation: floatBlob 12s ease-in-out infinite;
+}
+
+.hero-blob--2 {
+  width: 350px;
+  height: 350px;
+  background: var(--color-secondary);
+  bottom: -80px;
+  right: -80px;
+  animation: floatBlob 15s ease-in-out infinite reverse;
+}
+
+.hero-blob--3 {
+  width: 300px;
+  height: 300px;
+  background: var(--color-accent);
+  top: 40%;
+  left: 50%;
+  animation: floatBlob 18s ease-in-out infinite;
+}
+
+/* Dark mode: slightly brighter blobs so they're still visible */
+[data-theme="dark"] .hero-blob {
+  opacity: 0.25;
+}
+
+
+/* ── HERO CONTENT ── */
+.hero-content {
+  position: relative;     /* Sits above the blobs (because of z-index stacking) */
+  z-index: var(--z-base);
+  max-width: 800px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease both;
+  /* fadeInUp makes the whole hero gently rise into view on page load */
+}
+
+
+/* ── BADGE ABOVE HEADLINE ── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-6);
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+
+/* ── HEADLINE ── */
+.hero-headline {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
+}
+
+
+/* ── SUBTEXT ── */
+.hero-subtext {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--space-10);
+  line-height: var(--line-height-relaxed);
+}
+
+
+/* ── CTA BUTTONS ── */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-16);
+  flex-wrap: wrap;     /* Stack on small screens instead of overflowing */
+}
+
+
+/* ── STATS STRIP ── */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.hero-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.hero-stat-number {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.hero-stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-border);
+}
+
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: var(--font-size-4xl);
+  }
+
+  .hero-subtext {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-stats {
+    gap: var(--space-6);
+  }
+
+  .hero-stat-divider {
+    display: none;    /* Hide dividers when stats wrap to new lines */
+  }
+}
+
+
+/* ============================================
+   FEATURED ARTICLE SECTION
+   ============================================ */
+
+.featured-section {
+  padding: var(--space-24) var(--space-6);
+}
+
+
+/* ── SECTION HEADER (reused pattern for every section) ── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section-label {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+
+/* ── FEATURED CARD ── */
+.featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* Two equal columns: image | text */
+  max-width: var(--max-width-xl);
+  margin: 0 auto;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;                  /* Keeps image corners rounded */
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-base);
+}
+
+.featured-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);       /* Lifts up slightly on hover */
+}
+
+
+/* ── IMAGE SIDE ── */
+.featured-card-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.featured-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Fills the space without distorting */
+  transition: transform 0.5s ease;
+}
+
+/* Image slowly zooms in when the whole card is hovered */
+.featured-card:hover .featured-card-image img {
+  transform: scale(1.06);
+}
+
+
+/* ── TEXT SIDE ── */
+.featured-card-content {
+  padding: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.featured-card-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-primary);
+}
+
+.featured-card-excerpt {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+
+/* ── AUTHOR META ── */
+.featured-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.featured-card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.featured-card-meta-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-card-author {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.featured-card-details {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  .featured-card {
+    grid-template-columns: 1fr;   /* Stack image on top, text below */
+  }
+
+  .featured-card-image {
+    min-height: 240px;
+  }
+
+  .featured-card-content {
+    padding: var(--space-6);
+  }
+
+  .featured-card-title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* ============================================
+   TRENDING CATEGORIES SECTION
+   ============================================ */
+
+.categories-section {
+  padding: var(--space-24) var(--space-6);
+  background-color: var(--color-bg-tertiary);
+}
+
+
+/* ── CATEGORIES GRID ── */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   /* 4 cards per row on desktop */
+  gap: var(--space-5);
+  max-width: var(--max-width-xl);
+  margin: 0 auto;
+}
+
+
+/* ── INDIVIDUAL CATEGORY CARD ── */
+.category-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: var(--transition-bounce);
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-hover);
+}
+
+
+/* ── CATEGORY ICON CIRCLE ──
+   Each category has its own gradient color.
+   We define one base style, then 8 color variants.
+------------------------------------------------ */
+.category-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition-bounce);
+}
+
+/* When the card is hovered, the icon scales up slightly */
+.category-card:hover .category-card-icon {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.category-card-icon--indigo { background: linear-gradient(135deg, #4F46E5, #6366F1); }
+.category-card-icon--purple { background: linear-gradient(135deg, #7C3AED, #8B5CF6); }
+.category-card-icon--cyan   { background: linear-gradient(135deg, #06B6D4, #22D3EE); }
+.category-card-icon--pink   { background: linear-gradient(135deg, #EC4899, #F472B6); }
+.category-card-icon--orange { background: linear-gradient(135deg, #F59E0B, #FBBF24); }
+.category-card-icon--green  { background: linear-gradient(135deg, #22C55E, #4ADE80); }
+.category-card-icon--red    { background: linear-gradient(135deg, #EF4444, #F87171); }
+.category-card-icon--blue   { background: linear-gradient(135deg, #3B82F6, #60A5FA); }
+
+
+/* ── CARD TEXT ── */
+.category-card-name {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.category-card-count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+
+/* ── VIEW ALL BUTTON ── */
+.categories-view-all {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-10);
+}
+
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);   /* 3 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);   /* 2 per row on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-grid {
+    grid-template-columns: 1fr;              /* 1 per row on small phones */
+  }
+}
+
+/* ============================================
+   LATEST ARTICLES SECTION
+   ============================================ */
+
+.latest-section {
+  padding: var(--space-24) var(--space-6);
+}
+
+
+/* ── SECTION HEADER VARIANT (label+title on left, button on right) ── */
+.section-header--row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+
+/* ── ARTICLES GRID ── */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 3 cards per row on desktop */
+  gap: var(--space-6);
+  max-width: var(--max-width-xl);
+  margin: 0 auto;
+}
+
+
+/* ── ARTICLE CARD ── */
+.article-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+
+/* ── CARD IMAGE ── */
+.article-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.article-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.article-card:hover .article-card-image img {
+  transform: scale(1.08);
+}
+
+
+/* ── CARD BODY ── */
+.article-card-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;     /* Pushes the meta row to the bottom even if text is short */
+}
+
+.article-card-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-snug);
+}
+
+.article-card-excerpt {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+
+/* ── CARD FOOTER (author + stats) ── */
+.article-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;          /* Sticks to bottom of the card */
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.article-card-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.article-card-author img {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.article-card-author-name {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.article-card-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.article-card-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+
+/* ============================================
+   SKELETON LOADING CARDS
+   Shown briefly while "loading" article data.
+   Uses a shimmering gradient animation.
+   ============================================ */
+
+.skeleton-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 200px;
+}
+
+.skeleton-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skeleton-line {
+  height: 14px;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-line--title {
+  height: 18px;
+  width: 90%;
+}
+
+.skeleton-line--short {
+  width: 60%;
+}
+
+/* The shimmer effect itself — shared by all skeleton pieces */
+.skeleton-image,
+.skeleton-line {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-tertiary) 25%,
+    var(--color-bg-hover) 50%,
+    var(--color-bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header--row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+}

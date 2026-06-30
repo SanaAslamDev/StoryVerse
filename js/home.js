@@ -160,3 +160,27 @@ function loadLatestArticles() {
 }
 
 loadLatestArticles();
+
+/* ---------- FOLLOW BUTTON TOGGLE ---------- */
+/* Clicking "Follow" changes the button text to "Following"
+   and changes its style. Clicking again undoes it.
+   This is just a visual demo for now — in Phase 3,
+   this will actually save the follow to the database. */
+
+const followButtons = document.querySelectorAll('.creator-follow-btn');
+
+for (const button of followButtons) {
+  button.addEventListener('click', function () {
+    const isAlreadyFollowing = button.classList.contains('creator-follow-btn--following');
+
+    if (isAlreadyFollowing) {
+      // Unfollow
+      button.classList.remove('creator-follow-btn--following');
+      button.textContent = 'Follow';
+    } else {
+      // Follow
+      button.classList.add('creator-follow-btn--following');
+      button.textContent = 'Following';
+    }
+  });
+}

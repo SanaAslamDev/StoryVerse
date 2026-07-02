@@ -1,0 +1,472 @@
+/* ============================================
+   STORYVERSE — DASHBOARD
+   ============================================ */
+
+
+/* ── OVERALL LAYOUT ──
+   Sidebar fixed on the left, content scrolls on the right
+------------------------------------------------ */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+}
+
+
+/* ── SIDEBAR ── */
+.dashboard-sidebar {
+  background-color: var(--color-bg-secondary);
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.dashboard-sidebar-logo {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  letter-spacing: var(--letter-spacing-tight);
+  text-decoration: none;
+}
+
+
+/* ── SIDEBAR USER INFO ── */
+.dashboard-sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-lg);
+}
+
+/* Avatar circle with first letter of name */
+.dashboard-sidebar-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashboard-sidebar-name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  max-width: none;
+}
+
+.dashboard-sidebar-handle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  max-width: none;
+}
+
+
+/* ── SIDEBAR NAV ── */
+.dashboard-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;       /* Pushes logout button to the very bottom */
+}
+
+.dashboard-nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  transition: var(--transition-fast);
+  text-decoration: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.dashboard-nav-link:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+.dashboard-nav-link--active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.dashboard-nav-icon {
+  font-size: var(--font-size-base);
+  width: 20px;
+  text-align: center;
+}
+
+
+
+/* ── LOGOUT BUTTON ── */
+.dashboard-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-danger);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: var(--transition-fast);
+}
+
+.dashboard-logout-btn:hover {
+  background-color: var(--color-danger-light);
+}
+
+
+/* ── MAIN CONTENT ── */
+.dashboard-content {
+  padding: var(--space-8) var(--space-10);
+  max-width: 960px;
+}
+
+
+/* ── TOP BAR ── */
+.dashboard-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+/* Theme toggle button in dashboard topbar */
+.dashboard-topbar-actions .navbar-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.dashboard-topbar-actions .navbar-icon-btn:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+.dashboard-welcome {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.dashboard-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+  max-width: none;
+}
+
+.dashboard-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ── THEME TOGGLE ICON SWITCHING ──
+   Only show one icon at a time depending on current theme.
+   Same logic as the navbar theme toggle.
+------------------------------------------------ */
+.theme-icon--sun  { display: none; }
+.theme-icon--moon { display: block; }
+
+[data-theme="dark"] .theme-icon--sun  { display: block; }
+[data-theme="dark"] .theme-icon--moon { display: none; }
+
+/* ── STAT CARDS ── */
+.dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-10);
+}
+
+.dashboard-stat-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  transition: var(--transition-base);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.dashboard-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.dashboard-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.dashboard-stat-icon--blue {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+.dashboard-stat-icon--red {
+  background-color: var(--color-danger-light);
+  color: var(--color-danger);
+}
+.dashboard-stat-icon--purple {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+.dashboard-stat-icon--green {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.dashboard-stat-number {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  max-width: none;
+}
+
+.dashboard-stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+  max-width: none;
+}
+
+
+/* ── ARTICLES SECTION ── */
+.dashboard-section {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.dashboard-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.dashboard-section-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+
+/* ── EMPTY STATE ── */
+.dashboard-empty-state {
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.dashboard-empty-icon {
+  font-size: 48px;
+  margin-bottom: var(--space-2);
+}
+
+.dashboard-empty-state h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.dashboard-empty-state p {
+  color: var(--color-text-muted);
+  max-width: 360px;
+}
+
+
+/* ── ARTICLE ROW ── */
+.dashboard-article-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: var(--space-4);
+  transition: var(--transition-fast);
+}
+
+.dashboard-article-row:last-child {
+  border-bottom: none;
+}
+
+.dashboard-article-row:hover {
+  background-color: var(--color-bg-tertiary);
+  margin: 0 calc(-1 * var(--space-6));
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+  border-radius: var(--radius-md);
+}
+
+.dashboard-article-info {
+  flex: 1;
+  min-width: 0;     /* Prevents text from overflowing */
+}
+
+.dashboard-article-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard-article-meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+.dashboard-article-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.dashboard-action-btn {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.dashboard-action-btn:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+.dashboard-action-btn--delete:hover {
+  background-color: var(--color-danger-light);
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    position: static;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .dashboard-content {
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
+/* SVG icons inside nav links inherit the link color automatically */
+.dashboard-nav-icon {
+  flex-shrink: 0;
+  color: inherit;
+}
+
+/* Stat card SVG icons inherit their container color */
+.dashboard-stat-icon svg {
+  color: inherit;
+}
+
+/* Empty state icon color */
+.dashboard-empty-icon svg {
+  color: var(--color-text-muted);
+}
+/* ── DARK MODE FIXES ── */
+
+/* Stat icon backgrounds are too bright in dark mode —
+   use rgba so they look subtle instead of solid blocks */
+[data-theme="dark"] .dashboard-stat-icon--blue {
+  background-color: rgba(79, 70, 229, 0.2);
+}
+[data-theme="dark"] .dashboard-stat-icon--red {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+[data-theme="dark"] .dashboard-stat-icon--purple {
+  background-color: rgba(124, 58, 237, 0.2);
+}
+[data-theme="dark"] .dashboard-stat-icon--green {
+  background-color: rgba(34, 197, 94, 0.2);
+}
+
+/* Sidebar in dark mode — use a neutral gray instead of blue tint */
+[data-theme="dark"] .dashboard-nav-link {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .dashboard-nav-link:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-hover);
+}
+
+/* Active link stays purple in both modes */
+[data-theme="dark"] .dashboard-nav-link--active {
+  background-color: rgba(79, 70, 229, 0.2);
+  color: #818CF8;
+}
+
+/* Sidebar user card in dark mode */
+[data-theme="dark"] .dashboard-sidebar-user {
+  background-color: var(--color-bg-hover);
+}

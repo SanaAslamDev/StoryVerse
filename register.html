@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — StoryVerse</title>
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- Back to home link -->
+  <a href="index.html" class="auth-back-link">
+    ← Back to StoryVerse
+  </a>
+
+  <div class="auth-page">
+
+    <!-- Left side: decorative panel -->
+    <div class="auth-panel">
+      <div class="auth-panel-content">
+
+        <div class="auth-panel-logo">✦ StoryVerse</div>
+
+        <h2 class="auth-panel-headline">
+          Join a community of curious minds
+        </h2>
+
+        <p class="auth-panel-subtext">
+          Thousands of writers and readers share knowledge here every day.
+        </p>
+
+        <!-- Floating testimonial quote on the left panel -->
+        <div class="auth-panel-quote">
+          <p>"The best place I've found to share what I know and learn from others."</p>
+          <div class="auth-panel-quote-author">
+            <img src="https://i.pravatar.cc/36?img=25" alt="Anita Roy" />
+            <span>Anita Roy, Software Engineer</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right side: the actual form -->
+    <div class="auth-form-side">
+      <div class="auth-form-box">
+
+        <h1 class="auth-form-title">Create your account</h1>
+        <p class="auth-form-subtitle">
+          Already have an account?
+          <a href="login.html" class="auth-switch-link">Sign in</a>
+        </p>
+
+        <!-- Error message box (hidden until needed) -->
+        <div class="auth-error-box" id="registerErrorBox">
+          <span id="registerErrorText"></span>
+        </div>
+
+        <!-- Register Form -->
+        <form class="auth-form" id="registerForm">
+
+          <!-- Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="registerName">Full Name</label>
+            <input
+              type="text"
+              id="registerName"
+              class="form-input"
+              placeholder="Your Full Name"
+              autocomplete="name"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="registerEmail">Email Address</label>
+            <input
+              type="email"
+              id="registerEmail"
+              class="form-input"
+              placeholder="abc@example.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <!-- Username -->
+          <div class="form-group">
+            <label class="form-label" for="registerUsername">Username</label>
+            <div class="form-input-prefix-wrapper">
+              <span class="form-input-prefix">storyverse.com/</span>
+              <input
+                type="text"
+                id="registerUsername"
+                class="form-input form-input--with-prefix"
+                placeholder="Your User Name"
+                autocomplete="username"
+              />
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="registerPassword">Password</label>
+            <div class="form-input-icon-wrapper">
+              <input
+                type="password"
+                id="registerPassword"
+                class="form-input"
+                placeholder="At least 6 characters"
+                autocomplete="new-password"
+              />
+              <!-- Eye icon to show/hide password -->
+              <button
+                type="button"
+                class="form-password-toggle"
+                id="registerPasswordToggle"
+                aria-label="Toggle password visibility"
+              >
+                👁
+              </button>
+            </div>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn--primary btn--full auth-submit-btn">
+            Create Account
+          </button>
+
+        </form>
+
+        <p class="auth-terms">
+          By signing up you agree to our
+          <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+
+</body>
+</html>

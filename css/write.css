@@ -1,28 +1,26 @@
 /* ============================================
-   STORYVERSE — WRITE ARTICLE PAGE
-   Clean, distraction-free writing experience.
-   Inspired by Medium's editor aesthetic.
+   STORYVERSE - WRITE PAGE
+   Clean cartoon editor
    ============================================ */
 
-
-/* ── TOPBAR ── */
 .write-topbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0 0 auto;
+  z-index: var(--z-sticky);
   height: var(--navbar-height);
-  background-color: var(--color-bg-primary);
-  border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--space-6);
-  z-index: var(--z-sticky);
   gap: var(--space-4);
+  padding: 0 var(--space-6);
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 5px solid var(--color-black);
+  box-shadow: 0 6px 0 var(--color-black);
+  backdrop-filter: blur(14px);
 }
 
-.write-topbar-left {
+.write-topbar-left,
+.write-topbar-right {
   display: flex;
   align-items: center;
   gap: var(--space-3);
@@ -33,263 +31,335 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
+  color: var(--color-black);
+  font-size: var(--font-size-md);
+  font-weight: 900;
   transition: var(--transition-fast);
 }
 
 .write-back-link:hover {
-  color: var(--color-text-primary);
+  color: var(--color-accent-pink);
+  transform: translateX(-3px);
 }
 
 .write-topbar-divider {
-  color: var(--color-border);
-  font-size: var(--font-size-lg);
+  color: var(--color-black);
+  font-size: 2rem;
+  font-weight: 900;
 }
 
 .write-topbar-logo {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  color: var(--color-black);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: 900;
 }
 
-
-/* ── AUTOSAVE STATUS ── */
 .write-status {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
+  min-height: 48px;
+  padding: 0 var(--space-5);
+  color: var(--color-black);
+  background: var(--color-white);
+  border: 4px solid var(--color-black);
+  border-radius: var(--radius-full);
+  box-shadow: 5px 5px 0 var(--color-black);
+  font-size: var(--font-size-md);
+  font-weight: 900;
 }
 
 .write-status-dot {
-  width: 8px;
-  height: 8px;
+  width: 11px;
+  height: 11px;
+  background: var(--color-text-muted);
+  border: 2px solid var(--color-black);
   border-radius: 50%;
-  background-color: var(--color-text-muted);
   transition: var(--transition-base);
 }
 
-/* Green dot when saved successfully */
 .write-status--saved .write-status-dot {
-  background-color: var(--color-success);
+  background: var(--color-accent-lime);
 }
 
 .write-status--saved .write-status-text {
-  color: var(--color-success);
-}
-
-
-/* ── TOPBAR RIGHT ── */
-.write-topbar-right {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  flex-shrink: 0;
+  color: var(--color-black);
 }
 
 .write-reading-time {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
   white-space: nowrap;
 }
 
+.write-topbar-right .btn {
+  min-height: 50px;
+  border-radius: 10px;
+  font-size: var(--font-size-lg);
+}
 
-/* ── MAIN WRITING AREA ── */
+.write-topbar-right .btn--primary {
+  color: var(--color-white);
+  background: var(--gradient-primary);
+}
+
 .write-main {
-  padding-top: var(--navbar-height);
   min-height: 100vh;
-  background-color: var(--color-bg-primary);
+  padding-top: var(--navbar-height);
+  background:
+    radial-gradient(circle at 8% 10%, transparent 0 8px, var(--color-black) 9px 12px, transparent 13px),
+    linear-gradient(var(--color-bg-primary), var(--color-bg-primary));
 }
 
 .write-container {
-  max-width: var(--max-width-article);   /* 680px — ideal reading/writing width */
+  width: min(100% - 48px, 980px);
   margin: 0 auto;
-  padding: var(--space-12) var(--space-6) var(--space-24);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+  padding: var(--space-12) 0 var(--space-24);
+  display: grid;
+  gap: var(--space-7, 1.75rem);
 }
 
-
-/* ── COVER IMAGE AREA ── */
 .write-cover-area {
   width: 100%;
-  border-radius: var(--radius-xl);
   overflow: hidden;
+  border-radius: 28px;
   cursor: pointer;
-  transition: var(--transition-base);
 }
 
 .write-cover-placeholder {
-  width: 100%;
-  height: 200px;
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius-xl);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
-  transition: var(--transition-fast);
+  min-height: clamp(230px, 36vw, 360px);
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  color: var(--color-black);
+  background: var(--color-accent-cyan);
+  border: 6px solid var(--color-black);
+  border-radius: 28px;
+  box-shadow: 8px 8px 0 var(--color-black);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 900;
+  text-align: center;
+  transition: var(--transition-bounce);
+}
+
+.write-cover-placeholder svg {
+  width: 68px;
+  height: 68px;
+  stroke-width: 2.5;
 }
 
 .write-cover-placeholder:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background-color: var(--color-primary-light);
+  background: var(--color-accent-yellow);
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 var(--color-black);
 }
 
 .write-cover-preview {
   width: 100%;
-  height: 280px;
+  height: clamp(260px, 42vw, 430px);
   object-fit: cover;
-  border-radius: var(--radius-xl);
+  border: 6px solid var(--color-black);
+  border-radius: 28px;
+  box-shadow: 8px 8px 0 var(--color-black);
 }
 
-
-/* ── CATEGORY SELECT ── */
 .write-meta-row {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-3);
 }
 
 .write-category-select {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
-  background-color: var(--color-bg-tertiary);
-  border: 1px solid var(--color-border);
+  min-height: 60px;
+  max-width: 100%;
+  padding: 0 var(--space-6);
+  color: var(--color-black);
+  background: var(--color-white);
+  border: 5px solid var(--color-black);
   border-radius: var(--radius-full);
-  padding: var(--space-2) var(--space-4);
+  box-shadow: 6px 6px 0 var(--color-black);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: 900;
   cursor: pointer;
   transition: var(--transition-fast);
-  outline: none;
 }
 
 .write-category-select:focus {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  box-shadow: 6px 6px 0 var(--color-accent-cyan);
+  transform: translate(-2px, -2px);
 }
 
-
-/* ── TITLE INPUT ──
-   Looks like a heading, not a form field.
-   No border, no box — just big text.
------------------------------------------------- */
 .write-title-input {
   width: 100%;
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
+  min-height: 1.15em;
+  color: var(--color-black);
   background: transparent;
-  border: none;
-  outline: none;
-  resize: none;               /* No resize handle */
-  line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
-  overflow: hidden;           /* Hides scrollbar */
+  border: 0;
+  outline: 0;
+  resize: none;
+  overflow: hidden;
   font-family: var(--font-primary);
+  font-size: clamp(3.2rem, 8vw, 6.4rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: 0;
 }
 
 .write-title-input::placeholder {
-  color: var(--color-text-muted);
+  color: var(--color-black);
+  opacity: 1;
 }
 
-
-/* ── EXCERPT INPUT ── */
 .write-excerpt-input {
   width: 100%;
-  font-size: var(--font-size-md);
-  color: var(--color-text-secondary);
+  min-height: 1.3em;
+  color: var(--color-gray-600);
   background: transparent;
-  border: none;
-  outline: none;
+  border: 0;
+  outline: 0;
   resize: none;
-  line-height: var(--line-height-relaxed);
+  overflow: hidden;
   font-family: var(--font-primary);
-  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 .write-excerpt-input::placeholder {
-  color: var(--color-text-muted);
+  color: var(--color-gray-600);
+  opacity: 1;
 }
 
-
-/* ── DIVIDER BETWEEN META AND BODY ── */
 .write-divider {
-  height: 1px;
-  background-color: var(--color-border);
+  height: 5px;
   margin: var(--space-2) 0;
+  background: var(--color-black);
+  border-radius: 999px;
 }
 
-
-/* ── BODY TEXTAREA ──
-   Grows automatically as the user types.
-   No border — feels like a real writing surface.
------------------------------------------------- */
 .write-body-input {
   width: 100%;
-  min-height: 500px;
-  font-size: var(--font-size-md);
-  color: var(--color-text-secondary);
-  background: transparent;
-  border: none;
-  outline: none;
-  resize: none;
-  line-height: var(--line-height-loose);
+  min-height: 520px;
+  padding: var(--space-6);
+  color: var(--color-black);
+  background: var(--color-white);
+  border: 3px solid var(--color-border-light);
+  border-radius: 10px;
+  outline: 0;
+  resize: vertical;
   font-family: var(--font-primary);
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.write-body-input:focus {
+  border-color: var(--color-black);
+  box-shadow: 6px 6px 0 var(--color-accent-cyan);
 }
 
 .write-body-input::placeholder {
-  color: var(--color-text-muted);
+  color: #8a8f9b;
 }
 
-
-/* ── TOAST NOTIFICATION ──
-   Small popup at bottom center of screen.
-   Shows briefly when article is saved or published.
------------------------------------------------- */
 .toast {
   position: fixed;
-  bottom: var(--space-8);
   left: 50%;
+  bottom: var(--space-8);
+  z-index: var(--z-toast);
   transform: translateX(-50%) translateY(20px);
-  background-color: var(--color-text-primary);
-  color: var(--color-bg-primary);
-  padding: var(--space-3) var(--space-6);
+  max-width: min(92vw, 560px);
+  padding: var(--space-4) var(--space-7, 1.75rem);
+  color: var(--color-white);
+  background: var(--color-black);
+  border: 4px solid var(--color-black);
   border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  box-shadow: 7px 7px 0 var(--color-accent-pink);
+  font-size: var(--font-size-md);
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  white-space: nowrap;
-  z-index: var(--z-toast);
 }
 
-/* JS adds this class to show the toast */
 .toast--visible {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
+[data-theme="dark"] .write-topbar {
+  background: rgba(17, 17, 17, 0.94);
+}
 
-/* ── MOBILE RESPONSIVE ── */
-@media (max-width: 768px) {
+[data-theme="dark"] .write-topbar-logo,
+[data-theme="dark"] .write-back-link,
+[data-theme="dark"] .write-topbar-divider,
+[data-theme="dark"] .write-reading-time,
+[data-theme="dark"] .write-title-input,
+[data-theme="dark"] .write-title-input::placeholder,
+[data-theme="dark"] .write-excerpt-input,
+[data-theme="dark"] .write-excerpt-input::placeholder {
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .write-body-input {
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+}
+
+@media (max-width: 820px) {
+  .write-topbar {
+    height: auto;
+    min-height: var(--navbar-height);
+    flex-wrap: wrap;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .write-main {
+    padding-top: 112px;
+  }
+
+  .write-status,
+  .write-reading-time,
+  .write-topbar-logo,
+  .write-topbar-divider {
+    display: none;
+  }
+
+  .write-topbar-left,
+  .write-topbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .write-topbar-right {
+    gap: var(--space-2);
+  }
+
+  .write-topbar-right .btn {
+    flex: 1;
+    min-height: 48px;
+    padding-inline: var(--space-3);
+    font-size: var(--font-size-base);
+  }
+
+  .write-container {
+    width: min(100% - 28px, 980px);
+    padding-top: var(--space-8);
+  }
+
   .write-title-input {
-    font-size: var(--font-size-2xl);
+    font-size: clamp(2.8rem, 14vw, 4.6rem);
   }
 
-  .write-topbar-logo {
-    display: none;
-  }
-
-  .write-reading-time {
-    display: none;
+  .write-excerpt-input {
+    font-size: clamp(1.35rem, 7vw, 1.8rem);
   }
 }

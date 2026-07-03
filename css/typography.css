@@ -1,175 +1,227 @@
 /* ============================================
-   STORYVERSE — TYPOGRAPHY
-   Defines all text styles across the platform.
-   Imports Google Fonts and sets global defaults.
+   STORYVERSE - TYPOGRAPHY
+   Loud display type + clean readable body text
    ============================================ */
 
-/* Import Inter (body) and JetBrains Mono (code) from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
-
-
-/* ── BASE BODY TEXT ── */
 body {
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
+  background:
+    radial-gradient(circle at 18px 18px, rgba(5, 5, 5, 0.035) 2px, transparent 2px),
+    var(--color-bg-primary);
+  background-size: 36px 36px, auto;
   transition: background-color 0.3s ease, color 0.3s ease;
-  /* The transition makes light/dark switching smooth */
 }
 
-
-/* ── HEADINGS ── */
-h1 {
-  font-size: var(--font-size-5xl);
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
   font-weight: var(--font-weight-black);
   line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
+  letter-spacing: 0;
   color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
 }
 
 h2 {
   font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
-  color: var(--color-text-primary);
 }
 
 h3 {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-snug);
-  color: var(--color-text-primary);
 }
 
 h4 {
+  font-family: var(--font-primary);
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-snug);
   color: var(--color-text-primary);
 }
 
 h5 {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
 }
 
 h6 {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-secondary);
-  letter-spacing: var(--letter-spacing-wide);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wider);
   text-transform: uppercase;
+  color: var(--color-text-primary);
 }
 
-
-/* ── PARAGRAPHS ── */
 p {
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   max-width: 65ch;
-  /* 65 characters per line is the ideal reading width */
 }
 
-
-/* ── LINKS ── */
 a {
-  color: var(--color-primary);
+  color: inherit;
   transition: var(--transition-fast);
 }
 
 a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-accent-pink);
 }
 
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+}
 
-/* ── INLINE CODE ── */
 code {
   font-family: var(--font-mono);
   font-size: 0.9em;
-  background-color: var(--color-bg-tertiary);
-  color: var(--color-primary);
-  padding: 0.15em 0.4em;
+  font-weight: 600;
+  background-color: var(--color-accent-yellow);
+  color: var(--color-black);
+  padding: 0.12em 0.4em;
+  border: 2px solid var(--color-black);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
 }
 
-
-/* ── CODE BLOCKS ── */
 pre {
   font-family: var(--font-mono);
   font-size: var(--font-size-sm);
-  background-color: #0F172A;   /* Always dark — code blocks look better dark */
-  color: #E2E8F0;
+  background-color: var(--color-black);
+  color: var(--color-white);
   padding: var(--space-6);
   border-radius: var(--radius-lg);
+  border: var(--border);
   overflow-x: auto;
   line-height: var(--line-height-relaxed);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow-md);
 }
 
-pre code {
-  background: none;
-  border: none;
-  padding: 0;
-  color: inherit;
-  font-size: inherit;
-}
-
-
-/* ── BLOCKQUOTE ── */
 blockquote {
-  border-left: 4px solid var(--color-primary);
-  padding-left: var(--space-6);
+  position: relative;
   margin: var(--space-8) 0;
+  padding: var(--space-6);
   color: var(--color-text-secondary);
+  background: var(--color-bg-secondary);
+  border: var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
   font-size: var(--font-size-md);
   font-style: italic;
-  line-height: var(--line-height-relaxed);
 }
 
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -26px;
+  left: 20px;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-accent-pink);
+  -webkit-text-stroke: 2px var(--color-black);
+}
 
-/* ── UTILITY TEXT CLASSES ── */
-/* Use these classes directly in HTML when needed */
+.text-xs {
+  font-size: var(--font-size-xs);
+}
 
-.text-xs       { font-size: var(--font-size-xs); }
-.text-sm       { font-size: var(--font-size-sm); }
-.text-base     { font-size: var(--font-size-base); }
-.text-md       { font-size: var(--font-size-md); }
-.text-lg       { font-size: var(--font-size-lg); }
-.text-xl       { font-size: var(--font-size-xl); }
-.text-2xl      { font-size: var(--font-size-2xl); }
-.text-3xl      { font-size: var(--font-size-3xl); }
-.text-4xl      { font-size: var(--font-size-4xl); }
+.text-sm {
+  font-size: var(--font-size-sm);
+}
 
-.text-primary   { color: var(--color-text-primary); }
-.text-secondary { color: var(--color-text-secondary); }
-.text-muted     { color: var(--color-text-muted); }
-.text-accent    { color: var(--color-primary); }
-.text-gradient  {
-  background: var(--gradient-primary);
+.text-base {
+  font-size: var(--font-size-base);
+}
+
+.text-md {
+  font-size: var(--font-size-md);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.text-2xl {
+  font-size: var(--font-size-2xl);
+}
+
+.text-3xl {
+  font-size: var(--font-size-3xl);
+}
+
+.text-4xl {
+  font-size: var(--font-size-4xl);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-accent {
+  color: var(--color-accent-pink);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  /* This creates the purple-to-indigo gradient text effect */
+  color: transparent;
 }
 
-.font-normal    { font-weight: var(--font-weight-normal); }
-.font-medium    { font-weight: var(--font-weight-medium); }
-.font-semibold  { font-weight: var(--font-weight-semibold); }
-.font-bold      { font-weight: var(--font-weight-bold); }
-.font-black     { font-weight: var(--font-weight-black); }
+.font-display {
+  font-family: var(--font-display);
+}
 
-.text-center    { text-align: center; }
-.text-left      { text-align: left; }
-.text-right     { text-align: right; }
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
 
-.uppercase      { text-transform: uppercase; }
-.capitalize     { text-transform: capitalize; }
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.font-black {
+  font-weight: var(--font-weight-black);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+}
 
 .truncate {
   overflow: hidden;
@@ -177,17 +229,45 @@ blockquote {
   white-space: nowrap;
 }
 
-/* Clamp text to 2 lines, then show "..." */
-.line-clamp-2 {
+.line-clamp-2,
+.line-clamp-3 {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
 .line-clamp-3 {
-  display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(3.5rem, 18vw, 5rem);
+  }
+
+  h2 {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+
+  h3 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.98rem;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 17vw, 4.2rem);
+  }
+
+  h2 {
+    font-size: clamp(2.4rem, 12vw, 3.4rem);
+  }
 }

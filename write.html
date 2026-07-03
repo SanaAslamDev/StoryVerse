@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Write — StoryVerse</title>
+  <title>Write - StoryVerse</title>
 
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
@@ -15,49 +15,32 @@
 </head>
 
 <body>
-
-  <!-- =============================================
-       WRITE PAGE TOPBAR
-       Minimal header — just logo, status, and actions
-       ============================================= -->
   <header class="write-topbar">
-
-    <!-- Left: back link and logo -->
     <div class="write-topbar-left">
       <a href="dashboard.html" class="write-back-link">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="19" y1="12" x2="5" y2="12"/>
-          <polyline points="12 19 5 12 12 5"/>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+          <path d="M19 12H5M12 19l-7-7 7-7"></path>
         </svg>
         Dashboard
       </a>
       <span class="write-topbar-divider">|</span>
-      <span class="write-topbar-logo">✦ StoryVerse</span>
+      <span class="write-topbar-logo">Draft</span>
     </div>
 
-    <!-- Center: autosave status indicator -->
     <div class="write-status" id="writeStatus">
       <span class="write-status-dot"></span>
       <span class="write-status-text" id="writeStatusText">Draft</span>
     </div>
 
-    <!-- Right: action buttons -->
     <div class="write-topbar-right">
       <span class="write-reading-time" id="writeReadingTime">0 min read</span>
       <button class="btn btn--ghost btn--sm" id="saveDraftBtn">Save Draft</button>
       <button class="btn btn--primary btn--sm" id="publishBtn">Publish</button>
     </div>
-
   </header>
 
-  <!-- =============================================
-       WRITE PAGE BODY
-       Clean, distraction-free writing area
-       ============================================= -->
   <main class="write-main">
     <div class="write-container">
-
-      <!-- Cover image upload area -->
       <div class="write-cover-area" id="writeCoverArea">
         <input
           type="file"
@@ -65,14 +48,16 @@
           accept="image/*"
           style="display: none;"
         />
+
         <div class="write-cover-placeholder" id="coverPlaceholder">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
+          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <path d="m21 15-5-5L5 21"></path>
           </svg>
           <span>Click to add a cover image</span>
         </div>
+
         <img
           src=""
           alt="Cover image"
@@ -82,7 +67,6 @@
         />
       </div>
 
-      <!-- Category selector -->
       <div class="write-meta-row">
         <select class="write-category-select" id="writeCategorySelect">
           <option value="">Select a category...</option>
@@ -107,7 +91,6 @@
         </select>
       </div>
 
-      <!-- Article title -->
       <textarea
         class="write-title-input"
         id="writeTitleInput"
@@ -116,7 +99,6 @@
         maxlength="120"
       ></textarea>
 
-      <!-- Excerpt / summary -->
       <textarea
         class="write-excerpt-input"
         id="writeExcerptInput"
@@ -125,20 +107,16 @@
         maxlength="200"
       ></textarea>
 
-      <!-- Divider between meta and body -->
       <div class="write-divider"></div>
 
-      <!-- Main article body -->
       <textarea
         class="write-body-input"
         id="writeBodyInput"
         placeholder="Tell your story..."
       ></textarea>
-
     </div>
   </main>
 
-  <!-- Toast notification (shows briefly on save/publish) -->
   <div class="toast" id="toastNotification">
     <span id="toastMessage"></span>
   </div>
@@ -148,6 +126,5 @@
   <script src="js/utils.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/write.js"></script>
-
 </body>
 </html>

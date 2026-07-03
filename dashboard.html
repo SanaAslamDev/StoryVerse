@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard — StoryVerse</title>
+  <title>Dashboard - StoryVerse</title>
 
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
@@ -15,22 +15,10 @@
 </head>
 
 <body>
-
-  <!-- =============================================
-       DASHBOARD LAYOUT
-       Two columns: sidebar on left, content on right
-       ============================================= -->
   <div class="dashboard-layout">
-
-    <!-- ── SIDEBAR ── -->
     <aside class="dashboard-sidebar" id="dashboardSidebar">
+      <a href="index.html" class="dashboard-sidebar-logo">✦ StoryVerse</a>
 
-      <!-- Logo -->
-      <a href="index.html" class="dashboard-sidebar-logo">
-        ✦ StoryVerse
-      </a>
-
-      <!-- User info at top of sidebar -->
       <div class="dashboard-sidebar-user">
         <div class="dashboard-sidebar-avatar" id="sidebarAvatar">S</div>
         <div>
@@ -39,195 +27,150 @@
         </div>
       </div>
 
-      <!-- Nav links -->
       <nav class="dashboard-nav">
-
         <a href="dashboard.html" class="dashboard-nav-link dashboard-nav-link--active">
-          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="7" height="7" rx="1"/>
-            <rect x="14" y="3" width="7" height="7" rx="1"/>
-            <rect x="3" y="14" width="7" height="7" rx="1"/>
-            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
           </svg>
           Dashboard
         </a>
 
         <a href="write.html" class="dashboard-nav-link">
-          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
           </svg>
           Write Article
         </a>
 
         <a href="drafts.html" class="dashboard-nav-link">
-          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-            <line x1="10" y1="9" x2="8" y2="9"/>
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"></path>
           </svg>
           Drafts
         </a>
 
         <a href="bookmarks.html" class="dashboard-nav-link">
-          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
           </svg>
           Bookmarks
         </a>
 
         <a href="profile.html" class="dashboard-nav-link">
-          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
           </svg>
           Profile
         </a>
 
         <a href="settings.html" class="dashboard-nav-link">
-          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.14.31.22.65.24 1H21a2 2 0 1 1 0 4h-1.36c-.02.35-.1.69-.24 1z"></path>
           </svg>
           Settings
         </a>
-
       </nav>
 
-      <!-- Logout button -->
       <button class="dashboard-logout-btn" id="logoutButton">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-          <polyline points="16 17 21 12 16 7"/>
-          <line x1="21" y1="12" x2="9" y2="12"/>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <path d="m16 17 5-5-5-5M21 12H9"></path>
         </svg>
         Sign Out
       </button>
-
     </aside>
 
-    <!-- ── MAIN CONTENT AREA ── -->
     <main class="dashboard-content">
-
-      <!-- Top bar -->
       <div class="dashboard-topbar">
         <div>
-          <h1 class="dashboard-welcome" id="dashboardWelcome">Welcome back!</h1>
+          <h1 class="dashboard-welcome" id="dashboardWelcome">Ready to write your next masterpiece?</h1>
           <p class="dashboard-date" id="dashboardDate"></p>
         </div>
 
         <div class="dashboard-topbar-actions">
           <button class="navbar-icon-btn" id="dashboardThemeBtn" aria-label="Toggle theme">
-            <svg class="theme-icon theme-icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            <svg class="theme-icon theme-icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
             </svg>
-            <svg class="theme-icon theme-icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"/>
-              <line x1="12" y1="1" x2="12" y2="3"/>
-              <line x1="12" y1="21" x2="12" y2="23"/>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-              <line x1="1" y1="12" x2="3" y2="12"/>
-              <line x1="21" y1="12" x2="23" y2="12"/>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <svg class="theme-icon theme-icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="5"></circle>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
             </svg>
           </button>
-          <a href="write.html" class="btn btn--primary btn--sm">+ New Article</a>
+          <a href="write.html" class="btn btn--primary btn--sm">New Article</a>
         </div>
       </div>
 
-     <!-- Analytics cards -->
       <div class="dashboard-stats-grid">
-
-        <!-- Total Views -->
         <div class="dashboard-stat-card">
           <div class="dashboard-stat-icon dashboard-stat-icon--blue">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-              <circle cx="12" cy="12" r="3"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
             </svg>
           </div>
-          <div>
-            <p class="dashboard-stat-number" id="statTotalViews">0</p>
-            <p class="dashboard-stat-label">Total Views</p>
-          </div>
+          <p class="dashboard-stat-number" id="statTotalViews">0</p>
+          <p class="dashboard-stat-label">Views</p>
         </div>
 
-        <!-- Total Likes -->
         <div class="dashboard-stat-card">
           <div class="dashboard-stat-icon dashboard-stat-icon--red">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
           </div>
-          <div>
-            <p class="dashboard-stat-number" id="statTotalLikes">0</p>
-            <p class="dashboard-stat-label">Total Likes</p>
-          </div>
+          <p class="dashboard-stat-number" id="statTotalLikes">0</p>
+          <p class="dashboard-stat-label">Likes</p>
         </div>
 
-        <!-- Articles Published -->
         <div class="dashboard-stat-card">
           <div class="dashboard-stat-icon dashboard-stat-icon--purple">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
             </svg>
           </div>
-          <div>
-            <p class="dashboard-stat-number" id="statTotalArticles">0</p>
-            <p class="dashboard-stat-label">Articles Published</p>
-          </div>
+          <p class="dashboard-stat-number" id="statTotalArticles">0</p>
+          <p class="dashboard-stat-label">Comments</p>
         </div>
 
-        <!-- Bookmarks -->
         <div class="dashboard-stat-card">
           <div class="dashboard-stat-icon dashboard-stat-icon--green">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
             </svg>
           </div>
-          <div>
-            <p class="dashboard-stat-number" id="statTotalBookmarks">0</p>
-            <p class="dashboard-stat-label">Bookmarks</p>
-          </div>
+          <p class="dashboard-stat-number" id="statTotalBookmarks">0</p>
+          <p class="dashboard-stat-label">Bookmarks</p>
         </div>
-
       </div>
 
-      <!-- Articles table -->
-      <div class="dashboard-section">
-
+      <section class="dashboard-section">
         <div class="dashboard-section-header">
           <h2 class="dashboard-section-title">Your Articles</h2>
-          <a href="write.html" class="btn btn--secondary btn--sm">+ Write New</a>
+          <a href="write.html" class="btn btn--primary btn--sm">View More</a>
         </div>
 
-        <!-- Empty state (shown when user has no articles) -->
         <div class="dashboard-empty-state" id="dashboardEmptyState">
           <div class="dashboard-empty-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-          </svg>
-        </div>
+            <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </div>
           <h3>No articles yet</h3>
           <p>You haven't published anything yet. Start writing your first article!</p>
           <a href="write.html" class="btn btn--primary">Write Your First Article</a>
         </div>
 
-        <!-- Articles list (hidden when empty) -->
-        <div class="dashboard-articles-list" id="dashboardArticlesList">
-          <!-- Filled by dashboard.js -->
-        </div>
-
-      </div>
-
+        <div class="dashboard-articles-list" id="dashboardArticlesList"></div>
+      </section>
     </main>
   </div>
 
@@ -236,6 +179,5 @@
   <script src="js/utils.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/dashboard.js"></script>
-
 </body>
 </html>

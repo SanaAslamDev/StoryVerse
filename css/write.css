@@ -1,0 +1,295 @@
+/* ============================================
+   STORYVERSE — WRITE ARTICLE PAGE
+   Clean, distraction-free writing experience.
+   Inspired by Medium's editor aesthetic.
+   ============================================ */
+
+
+/* ── TOPBAR ── */
+.write-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  z-index: var(--z-sticky);
+  gap: var(--space-4);
+}
+
+.write-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.write-back-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  transition: var(--transition-fast);
+}
+
+.write-back-link:hover {
+  color: var(--color-text-primary);
+}
+
+.write-topbar-divider {
+  color: var(--color-border);
+  font-size: var(--font-size-lg);
+}
+
+.write-topbar-logo {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+
+/* ── AUTOSAVE STATUS ── */
+.write-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.write-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-text-muted);
+  transition: var(--transition-base);
+}
+
+/* Green dot when saved successfully */
+.write-status--saved .write-status-dot {
+  background-color: var(--color-success);
+}
+
+.write-status--saved .write-status-text {
+  color: var(--color-success);
+}
+
+
+/* ── TOPBAR RIGHT ── */
+.write-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.write-reading-time {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+
+/* ── MAIN WRITING AREA ── */
+.write-main {
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+}
+
+.write-container {
+  max-width: var(--max-width-article);   /* 680px — ideal reading/writing width */
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-6) var(--space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+
+/* ── COVER IMAGE AREA ── */
+.write-cover-area {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.write-cover-placeholder {
+  width: 100%;
+  height: 200px;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  transition: var(--transition-fast);
+}
+
+.write-cover-placeholder:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.write-cover-preview {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
+
+/* ── CATEGORY SELECT ── */
+.write-meta-row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.write-category-select {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+.write-category-select:focus {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+
+/* ── TITLE INPUT ──
+   Looks like a heading, not a form field.
+   No border, no box — just big text.
+------------------------------------------------ */
+.write-title-input {
+  width: 100%;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;               /* No resize handle */
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  overflow: hidden;           /* Hides scrollbar */
+  font-family: var(--font-primary);
+}
+
+.write-title-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+
+/* ── EXCERPT INPUT ── */
+.write-excerpt-input {
+  width: 100%;
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  line-height: var(--line-height-relaxed);
+  font-family: var(--font-primary);
+  font-style: italic;
+}
+
+.write-excerpt-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+
+/* ── DIVIDER BETWEEN META AND BODY ── */
+.write-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: var(--space-2) 0;
+}
+
+
+/* ── BODY TEXTAREA ──
+   Grows automatically as the user types.
+   No border — feels like a real writing surface.
+------------------------------------------------ */
+.write-body-input {
+  width: 100%;
+  min-height: 500px;
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  line-height: var(--line-height-loose);
+  font-family: var(--font-primary);
+}
+
+.write-body-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+
+/* ── TOAST NOTIFICATION ──
+   Small popup at bottom center of screen.
+   Shows briefly when article is saved or published.
+------------------------------------------------ */
+.toast {
+  position: fixed;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-primary);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  z-index: var(--z-toast);
+}
+
+/* JS adds this class to show the toast */
+.toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  .write-title-input {
+    font-size: var(--font-size-2xl);
+  }
+
+  .write-topbar-logo {
+    display: none;
+  }
+
+  .write-reading-time {
+    display: none;
+  }
+}

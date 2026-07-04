@@ -1,0 +1,192 @@
+/* ============================================
+   STORYVERSE — EXPLORE PAGE
+   ============================================ */
+
+
+/* ── HERO HEADER ── */
+.explore-hero {
+  padding: var(--space-16) 0 var(--space-10);
+  border-bottom: var(--border);
+  background:
+    radial-gradient(circle at 6% 50%, var(--color-accent-pink) 0 30px, transparent 31px),
+    radial-gradient(circle at 96% 20%, var(--color-accent-cyan) 0 40px, transparent 41px),
+    var(--color-bg-primary);
+}
+
+.explore-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, var(--font-size-5xl));
+  font-weight: 900;
+  color: var(--color-black);
+  margin: var(--space-3) 0 var(--space-4);
+  line-height: 0.95;
+}
+
+.explore-hero-subtext {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-8);
+  max-width: 500px;
+}
+
+
+/* ── SEARCH BOX ── */
+.explore-search-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 600px;
+  background: var(--color-white);
+  border: var(--border);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-5);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-fast);
+  color: var(--color-text-muted);
+}
+
+.explore-search-box:focus-within {
+  border-color: var(--color-accent-pink);
+  box-shadow: var(--shadow-pink);
+  transform: translate(-2px, -2px);
+}
+
+.explore-search-input {
+  flex: 1;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.explore-search-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+
+/* ── FILTER BUTTONS ── */
+.explore-filters-section {
+  padding: var(--space-6) 0;
+  border-bottom: var(--border);
+  background: var(--color-bg-secondary);
+}
+
+.explore-filters {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.explore-filter-btn {
+  min-height: 44px;
+  padding: var(--space-2) var(--space-5);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-black);
+  color: var(--color-black);
+  background: var(--color-white);
+  border: var(--border);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  white-space: nowrap;
+}
+
+.explore-filter-btn:hover {
+  background: var(--color-accent-yellow);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Active filter gets pink background */
+.explore-filter-btn--active {
+  background: var(--color-accent-pink);
+  color: var(--color-white);
+  border-color: var(--color-black);
+  box-shadow: var(--shadow-md);
+  transform: translate(-2px, -2px);
+}
+
+
+/* ── ARTICLES SECTION ── */
+.explore-articles-section {
+  padding: var(--space-10) 0 var(--space-24);
+}
+
+.explore-results-count {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+  max-width: none;
+}
+
+
+/* ── ARTICLES GRID ── */
+.explore-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* Reuse article-card styles from home.css */
+/* The cards are built by JS using the same
+   class names as the home page cards */
+
+
+/* ── EMPTY STATE ── */
+.explore-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-24) var(--space-8);
+  text-align: center;
+}
+
+.explore-empty-icon {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.explore-empty-state h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 900;
+  color: var(--color-black);
+  text-transform: none;
+}
+
+.explore-empty-state p {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .explore-articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .explore-articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-filters {
+    gap: var(--space-2);
+  }
+
+  .explore-filter-btn {
+    min-height: 38px;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-xs);
+  }
+}

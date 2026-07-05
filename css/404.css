@@ -1,0 +1,247 @@
+/* ============================================
+   STORYVERSE — 404 PAGE
+   Bold, on-brand error page.
+   ============================================ */
+
+/* Full screen centered layout */
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18px 18px, rgba(5,5,5,0.035) 2px, transparent 2px),
+    var(--color-bg-primary);
+  background-size: 36px 36px, auto;
+  padding: var(--space-8);
+}
+
+
+/* ── DECORATIVE BLOBS ── */
+.error-blob {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  border: var(--border);
+}
+
+.error-blob--1 {
+  width: 300px;
+  height: 300px;
+  background: var(--color-accent-pink);
+  top: -80px;
+  left: -80px;
+  opacity: 0.25;
+  animation: floatBlob 12s ease-in-out infinite;
+}
+
+.error-blob--2 {
+  width: 250px;
+  height: 250px;
+  background: var(--color-accent-cyan);
+  bottom: -60px;
+  right: -60px;
+  opacity: 0.2;
+  animation: floatBlob 15s ease-in-out infinite reverse;
+}
+
+.error-blob--3 {
+  width: 180px;
+  height: 180px;
+  background: var(--color-accent-yellow);
+  top: 50%;
+  right: 10%;
+  opacity: 0.3;
+  animation: floatBlob 10s ease-in-out infinite;
+  border: var(--border-heavy);
+}
+
+
+/* ── MAIN CONTENT ── */
+.error-content {
+  position: relative;
+  z-index: var(--z-base);
+  max-width: 680px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  animation: fadeInUp 0.7s ease both;
+}
+
+
+/* ── LOGO ── */
+.error-logo {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  color: var(--color-black);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-5);
+  border: var(--border);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-bounce);
+}
+
+.error-logo:hover {
+  background: var(--color-accent-yellow);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-black);
+}
+
+
+/* ── BIG 404 NUMBER ── */
+.error-number {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  line-height: 1;
+  margin: var(--space-4) 0;
+}
+
+/* Each digit is styled individually for visual interest */
+.error-number-4--left {
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 14rem);
+  font-weight: 900;
+  color: var(--color-white);
+  background: var(--color-accent-pink);
+  border: var(--border-heavy);
+  border-radius: var(--radius-xl);
+  padding: 0 var(--space-5);
+  box-shadow: var(--shadow-xl);
+  display: inline-block;
+  line-height: 1;
+  transform: rotate(-4deg);
+}
+
+.error-number-0 {
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 14rem);
+  font-weight: 900;
+  color: var(--color-black);
+  background: var(--color-accent-yellow);
+  border: var(--border-heavy);
+  border-radius: 50%;
+  width: clamp(9rem, 22vw, 15rem);
+  height: clamp(9rem, 22vw, 15rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xl);
+  line-height: 1;
+}
+
+.error-number-4--right {
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 14rem);
+  font-weight: 900;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border: var(--border-heavy);
+  border-radius: var(--radius-xl);
+  padding: 0 var(--space-5);
+  box-shadow: var(--shadow-xl);
+  display: inline-block;
+  line-height: 1;
+  transform: rotate(4deg);
+}
+
+
+/* ── MESSAGE ── */
+.error-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, var(--font-size-3xl));
+  font-weight: 900;
+  color: var(--color-black);
+  text-transform: none;
+}
+
+.error-subtext {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  max-width: 480px;
+  line-height: var(--line-height-relaxed);
+}
+
+
+/* ── ACTION BUTTONS ── */
+.error-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* ── HELPFUL LINKS ── */
+.error-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: var(--border);
+  width: 100%;
+}
+
+.error-links-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  max-width: none;
+}
+
+.error-links-row {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.error-link {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-black);
+  color: var(--color-black);
+  background: var(--color-bg-secondary);
+  border: var(--border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-bounce);
+  text-decoration: none;
+}
+
+.error-link:hover {
+  background: var(--color-accent-cyan);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-black);
+}
+
+
+/* ── MOBILE ── */
+@media (max-width: 480px) {
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .error-actions .btn {
+    width: 100%;
+  }
+
+  .error-number-4--left,
+  .error-number-4--right {
+    padding: 0 var(--space-3);
+  }
+}

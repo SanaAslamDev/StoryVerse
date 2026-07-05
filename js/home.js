@@ -17,7 +17,7 @@ console.log('home.js loaded');
 const latestArticlesData = [
   {
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80",
-    category: "Web Development",
+    category: "Technology",
     title: "Building Accessible Forms That Don't Annoy Your Users",
     excerpt: "A practical guide to form design that respects both usability and accessibility standards.",
     authorName: "Maria Lopez",
@@ -28,7 +28,7 @@ const latestArticlesData = [
   },
   {
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
-    category: "Programming",
+    category: "Technology",
     title: "Understanding Closures in JavaScript Once and For All",
     excerpt: "Closures confuse every beginner at some point. Here's the explanation that finally makes it click.",
     authorName: "David Kim",
@@ -39,7 +39,7 @@ const latestArticlesData = [
   },
   {
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&q=80",
-    category: "Career",
+    category: "Knowledge & Learning",
     title: "What I Wish I Knew Before My First Developer Job",
     excerpt: "Lessons learned from two years in the industry that no bootcamp prepares you for.",
     authorName: "Priya Nair",
@@ -50,7 +50,7 @@ const latestArticlesData = [
   },
   {
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80",
-    category: "Artificial Intelligence",
+    category: "Technology",
     title: "Prompt Engineering Is a Real Skill — Here's Why",
     excerpt: "Why writing good prompts is becoming as important as writing good code.",
     authorName: "James Wright",
@@ -74,7 +74,7 @@ const latestArticlesData = [
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&q=80",
     category: "Travel",
     title: "Working Remotely From 12 Countries in One Year",
-    excerpt: "What actually works (and what doesn't) when you try to be a full-time digital nomad.",
+    excerpt: "What actually works and what doesn't when you try to be a full-time digital nomad.",
     authorName: "Tom Becker",
     authorAvatar: "https://i.pravatar.cc/40?img=33",
     readTime: "10 min read",

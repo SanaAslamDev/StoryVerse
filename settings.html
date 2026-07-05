@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — StoryVerse</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/settings.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <div class="dashboard-layout">
+
+    <aside class="dashboard-sidebar">
+      <a href="index.html" class="dashboard-sidebar-logo">✦ StoryVerse</a>
+      <div class="dashboard-sidebar-user">
+        <div class="dashboard-sidebar-avatar" id="sidebarAvatar">S</div>
+        <div>
+          <p class="dashboard-sidebar-name" id="sidebarUserName">Loading...</p>
+          <p class="dashboard-sidebar-handle" id="sidebarUserHandle">@username</p>
+        </div>
+      </div>
+      <nav class="dashboard-nav">
+        <a href="dashboard.html" class="dashboard-nav-link">
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a href="write.html" class="dashboard-nav-link">
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Write Article
+        </a>
+        <a href="drafts.html" class="dashboard-nav-link">
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          Drafts
+        </a>
+        <a href="bookmarks.html" class="dashboard-nav-link">
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          Bookmarks
+        </a>
+        <a href="profile.html" class="dashboard-nav-link">
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Profile
+        </a>
+        <a href="settings.html" class="dashboard-nav-link dashboard-nav-link--active">
+          <svg class="dashboard-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.14.31.22.65.24 1H21a2 2 0 1 1 0 4h-1.36c-.02.35-.1.69-.24 1z"/></svg>
+          Settings
+        </a>
+      </nav>
+      <button class="dashboard-logout-btn" id="logoutButton">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>
+        Sign Out
+      </button>
+    </aside>
+
+    <main class="dashboard-content">
+      <div class="dashboard-topbar">
+        <div>
+          <h1 class="dashboard-welcome">Settings</h1>
+          <p class="dashboard-date">Manage your account and profile</p>
+        </div>
+      </div>
+
+      <!-- Profile Settings -->
+      <div class="settings-card">
+        <h2 class="settings-card-title">Profile Information</h2>
+        <p class="settings-card-desc">Update your public profile details.</p>
+
+        <div class="settings-form">
+
+          <div class="settings-form-group">
+            <label class="settings-label" for="settingsName">Full Name</label>
+            <input type="text" id="settingsName" class="settings-input" placeholder="Your full name" />
+          </div>
+
+          <div class="settings-form-group">
+            <label class="settings-label" for="settingsUsername">Username</label>
+            <div class="settings-input-prefix-wrapper">
+              <span class="settings-input-prefix">storyverse.com/</span>
+              <input type="text" id="settingsUsername" class="settings-input settings-input--prefixed" placeholder="yourname" />
+            </div>
+          </div>
+
+          <div class="settings-form-group">
+            <label class="settings-label" for="settingsBio">Bio</label>
+            <textarea
+              id="settingsBio"
+              class="settings-input settings-textarea"
+              placeholder="Tell readers a bit about yourself..."
+              rows="3"
+            ></textarea>
+          </div>
+
+          <div class="settings-form-group">
+            <label class="settings-label" for="settingsEmail">Email Address</label>
+            <input type="email" id="settingsEmail" class="settings-input" placeholder="you@example.com" />
+          </div>
+
+          <button class="btn btn--primary" id="saveProfileBtn">Save Changes</button>
+
+        </div>
+      </div>
+
+      <!-- Change Password -->
+      <div class="settings-card">
+        <h2 class="settings-card-title">Change Password</h2>
+        <p class="settings-card-desc">Choose a strong password of at least 6 characters.</p>
+
+        <div class="settings-form">
+          <div class="settings-form-group">
+            <label class="settings-label" for="currentPassword">Current Password</label>
+            <input type="password" id="currentPassword" class="settings-input" placeholder="Your current password" />
+          </div>
+          <div class="settings-form-group">
+            <label class="settings-label" for="newPassword">New Password</label>
+            <input type="password" id="newPassword" class="settings-input" placeholder="At least 6 characters" />
+          </div>
+          <button class="btn btn--primary" id="changePasswordBtn">Update Password</button>
+        </div>
+      </div>
+
+      <!-- Danger Zone -->
+      <div class="settings-card settings-card--danger">
+        <h2 class="settings-card-title">Danger Zone</h2>
+        <p class="settings-card-desc">These actions are permanent and cannot be undone.</p>
+        <button class="btn btn--ghost" id="deleteAccountBtn" style="border-color: var(--color-danger); color: var(--color-danger);">
+          Delete My Account
+        </button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toastNotification">
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

@@ -12,35 +12,18 @@ body:has(.newsletter-section) {
   overflow: hidden;
   min-height: auto;
   padding: 72px 0 0;
-  background:
-    linear-gradient(160deg, var(--color-accent-yellow) 0 22%, transparent 22%),
-    linear-gradient(166deg, transparent 0 18%, var(--color-accent-pink) 18% 58%, transparent 58%),
-    linear-gradient(164deg, transparent 0 54%, var(--color-accent-cyan) 54% 100%);
-  border-bottom: var(--border-heavy);
+  background: linear-gradient(
+    135deg,
+    #ec1fc0 0%,
+    #d626c9 20%,
+    #a52dd6 45%,
+    #6b35d9 65%,
+    #2f3fb0 85%,
+    #1a2a7a 100%
+  );
+  border-bottom: none;
 }
 
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 9% 18%, transparent 0 20px, var(--color-black) 21px 28px, transparent 29px),
-    radial-gradient(circle at 86% 72%, transparent 0 26px, var(--color-black) 27px 34px, transparent 35px);
-}
-
-.hero-section::after {
-  content: "";
-  position: absolute;
-  left: -8%;
-  right: -8%;
-  bottom: 34%;
-  z-index: 0;
-  height: 12px;
-  background: var(--color-black);
-  transform: rotate(-10deg);
-}
 
 .hero-blob {
   display: none;
@@ -898,4 +881,157 @@ body:has(.newsletter-section) {
 .newsletter-subtext {
   margin-bottom: 2rem;
   font-size: clamp(1rem, 1.25vw, 1.15rem);
+}
+
+
+
+
+
+
+/* ============================================
+   HERO SCROLLING MARQUEE BACKGROUND - 2 ROWS
+   ============================================ */
+
+.hero-marquee {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 22px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-marquee-row {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+}
+
+.hero-marquee-track--left {
+  animation: heroMarqueeLeft 42s linear infinite;
+}
+
+.hero-marquee-track--right {
+  animation: heroMarqueeRight 42s linear infinite;
+}
+
+/* Keep photos vivid — do NOT wash them out with opacity/saturate */
+.hero-marquee-img {
+  width: 170px;
+  height: 220px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  filter: brightness(0.82);
+}
+
+@keyframes heroMarqueeLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes heroMarqueeRight {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Neutral dark fade at the far edges only — no color tint, keeps photos true-color */
+.hero-marquee::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 8, 40, 0.55) 0%,
+    rgba(15, 8, 40, 0) 20%,
+    rgba(15, 8, 40, 0) 80%,
+    rgba(15, 8, 40, 0.55) 100%
+  );
+}
+
+/* Strong, tight, solid-ish zone directly behind the text so it's always crisp */
+.hero-marquee::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse 48% 65% at center,
+    rgba(20, 10, 55, 0.82) 0%,
+    rgba(20, 10, 55, 0.6) 40%,
+    rgba(20, 10, 55, 0.15) 68%,
+    rgba(20, 10, 55, 0) 82%
+  );
+}
+
+/* keep hero content above the marquee */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 720px) {
+  .hero-marquee-img {
+    width: 110px;
+    height: 150px;
+  }
+
+  .hero-marquee {
+    gap: 12px;
+  }
+}
+
+/* Text: solid colors + real contrast instead of a low-contrast gradient */
+.hero-headline {
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.hero-headline .text-gradient {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: #22e6e0;
+}
+
+.hero-badge,
+.hero-subtext {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtext {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.hero-headline {
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.hero-headline .text-gradient {
+  background: linear-gradient(90deg, #ffd93d 0%, #ff6b9d 45%, #22e6e0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.35);
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
+}
+
+.hero-badge,
+.hero-subtext {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtext {
+  color: rgba(255, 255, 255, 0.94);
 }

@@ -1,0 +1,152 @@
+/* ============================================
+   STORYVERSE — SETTINGS PAGE
+   ============================================ */
+
+.settings-card {
+  background: var(--color-white);
+  border: var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-6);
+}
+
+.settings-card--danger {
+  border-color: var(--color-danger);
+  box-shadow: 5px 5px 0 var(--color-danger);
+}
+
+.settings-card-title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  color: var(--color-black);
+  margin-bottom: var(--space-2);
+  text-transform: none;
+}
+
+.settings-card-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-6);
+  max-width: none;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 520px;
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.settings-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-black);
+  color: var(--color-black);
+}
+
+.settings-input {
+  width: 100%;
+  min-height: 52px;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  background: var(--color-bg-primary);
+  border: var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.settings-input:focus {
+  border-color: var(--color-accent-pink);
+  box-shadow: 4px 4px 0 var(--color-accent-pink);
+  outline: none;
+  transform: translate(-2px, -2px);
+}
+
+.settings-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.settings-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.settings-input-prefix-wrapper {
+  display: flex;
+  align-items: stretch;
+  border: var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--color-bg-primary);
+}
+
+.settings-input-prefix-wrapper:focus-within {
+  border-color: var(--color-accent-pink);
+  box-shadow: 4px 4px 0 var(--color-accent-pink);
+  transform: translate(-2px, -2px);
+}
+
+.settings-input-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-black);
+  color: var(--color-text-muted);
+  background: var(--color-bg-tertiary);
+  border-right: var(--border);
+  white-space: nowrap;
+}
+
+.settings-input--prefixed {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  flex: 1;
+}
+
+.settings-input--prefixed:focus {
+  border: none;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: var(--space-8);
+  z-index: var(--z-toast);
+  transform: translateX(-50%) translateY(20px);
+  padding: var(--space-4) var(--space-8);
+  color: var(--color-white);
+  background: var(--color-black);
+  border: var(--border);
+  border-radius: var(--radius-full);
+  box-shadow: 7px 7px 0 var(--color-accent-pink);
+  font-size: var(--font-size-sm);
+  font-weight: 900;
+  font-family: var(--font-primary);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

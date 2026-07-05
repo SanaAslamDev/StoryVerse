@@ -17,7 +17,7 @@ const allArticles = [
   {
     title: "Building Accessible Forms That Don't Annoy Your Users",
     excerpt: "A practical guide to form design that respects both usability and accessibility standards.",
-    category: "Web Development",
+    category: "Technology",
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80",
     authorName: "Maria Lopez",
     authorAvatar: "https://i.pravatar.cc/40?img=5",
@@ -28,7 +28,7 @@ const allArticles = [
   {
     title: "Understanding Closures in JavaScript Once and For All",
     excerpt: "Closures confuse every beginner at some point. Here's the explanation that finally makes it click.",
-    category: "Programming",
+    category: "Technology",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
     authorName: "David Kim",
     authorAvatar: "https://i.pravatar.cc/40?img=8",
@@ -39,7 +39,7 @@ const allArticles = [
   {
     title: "What I Wish I Knew Before My First Developer Job",
     excerpt: "Lessons learned from two years in the industry that no bootcamp prepares you for.",
-    category: "Career",
+    category: "Knowledge & Learning",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&q=80",
     authorName: "Priya Nair",
     authorAvatar: "https://i.pravatar.cc/40?img=9",
@@ -50,7 +50,7 @@ const allArticles = [
   {
     title: "Prompt Engineering Is a Real Skill — Here's Why",
     excerpt: "Why writing good prompts is becoming as important as writing good code.",
-    category: "Artificial Intelligence",
+    category: "Technology",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80",
     authorName: "James Wright",
     authorAvatar: "https://i.pravatar.cc/40?img=15",
@@ -71,7 +71,7 @@ const allArticles = [
   },
   {
     title: "Working Remotely From 12 Countries in One Year",
-    excerpt: "What actually works (and what doesn't) when you try to be a full-time digital nomad.",
+    excerpt: "What actually works and what doesn't when you try to be a full-time digital nomad.",
     category: "Travel",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&q=80",
     authorName: "Tom Becker",
@@ -83,7 +83,7 @@ const allArticles = [
   {
     title: "How Large Language Models Are Rewriting Software Engineering",
     excerpt: "From autocomplete to autonomous agents — AI is changing how developers build and ship.",
-    category: "Artificial Intelligence",
+    category: "Technology",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&q=80",
     authorName: "Sarah Chen",
     authorAvatar: "https://i.pravatar.cc/40?img=12",
@@ -94,7 +94,7 @@ const allArticles = [
   {
     title: "CSS Grid vs Flexbox — When to Use Which",
     excerpt: "A clear, practical breakdown of when each layout tool is the right choice.",
-    category: "Web Development",
+    category: "Technology",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80",
     authorName: "Ana Torres",
     authorAvatar: "https://i.pravatar.cc/40?img=44",
@@ -105,7 +105,7 @@ const allArticles = [
   {
     title: "The Psychology Behind Great Product Design",
     excerpt: "Why the best interfaces feel invisible — and how designers achieve that on purpose.",
-    category: "Design",
+    category: "Art & Creativity",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&q=80",
     authorName: "Hana Suzuki",
     authorAvatar: "https://i.pravatar.cc/40?img=47",
@@ -116,7 +116,7 @@ const allArticles = [
   {
     title: "How to Negotiate Your First Tech Salary",
     excerpt: "Most people leave money on the table. Here's exactly what to say and when.",
-    category: "Career",
+    category: "Knowledge & Learning",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&q=80",
     authorName: "Mark Johnson",
     authorAvatar: "https://i.pravatar.cc/40?img=31",
@@ -127,7 +127,7 @@ const allArticles = [
   {
     title: "A Beginner's Guide to Neural Networks",
     excerpt: "No PhD required. Here's how neural networks actually work, explained simply.",
-    category: "Artificial Intelligence",
+    category: "Technology",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&q=80",
     authorName: "Raj Patel",
     authorAvatar: "https://i.pravatar.cc/40?img=60",
@@ -138,16 +138,59 @@ const allArticles = [
   {
     title: "The Morning Routine That Actually Changed My Life",
     excerpt: "Not another productivity hack list. This is about one simple shift that made everything easier.",
-    category: "Health",
+    category: "Health & Wellness",
     image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&q=80",
     authorName: "Anita Roy",
     authorAvatar: "https://i.pravatar.cc/40?img=25",
     readTime: "4 min read",
     likes: 298,
     comments: 41
+  },
+  {
+    title: "The Lost City of Petra — A Traveler's Perspective",
+    excerpt: "Walking through rose-red cliffs carved by ancient hands. A journey through Jordan's most iconic site.",
+    category: "Travel",
+    image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?w=500&q=80",
+    authorName: "Sofia Reyes",
+    authorAvatar: "https://i.pravatar.cc/40?img=35",
+    readTime: "8 min read",
+    likes: 456,
+    comments: 39
+  },
+  {
+    title: "Why I Quit My Job to Write Fiction Full Time",
+    excerpt: "The fear, the freedom, and what happened after I finally chose stories over spreadsheets.",
+    category: "Stories & Fiction",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80",
+    authorName: "James Okafor",
+    authorAvatar: "https://i.pravatar.cc/40?img=53",
+    readTime: "6 min read",
+    likes: 612,
+    comments: 74
+  },
+  {
+    title: "How Ancient Rome Still Shapes Our Daily Lives",
+    excerpt: "From language and law to architecture and calendar — Rome never really fell.",
+    category: "History & Culture",
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500&q=80",
+    authorName: "Elena Marchetti",
+    authorAvatar: "https://i.pravatar.cc/40?img=41",
+    readTime: "9 min read",
+    likes: 381,
+    comments: 29
+  },
+  {
+    title: "AI Will Not Replace Creativity — Here's Why",
+    excerpt: "A counterpoint to the panic. Why human creativity matters more in the age of generative AI.",
+    category: "Opinions & Perspectives",
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=500&q=80",
+    authorName: "Nadia Hassan",
+    authorAvatar: "https://i.pravatar.cc/40?img=48",
+    readTime: "5 min read",
+    likes: 729,
+    comments: 118
   }
 ];
-
 
 /* ── GET DOM ELEMENTS ── */
 const articlesGrid      = document.getElementById('exploreArticlesGrid');

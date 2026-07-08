@@ -72,16 +72,30 @@
 
       <!-- Empty state — bookmarks always empty in Phase 1
            In Phase 3 these will be loaded from the database -->
-      <div class="dashboard-empty-state">
-        <div class="dashboard-empty-icon">
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+     <div class="dashboard-empty-state" id="dashboardEmptyState">
+  <span class="des-badge des-badge--tl">Bookmarks Vault Empty</span>
+  <span class="des-badge des-badge--tr">Bookmarks: 00</span>
+
+  <div class="des-left-group">
+    <div class="dashboard-empty-icon">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
-          </svg>
-        </div>
-        <h3>No bookmarks yet</h3>
-        <p>When you bookmark an article, it will appear here for easy reading later.</p>
-        <a href="explore.html" class="btn btn--primary">Explore Articles</a>
-      </div>
+      </svg>
+    </div>
+    <div class="des-rects">
+      <span class="des-rect des-rect--cyan"></span>
+      <span class="des-rect des-rect--lime"></span>
+    </div>
+  </div>
+
+  <h3>No bookmarks yet</h3>
+
+  <p>When you bookmark an article, it will appear here for easy reading later.</p>
+
+  <a href="explore.html" class="btn btn--primary">Explore Articles &nbsp;→</a>
+
+  <div class="des-deco-dots"></div>
+</div>
 
     </main>
   </div>

@@ -61,7 +61,7 @@ const latestArticlesData = [
   },
   {
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80",
-    category: "Business",
+    category: "Knowledge & Learning",
     title: "How Small Teams Ship Faster Than Big Companies",
     excerpt: "Speed isn't about headcount. It's about how decisions get made.",
     authorName: "Lena Schmidt",
@@ -110,28 +110,41 @@ function showSkeletonCards() {
 }
 
 
-// Step 2: Build the real article card HTML for one article
+
+/* ── BUILD ONE ARTICLE CARD ── */
 function buildArticleCardHTML(article) {
   return `
     <a href="article.html" class="article-card">
-      <div class="article-card-image">
-        <img src="${article.image}" alt="${article.title}" />
+
+      <div class="article-card-image-wrapper">
+        <img src="${article.image}" alt="${article.title}" loading="lazy" />
       </div>
-      <div class="article-card-body">
-        <span class="badge badge--primary">${article.category}</span>
+
+      <div class="article-card-content">
+
+        <div class="article-card-topline">
+          <span class="article-card-category">${article.category}</span>
+          <span class="article-card-readtime">${article.readTime}</span>
+        </div>
+
         <h3 class="article-card-title">${article.title}</h3>
+
         <p class="article-card-excerpt">${article.excerpt}</p>
-        <div class="article-card-footer">
-          <div class="article-card-author">
+
+        <div class="article-card-meta">
+          <div class="article-card-author-pill">
             <img src="${article.authorAvatar}" alt="${article.authorName}" />
-            <span class="article-card-author-name">${article.authorName}</span>
+            <span>${article.authorName}</span>
           </div>
+
           <div class="article-card-stats">
-            <span class="article-card-stat">❤ ${article.likes}</span>
-            <span class="article-card-stat">💬 ${article.comments}</span>
+            <span>♡ ${article.likes}</span>
+            <span>○ ${article.comments}</span>
           </div>
         </div>
+
       </div>
+
     </a>
   `;
 }

@@ -306,34 +306,224 @@
   text-transform: none;
 }
 
+/* ══════════════════════════════════════════
+   DASHBOARD EMPTY STATE
+   ══════════════════════════════════════════ */
+
 .dashboard-empty-state {
-  display: grid;
-  justify-items: center;
-  gap: var(--space-4);
-  padding: var(--space-16) var(--space-8);
-  text-align: center;
-  background: var(--color-white);
-  border: 5px solid var(--color-black);
-  border-radius: 24px;
-  box-shadow: 7px 7px 0 var(--color-black);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.8rem 2rem 2rem 1.8rem;
+  background: #f5f0e3;
+  border: 3px solid #000;
+  border-radius: 18px;
+  box-shadow: 6px 6px 0 3px #000;
+  overflow: visible;
+  isolation: isolate;
+  z-index: 0;
+  text-align: left;
 }
 
-.dashboard-empty-icon,
+/* ── Left group: icon + rects ── */
+.des-left-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* ── Icon box ── */
+.dashboard-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  background: #c8f135;
+  border: 3px solid #000;
+  border-radius: 18px;
+  box-shadow: 4px 4px 0 #000;
+  color: #000;
+  flex-shrink: 0;
+}
+
 .dashboard-empty-icon svg {
-  color: var(--color-black);
+  color: #000;
 }
 
+/* ── Small colored rects below icon ── */
+.des-rects {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.des-rect {
+  display: block;
+  height: 16px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.des-rect--cyan {
+  width: 46px;
+  background: #00d8c4;
+}
+
+.des-rect--lime {
+  width: 32px;
+  background: #c8f135;
+}
+
+/* ── Heading ── */
 .dashboard-empty-state h3 {
-  color: var(--color-black);
-  font-family: var(--font-primary);
-  font-size: var(--font-size-2xl);
-  font-weight: 900;
+  flex-shrink: 0;
+  width: min-content;
+  min-width: 160px;
+  color: #000;
+  font-family: var(--font-primary, Impact, sans-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 950;
+  line-height: 1;
   text-transform: none;
+  letter-spacing: -0.01em;
+  margin: 0;
 }
 
+/* ── Description ── */
 .dashboard-empty-state p {
-  color: var(--color-text-muted);
-  font-weight: 700;
+  flex: 1;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  min-width: 140px;
+}
+
+/* ── CTA button ── */
+.dashboard-empty-state .btn--primary {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #8b2eff 0%, #d4178a 100%);
+  border: 3px solid #000;
+  border-radius: 999px;
+  box-shadow: 5px 5px 0 #000;
+  color: #fff !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.dashboard-empty-state .btn--primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 #000;
+}
+
+.dashboard-empty-state .btn--primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+/* ══ FLOATING BADGES ══ */
+.des-badge {
+  position: absolute;
+  z-index: 2;
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  border-radius: 999px;
+  padding: 5px 12px;
+  box-shadow: 2px 2px 0 #000;
+  white-space: nowrap;
+}
+
+.des-badge--tl {
+  top: -14px;
+  left: 16px;
+  background: #00d8c4;
+  color: #000;
+}
+
+.des-badge--tr {
+  top: -14px;
+  right: 16px;
+  background: #000;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+/* ══ DOT GRID DECORATION (bottom-right) ══ */
+.des-deco-dots {
+  position: absolute;
+  z-index: 2;
+  bottom: 14px;
+  right: 14px;
+  width: 66px;
+  height: 50px;
+  background-color: #fff;
+  border: 2px dashed #000;
+  border-radius: 8px;
+  background-image:
+    radial-gradient(circle 3.5px at 11px 11px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 22px 11px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 33px 11px,  #ff1f7a 100%, transparent 100%),
+    radial-gradient(circle 3.5px at 44px 11px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 55px 11px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 11px 25px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 22px 25px,  #00d8c4 100%, transparent 100%),
+    radial-gradient(circle 3.5px at 33px 25px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 44px 25px,  #ff1f7a 100%, transparent 100%),
+    radial-gradient(circle 3.5px at 55px 25px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 11px 39px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 22px 39px,  #000    100%, transparent 100%),
+    radial-gradient(circle 3.5px at 33px 39px,  #c8f135 100%, transparent 100%),
+    radial-gradient(circle 3.5px at 44px 39px,  #ff1f7a 100%, transparent 100%),
+    radial-gradient(circle 3.5px at 55px 39px,  #000    100%, transparent 100%);
+}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 768px) {
+  .dashboard-empty-state {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.8rem 1.5rem 1.8rem;
+    gap: 1.2rem;
+  }
+
+  .dashboard-empty-state h3 {
+    width: auto;
+    min-width: unset;
+  }
+
+  .des-rects {
+    justify-content: center;
+  }
+
+  .des-deco-dots {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .des-badge--tl,
+  .des-badge--tr {
+    font-size: 0.5rem;
+    padding: 4px 9px;
+  }
 }
 
 .dashboard-article-row {

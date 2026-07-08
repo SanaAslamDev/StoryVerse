@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,91 +20,43 @@
 </head>
 
 <body>
-  <header class="navbar" id="mainNavbar">
-    <div class="navbar-container">
-      <a href="index.html" class="navbar-logo">
-        <div class="navbar-logo-icon"></div>
-        <span class="navbar-logo-text">StoryVerse</span>
-      </a>
+     <header class="navbar" id="mainNavbar">
+  <div class="navbar-container">
+    <div class="sub-container">
 
-      <nav class="navbar-links" id="navbarLinks">
-        <a href="explore.html" class="navbar-link">Explore</a>
-        <a href="categories.html" class="navbar-link">Categories</a>
-        <a href="#" class="navbar-link">Trending</a>
-        <a href="write.html" class="navbar-link navbar-link--write">Write</a>
-      </nav>
+   <a href="index.html" class="navbar-logo">
+      <div class="navbar-logo-icon"></div>
+      <span class="navbar-logo-text">StoryVerse</span>
+    </a>
 
-      <div class="navbar-actions">
-        <button class="navbar-icon-btn" id="searchToggleBtn" aria-label="Open search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-        </button>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="explore.html" class="navbar-link">Explore</a>
+      <a href="categories.html" class="navbar-link">Categories</a>
+      <a href="#" class="navbar-link">Trending</a>
+      <a href="write.html" class="navbar-link navbar-link--write">Write</a>
+    </nav>
 
-        <div class="navbar-auth" id="navbarAuthButtons">
-          <a href="login.html" class="btn btn--ghost btn--sm">Sign in</a>
-          <a href="register.html" class="btn btn--primary btn--sm">Get Started</a>
-        </div>
+    <div class="navbar-actions">
+      <div class="navbar-auth" id="navbarAuthButtons">
+        <a href="login.html" class="btn btn--ghost btn--sm">Sign in</a>
+      </div>
 
-        <div class="navbar-user" id="navbarUserMenu" style="display: none;">
-          <button class="navbar-avatar-btn" id="userAvatarBtn" aria-label="User menu">
-            <img src="" alt="User avatar" class="navbar-avatar" id="navbarUserAvatar" />
-            <span class="navbar-username" id="navbarUsername"></span>
-          </button>
-        </div>
-
-        <button class="navbar-hamburger" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+      <div class="navbar-user" id="navbarUserMenu" style="display: none;">
+        <button class="navbar-avatar-btn" id="userAvatarBtn" aria-label="User menu">
+          <img src="" alt="User avatar" class="navbar-avatar" id="navbarUserAvatar" />
+          <span class="navbar-username" id="navbarUsername"></span>
         </button>
       </div>
-    </div>
-
-    <div class="navbar-mobile-menu" id="mobileMenu">
-      <nav class="mobile-nav-links">
-        <a href="explore.html" class="mobile-nav-link">Explore</a>
-        <a href="categories.html" class="mobile-nav-link">Categories</a>
-        <a href="#" class="mobile-nav-link">Trending</a>
-        <a href="write.html" class="mobile-nav-link">Write</a>
-      </nav>
-      <div class="mobile-nav-auth">
-        <a href="login.html" class="btn btn--ghost btn--full">Sign in</a>
-        <a href="register.html" class="btn btn--primary btn--full">Get Started</a>
-      </div>
-    </div>
-  </header>
-
-  <div class="search-overlay" id="searchOverlay">
-    <div class="search-overlay-container">
-      <div class="search-overlay-box">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <circle cx="11" cy="11" r="8"></circle>
-          <path d="m21 21-4.35-4.35"></path>
-        </svg>
-        <input
-          type="text"
-          class="search-overlay-input"
-          id="searchOverlayInput"
-          placeholder="Search articles, topics, authors..."
-          autocomplete="off"
-        />
-        <button class="search-overlay-close" id="searchCloseBtn" aria-label="Close search">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M18 6 6 18M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <p class="search-overlay-hint">Press <kbd>ESC</kbd> to close</p>
     </div>
   </div>
 
+    </div>
+   
+</header>
+
   <main class="main-content" id="mainContent">
     <section class="hero-section">
-      <div class="hero-blob hero-blob--1"></div>
-      <div class="hero-blob hero-blob--2"></div>
-      <div class="hero-blob hero-blob--3"></div>
+     
       
      <!-- NEW: scrolling covers marquee background - 2 rows -->
 <div class="hero-marquee" aria-hidden="true">
@@ -147,14 +99,11 @@
 
 
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          Join 50,000+ writers and readers
-        </div>
+       
 
         <h1 class="hero-headline">
-          Where great ideas become <span class="text-gradient">great stories</span>
-        </h1>
+  Where great ideas <br />become <span class="text-gradient">great stories</span>
+</h1>
 
         <p class="hero-subtext">
           StoryVerse is home to stories, ideas, experiences, and knowledge from curious minds around the world—all crafted for meaningful 5–15 minute reads.
@@ -181,384 +130,266 @@
         </div>
       </div>
     </section>
+  <!-- =============================================
+       FEATURED ARTICLES SECTION
+       ============================================= -->
+  <section class="featured-section">
+    <div class="container">
 
-    <section class="featured-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Editor's Pick</span>
-          <h2 class="section-title">Featured Story</h2>
-        </div>
-
-        <a href="article.html" class="featured-card">
-          <div class="featured-card-image">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&q=80" alt="Featured article cover" />
-          </div>
-
-          <div class="featured-card-content">
-            <span class="badge badge--primary">Artificial Intelligence</span>
-            <h3 class="featured-card-title">How Large Language Models Are Quietly Rewriting Software Engineering</h3>
-            <p class="featured-card-excerpt">
-              From autocomplete to autonomous agents, AI is changing how developers think,
-              build, and ship. We explore what this means for the next decade of software.
-            </p>
-
-            <div class="featured-card-meta">
-              <img src="https://i.pravatar.cc/80?img=12" alt="Sarah Chen" class="featured-card-avatar" />
-              <div>
-                <span class="featured-card-author">Sarah Chen</span>
-                <span class="featured-card-details">8 min read - June 24, 2026</span>
-              </div>
-            </div>
-          </div>
-        </a>
+      <div class="section-header">
+        <span class="section-label">Editor's Pick</span>
+        <h2 class="section-title">Featured Stories</h2>
       </div>
-    </section>
+
+      <!-- 4 featured cards grid -->
+      <div class="featured-small-grid">
+
+       <a href="article.html" class="featured-small-card">
+  <div class="featured-small-card-image">
+    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80" alt="Fiction article" />
+  </div>
+
+  <div class="featured-small-card-body">
+    <div class="featured-small-card-topline">
+      <span class="featured-small-card-category">Stories & Fiction</span>
+      <span class="featured-small-card-time">6 min read</span>
+    </div>
+
+    <h3 class="featured-small-card-title">
+      Why I Quit My Job to Write Fiction Full Time
+    </h3>
+
+    <p class="featured-small-card-excerpt">
+      A personal story about choosing creative freedom and building a writing life.
+    </p>
+
+    <div class="featured-small-card-meta">
+      <div class="featured-small-card-author-pill">
+        <img src="https://i.pravatar.cc/28?img=53" alt="James Okafor" />
+        <span>James Okafor</span>
+      </div>
+
+      <div class="featured-small-card-stats">
+        <span>♡ 145</span>
+        <span>○ 9</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+       <a href="article.html" class="featured-small-card">
+  <div class="featured-small-card-image">
+    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80" alt="Fiction article" />
+  </div>
+
+  <div class="featured-small-card-body">
+    <div class="featured-small-card-topline">
+      <span class="featured-small-card-category">Stories & Fiction</span>
+      <span class="featured-small-card-time">6 min read</span>
+    </div>
+
+    <h3 class="featured-small-card-title">
+      Why I Quit My Job to Write Fiction Full Time
+    </h3>
+
+    <p class="featured-small-card-excerpt">
+      A personal story about choosing creative freedom and building a writing life.
+    </p>
+
+    <div class="featured-small-card-meta">
+      <div class="featured-small-card-author-pill">
+        <img src="https://i.pravatar.cc/28?img=53" alt="James Okafor" />
+        <span>James Okafor</span>
+      </div>
+
+      <div class="featured-small-card-stats">
+        <span>♡ 145</span>
+        <span>○ 9</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      <a href="article.html" class="featured-small-card">
+  <div class="featured-small-card-image">
+    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80" alt="Fiction article" />
+  </div>
+
+  <div class="featured-small-card-body">
+    <div class="featured-small-card-topline">
+      <span class="featured-small-card-category">Stories & Fiction</span>
+      <span class="featured-small-card-time">6 min read</span>
+    </div>
+
+    <h3 class="featured-small-card-title">
+      Why I Quit My Job to Write Fiction Full Time
+    </h3>
+
+    <p class="featured-small-card-excerpt">
+      A personal story about choosing creative freedom and building a writing life.
+    </p>
+
+    <div class="featured-small-card-meta">
+      <div class="featured-small-card-author-pill">
+        <img src="https://i.pravatar.cc/28?img=53" alt="James Okafor" />
+        <span>James Okafor</span>
+      </div>
+
+      <div class="featured-small-card-stats">
+        <span>♡ 145</span>
+        <span>○ 9</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      <a href="article.html" class="featured-small-card">
+  <div class="featured-small-card-image">
+    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80" alt="Fiction article" />
+  </div>
+
+  <div class="featured-small-card-body">
+    <div class="featured-small-card-topline">
+      <span class="featured-small-card-category">Stories & Fiction</span>
+      <span class="featured-small-card-time">6 min read</span>
+    </div>
+
+    <h3 class="featured-small-card-title">
+      Why I Quit My Job to Write Fiction Full Time
+    </h3>
+
+    <p class="featured-small-card-excerpt">
+      A personal story about choosing creative freedom and building a writing life.
+    </p>
+
+    <div class="featured-small-card-meta">
+      <div class="featured-small-card-author-pill">
+        <img src="https://i.pravatar.cc/28?img=53" alt="James Okafor" />
+        <span>James Okafor</span>
+      </div>
+
+      <div class="featured-small-card-stats">
+        <span>♡ 145</span>
+        <span>○ 9</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    </div>
+  </section>
 
     <section class="categories-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Browse Topics</span>
-          <h2 class="section-title">Trending Categories</h2>
-        </div>
+       <div class="section-header categories-header">
+  <span class="section-label categories-label">Browse Topics</span>
+  <h2 class="section-title categories-title">Collect Your Next Read</h2>
+  <p class="categories-subtitle">
+    Pick a shelf, open a world. Every category is a pocket-sized magazine for stories, ideas, lessons and curiosities.
+  </p>
+  <span class="categories-title-line"></span>
+</div>
+
+   
 
        <div class="categories-marquee">
   <div class="categories-track">
 
-    <!-- ============ SET 1 ============ -->
-    <a href="categories.html?topic=stories" class="category-card">
-      <div class="category-card-icon category-card-icon--pink">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Stories & Fiction</h3>
-      <p class="category-card-count">2,840 articles</p>
-    </a>
+  <!-- SET 1 -->
+  <a href="categories.html?topic=stories" class="category-card">
+    <img class="category-card-bg" src="assets/images/stories.jpg" alt="" />
+    <h3 class="category-card-name">Stories & Fiction</h3>
+  </a>
 
-    <a href="categories.html?topic=travel" class="category-card">
-      <div class="category-card-icon category-card-icon--cyan">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="2" y1="12" x2="22" y2="12"/>
-          <path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Travel</h3>
-      <p class="category-card-count">1,230 articles</p>
-    </a>
+  <a href="categories.html?topic=travel" class="category-card">
+    <img class="category-card-bg" src="assets/images/travel.jpg" alt="" />
+    <h3 class="category-card-name">Travel & Adventure</h3>
+  </a>
 
-    <a href="categories.html?topic=business" class="category-card">
-      <div class="category-card-icon category-card-icon--yellow">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="2" y="7" width="20" height="14" rx="2"/>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Business</h3>
-      <p class="category-card-count">1,890 articles</p>
-    </a>
+  <a href="categories.html?topic=technology" class="category-card">
+    <img class="category-card-bg" src="assets/images/technology.jpg" alt="" />
+    <h3 class="category-card-name">Technology</h3>
+  </a>
 
-    <a href="categories.html?topic=marketing" class="category-card">
-      <div class="category-card-icon category-card-icon--orange">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="20" x2="18" y2="10"/>
-          <line x1="12" y1="20" x2="12" y2="4"/>
-          <line x1="6" y1="20" x2="6" y2="14"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Marketing</h3>
-      <p class="category-card-count">980 articles</p>
-    </a>
+  <a href="categories.html?topic=news" class="category-card">
+    <img class="category-card-bg" src="assets/images/news.png" alt="" />
+    <h3 class="category-card-name">News & Current Affairs</h3>
+  </a>
 
-    <a href="categories.html?topic=technology" class="category-card">
-      <div class="category-card-icon category-card-icon--indigo">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="2" y="3" width="20" height="14" rx="2"/>
-          <line x1="8" y1="21" x2="16" y2="21"/>
-          <line x1="12" y1="17" x2="12" y2="21"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Technology</h3>
-      <p class="category-card-count">4,120 articles</p>
-    </a>
+  <a href="categories.html?topic=knowledge" class="category-card">
+    <img class="category-card-bg" src="assets/images/education.jpg" alt="" />
+    <h3 class="category-card-name">Education & Learning</h3>
+  </a>
 
-    <a href="categories.html?topic=news" class="category-card">
-      <div class="category-card-icon category-card-icon--red">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
-          <line x1="12" y1="6" x2="16" y2="6"/>
-          <line x1="12" y1="10" x2="16" y2="10"/>
-          <line x1="12" y1="14" x2="16" y2="14"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">News & Current Affairs</h3>
-      <p class="category-card-count">760 articles</p>
-    </a>
+  <a href="categories.html?topic=health" class="category-card">
+    <img class="category-card-bg" src="assets/images/health.jpg" alt="" />
+    <h3 class="category-card-name">Health & Wellness</h3>
+  </a>
 
-    <a href="categories.html?topic=knowledge" class="category-card">
-      <div class="category-card-icon category-card-icon--purple">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 18V5l12-2v13"/>
-          <circle cx="6" cy="18" r="3"/>
-          <circle cx="18" cy="16" r="3"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Knowledge & Learning</h3>
-      <p class="category-card-count">2,340 articles</p>
-    </a>
+  <a href="categories.html?topic=art" class="category-card">
+    <img class="category-card-bg" src="assets/images/arts.jpg" alt="" />
+    <h3 class="category-card-name">Arts & Culture</h3>
+  </a>
 
-    <a href="categories.html?topic=health" class="category-card">
-      <div class="category-card-icon category-card-icon--green">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Health & Wellness</h3>
-      <p class="category-card-count">1,140 articles</p>
-    </a>
+  <a href="categories.html?topic=lifestyle" class="category-card">
+    <img class="category-card-bg" src="assets/images/lifestyle.jpg" alt="" />
+    <h3 class="category-card-name">Lifestyle & Society</h3>
+  </a>
 
-    <a href="categories.html?topic=art" class="category-card">
-      <div class="category-card-icon category-card-icon--pink">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Art & Creativity</h3>
-      <p class="category-card-count">870 articles</p>
-    </a>
+  <a href="categories.html?topic=ideas" class="category-card">
+    <img class="category-card-bg" src="assets/images/ideas.jpg" alt="" />
+    <h3 class="category-card-name">Ideas & Perspectives</h3>
+  </a>
 
-    <a href="categories.html?topic=food" class="category-card">
-      <div class="category-card-icon category-card-icon--orange">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-          <line x1="6" y1="1" x2="6" y2="4"/>
-          <line x1="10" y1="1" x2="10" y2="4"/>
-          <line x1="14" y1="1" x2="14" y2="4"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Food & Cooking</h3>
-      <p class="category-card-count">650 articles</p>
-    </a>
+  <!-- SET 2 — exact duplicate for seamless loop -->
+ <a href="categories.html?topic=stories" class="category-card">
+    <img class="category-card-bg" src="assets/images/stories.jpg" alt="" />
+    <h3 class="category-card-name">Stories & Fiction</h3>
+  </a>
 
-    <a href="categories.html?topic=lifestyle" class="category-card">
-      <div class="category-card-icon category-card-icon--cyan">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Lifestyle</h3>
-      <p class="category-card-count">1,020 articles</p>
-    </a>
+  <a href="categories.html?topic=travel" class="category-card">
+    <img class="category-card-bg" src="assets/images/travel.jpg" alt="" />
+    <h3 class="category-card-name">Travel & Adventure</h3>
+  </a>
 
-    <a href="categories.html?topic=history" class="category-card">
-      <div class="category-card-icon category-card-icon--indigo">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22V12m0 0C12 6 6 2 6 2s0 4 2 6m4 4c0-6 6-10 6-10s0 4-2 6"/>
-          <circle cx="12" cy="12" r="2"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">History & Culture</h3>
-      <p class="category-card-count">540 articles</p>
-    </a>
+  <a href="categories.html?topic=technology" class="category-card">
+    <img class="category-card-bg" src="assets/images/technology.jpg" alt="" />
+    <h3 class="category-card-name">Technology</h3>
+  </a>
 
-    <a href="categories.html?topic=opinions" class="category-card">
-      <div class="category-card-icon category-card-icon--purple">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Opinions & Perspectives</h3>
-      <p class="category-card-count">430 articles</p>
-    </a>
+  <a href="categories.html?topic=news" class="category-card">
+    <img class="category-card-bg" src="assets/images/news.png" alt="" />
+    <h3 class="category-card-name">News & Current Affairs</h3>
+  </a>
 
-    <a href="categories.html?topic=ideas" class="category-card">
-      <div class="category-card-icon category-card-icon--yellow">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="12" y1="2" x2="12" y2="6"/>
-          <line x1="12" y1="18" x2="12" y2="22"/>
-          <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
-          <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
-          <line x1="2" y1="12" x2="6" y2="12"/>
-          <line x1="18" y1="12" x2="22" y2="12"/>
-          <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
-          <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Ideas & Innovation</h3>
-      <p class="category-card-count">390 articles</p>
-    </a>
+  <a href="categories.html?topic=knowledge" class="category-card">
+    <img class="category-card-bg" src="assets/images/education.jpg" alt="" />
+    <h3 class="category-card-name">Education & Learning</h3>
+  </a>
 
-    <!-- ============ SET 2 (duplicate — required for seamless loop) ============ -->
-    <a href="categories.html?topic=stories" class="category-card">
-      <div class="category-card-icon category-card-icon--pink">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Stories & Fiction</h3>
-      <p class="category-card-count">2,840 articles</p>
-    </a>
+  <a href="categories.html?topic=health" class="category-card">
+    <img class="category-card-bg" src="assets/images/health.jpg" alt="" />
+    <h3 class="category-card-name">Health & Wellness</h3>
+  </a>
 
-    <a href="categories.html?topic=travel" class="category-card">
-      <div class="category-card-icon category-card-icon--cyan">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="2" y1="12" x2="22" y2="12"/>
-          <path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Travel</h3>
-      <p class="category-card-count">1,230 articles</p>
-    </a>
+  <a href="categories.html?topic=art" class="category-card">
+    <img class="category-card-bg" src="assets/images/arts.jpg" alt="" />
+    <h3 class="category-card-name">Arts & Culture</h3>
+  </a>
 
-    <a href="categories.html?topic=business" class="category-card">
-      <div class="category-card-icon category-card-icon--yellow">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="2" y="7" width="20" height="14" rx="2"/>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Business</h3>
-      <p class="category-card-count">1,890 articles</p>
-    </a>
+  <a href="categories.html?topic=lifestyle" class="category-card">
+    <img class="category-card-bg" src="assets/images/lifestyle.jpg" alt="" />
+    <h3 class="category-card-name">Lifestyle & Society</h3>
+  </a>
 
-    <a href="categories.html?topic=marketing" class="category-card">
-      <div class="category-card-icon category-card-icon--orange">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="20" x2="18" y2="10"/>
-          <line x1="12" y1="20" x2="12" y2="4"/>
-          <line x1="6" y1="20" x2="6" y2="14"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Marketing</h3>
-      <p class="category-card-count">980 articles</p>
-    </a>
+  <a href="categories.html?topic=ideas" class="category-card">
+    <img class="category-card-bg" src="assets/images/ideas.jpg" alt="" />
+    <h3 class="category-card-name">Ideas & Perspectives</h3>
+  </a>
 
-    <a href="categories.html?topic=technology" class="category-card">
-      <div class="category-card-icon category-card-icon--indigo">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="2" y="3" width="20" height="14" rx="2"/>
-          <line x1="8" y1="21" x2="16" y2="21"/>
-          <line x1="12" y1="17" x2="12" y2="21"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Technology</h3>
-      <p class="category-card-count">4,120 articles</p>
-    </a>
-
-    <a href="categories.html?topic=news" class="category-card">
-      <div class="category-card-icon category-card-icon--red">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
-          <line x1="12" y1="6" x2="16" y2="6"/>
-          <line x1="12" y1="10" x2="16" y2="10"/>
-          <line x1="12" y1="14" x2="16" y2="14"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">News & Current Affairs</h3>
-      <p class="category-card-count">760 articles</p>
-    </a>
-
-    <a href="categories.html?topic=knowledge" class="category-card">
-      <div class="category-card-icon category-card-icon--purple">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 18V5l12-2v13"/>
-          <circle cx="6" cy="18" r="3"/>
-          <circle cx="18" cy="16" r="3"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Knowledge & Learning</h3>
-      <p class="category-card-count">2,340 articles</p>
-    </a>
-
-    <a href="categories.html?topic=health" class="category-card">
-      <div class="category-card-icon category-card-icon--green">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Health & Wellness</h3>
-      <p class="category-card-count">1,140 articles</p>
-    </a>
-
-    <a href="categories.html?topic=art" class="category-card">
-      <div class="category-card-icon category-card-icon--pink">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Art & Creativity</h3>
-      <p class="category-card-count">870 articles</p>
-    </a>
-
-    <a href="categories.html?topic=food" class="category-card">
-      <div class="category-card-icon category-card-icon--orange">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-          <line x1="6" y1="1" x2="6" y2="4"/>
-          <line x1="10" y1="1" x2="10" y2="4"/>
-          <line x1="14" y1="1" x2="14" y2="4"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Food & Cooking</h3>
-      <p class="category-card-count">650 articles</p>
-    </a>
-
-    <a href="categories.html?topic=lifestyle" class="category-card">
-      <div class="category-card-icon category-card-icon--cyan">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Lifestyle</h3>
-      <p class="category-card-count">1,020 articles</p>
-    </a>
-
-    <a href="categories.html?topic=history" class="category-card">
-      <div class="category-card-icon category-card-icon--indigo">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22V12m0 0C12 6 6 2 6 2s0 4 2 6m4 4c0-6 6-10 6-10s0 4-2 6"/>
-          <circle cx="12" cy="12" r="2"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">History & Culture</h3>
-      <p class="category-card-count">540 articles</p>
-    </a>
-
-    <a href="categories.html?topic=opinions" class="category-card">
-      <div class="category-card-icon category-card-icon--purple">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Opinions & Perspectives</h3>
-      <p class="category-card-count">430 articles</p>
-    </a>
-
-    <a href="categories.html?topic=ideas" class="category-card">
-      <div class="category-card-icon category-card-icon--yellow">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="12" y1="2" x2="12" y2="6"/>
-          <line x1="12" y1="18" x2="12" y2="22"/>
-          <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
-          <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
-          <line x1="2" y1="12" x2="6" y2="12"/>
-          <line x1="18" y1="12" x2="22" y2="12"/>
-          <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
-          <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
-        </svg>
-      </div>
-      <h3 class="category-card-name">Ideas & Innovation</h3>
-      <p class="category-card-count">390 articles</p>
-    </a>
-
-  </div>
+</div>
 </div>
 
         <div class="categories-view-all">

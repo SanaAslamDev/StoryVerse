@@ -19,67 +19,39 @@
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar" id="mainNavbar">
-    <div class="navbar-container">
-      <a href="index.html" class="navbar-logo">
-        <div class="navbar-logo-icon"></div>
-        <span class="navbar-logo-text">StoryVerse</span>
-      </a>
-      <nav class="navbar-links">
-        <a href="explore.html" class="navbar-link">Explore</a>
-        <a href="categories.html" class="navbar-link">Categories</a>
-        <a href="write.html" class="navbar-link navbar-link--write">✦ Write</a>
-      </nav>
-      <div class="navbar-actions">
-        <button class="navbar-icon-btn" id="searchToggleBtn" aria-label="Open search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
-          </svg>
-        </button>
-        <div class="navbar-auth" id="navbarAuthButtons">
-          <a href="login.html" class="navbar-auth-link">Sign in</a>
-          <a href="register.html" class="btn btn--primary btn--sm">Get Started</a>
-        </div>
-        <button class="navbar-hamburger" id="mobileMenuBtn" aria-label="Toggle menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
-    </div>
-    <div class="navbar-mobile-menu" id="mobileMenu">
-      <nav class="mobile-nav-links">
-        <a href="explore.html" class="mobile-nav-link">Explore</a>
-        <a href="categories.html" class="mobile-nav-link">Categories</a>
-        <a href="write.html" class="mobile-nav-link">✦ Write</a>
-      </nav>
-      <div class="mobile-nav-auth">
-        <a href="login.html" class="btn btn--ghost btn--full">Sign in</a>
-        <a href="register.html" class="btn btn--primary btn--full">Get Started</a>
-      </div>
-    </div>
-  </header>
+    <header class="navbar" id="mainNavbar">
+  <div class="navbar-container">
+    <div class="sub-container">
 
-  <!-- Search Overlay -->
-  <div class="search-overlay" id="searchOverlay">
-    <div class="search-overlay-container">
-      <div class="search-overlay-box">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/>
-          <path d="m21 21-4.35-4.35"/>
-        </svg>
-        <input type="text" class="search-overlay-input" id="searchOverlayInput" placeholder="Search articles, topics, authors..." autocomplete="off"/>
-        <button class="search-overlay-close" id="searchCloseBtn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
-          </svg>
+   <a href="index.html" class="navbar-logo">
+      <div class="navbar-logo-icon"></div>
+      <span class="navbar-logo-text">StoryVerse</span>
+    </a>
+
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="explore.html" class="navbar-link">Explore</a>
+      <a href="categories.html" class="navbar-link">Categories</a>
+      <a href="#" class="navbar-link">Trending</a>
+      <a href="write.html" class="navbar-link navbar-link--write">Write</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <div class="navbar-auth" id="navbarAuthButtons">
+        <a href="login.html" class="btn btn--ghost btn--sm">Sign in</a>
+      </div>
+
+      <div class="navbar-user" id="navbarUserMenu" style="display: none;">
+        <button class="navbar-avatar-btn" id="userAvatarBtn" aria-label="User menu">
+          <img src="" alt="User avatar" class="navbar-avatar" id="navbarUserAvatar" />
+          <span class="navbar-username" id="navbarUsername"></span>
         </button>
       </div>
-      <p class="search-overlay-hint">Press <kbd>ESC</kbd> to close</p>
     </div>
   </div>
+
+    </div>
+   
+</header>
 
   <main class="main-content">
 
@@ -179,12 +151,20 @@
             <!-- Filled by profile.js -->
           </div>
           <div class="profile-empty-state" id="publishedEmptyState" style="display: none;">
+            <span class="ees-badge ees-badge--top-left">Empty State V2</span>
+  <span class="ees-badge ees-badge--top-right">0 / 0</span>
+  <span class="ees-badge ees-badge--left-mid">Start Fresh</span>
+  <div class="ees-deco ees-deco--cyan-rect"></div>
+  <div class="ees-deco ees-deco--dots"></div>
+  <div class="ees-deco ees-deco--pink-rect-1"></div>
+  <div class="ees-deco ees-deco--pink-rect-2"></div>
             <div class="profile-empty-icon">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                 <polyline points="14 2 14 8 20 8"/>
               </svg>
             </div>
+              <span class="ees-search-label">Nothing To Show Yet</span>
             <h3>No published articles yet</h3>
             <p>Start writing and share your first story with the world.</p>
             <a href="write.html" class="btn btn--primary">Write Your First Article</a>
@@ -197,12 +177,21 @@
             <!-- Filled by profile.js -->
           </div>
           <div class="profile-empty-state" id="draftsEmptyState" style="display: none;">
+            <span class="ees-badge ees-badge--top-left">Empty State V2</span>
+  <span class="ees-badge ees-badge--top-right">0 / 0</span>
+  <span class="ees-badge ees-badge--left-mid">Start Fresh</span>
+  <div class="ees-deco ees-deco--cyan-rect"></div>
+  <div class="ees-deco ees-deco--dots"></div>
+  <div class="ees-deco ees-deco--pink-rect-1"></div>
+  <div class="ees-deco ees-deco--pink-rect-2"></div>
+
             <div class="profile-empty-icon">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                 <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
               </svg>
             </div>
+            <span class="ees-search-label">Nothing To Show Yet</span>
             <h3>No drafts saved</h3>
             <p>Articles you save as drafts will appear here.</p>
             <a href="write.html" class="btn btn--primary">Start Writing</a>
@@ -212,11 +201,19 @@
         <!-- Bookmarks panel -->
         <div class="profile-panel" id="panelBookmarks">
           <div class="profile-empty-state" id="bookmarksEmptyState">
+            <span class="ees-badge ees-badge--top-left">Empty State V2</span>
+  <span class="ees-badge ees-badge--top-right">0 / 0</span>
+  <span class="ees-badge ees-badge--left-mid">Start Fresh</span>
+  <div class="ees-deco ees-deco--cyan-rect"></div>
+  <div class="ees-deco ees-deco--dots"></div>
+  <div class="ees-deco ees-deco--pink-rect-1"></div>
+  <div class="ees-deco ees-deco--pink-rect-2"></div>
             <div class="profile-empty-icon">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
               </svg>
             </div>
+             <span class="ees-search-label">Nothing To Show Yet</span>
             <h3>No bookmarks yet</h3>
             <p>Articles you bookmark will be saved here for later.</p>
             <a href="explore.html" class="btn btn--primary">Explore Articles</a>

@@ -148,17 +148,32 @@
           <a href="write.html" class="btn btn--primary btn--sm">View More</a>
         </div>
 
-        <div class="dashboard-empty-state" id="dashboardEmptyState">
-          <div class="dashboard-empty-icon">
-            <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-              <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-            </svg>
-          </div>
-          <h3>No articles yet</h3>
-          <p>You haven't published anything yet. Start writing your first article!</p>
-          <a href="write.html" class="btn btn--primary">Write Your First Article</a>
-        </div>
+       <div class="dashboard-empty-state" id="dashboardEmptyState">
+  <span class="des-badge des-badge--tl">Draft Vault Empty</span>
+  <span class="des-badge des-badge--tr">Articles: 00</span>
+
+  <div class="des-left-group">
+    <div class="dashboard-empty-icon">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+        <path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+      </svg>
+    </div>
+    <div class="des-rects">
+      <span class="des-rect des-rect--cyan"></span>
+      <span class="des-rect des-rect--lime"></span>
+    </div>
+  </div>
+
+  <h3>No articles yet</h3>
+
+  <p>You haven't published anything yet.<br>Start writing your first article.</p>
+
+  <a href="write.html" class="btn btn--primary">Write Your First Article &nbsp;→</a>
+
+  <div class="des-deco-dots"></div>
+</div>
+
 
         <div class="dashboard-articles-list" id="dashboardArticlesList"></div>
       </section>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Explore — StoryVerse</title>
+  <title>Explore - StoryVerse</title>
 
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
@@ -17,162 +17,133 @@
 </head>
 
 <body>
+   <header class="navbar" id="mainNavbar">
+  <div class="navbar-container">
+    <div class="sub-container">
 
-  <!-- =============================================
-       NAVBAR
-       ============================================= -->
-  <header class="navbar" id="mainNavbar">
-    <div class="navbar-container">
+   <a href="index.html" class="navbar-logo">
+      <div class="navbar-logo-icon"></div>
+      <span class="navbar-logo-text">StoryVerse</span>
+    </a>
 
-      <a href="index.html" class="navbar-logo">
-        <div class="navbar-logo-icon"></div>
-        <span class="navbar-logo-text">StoryVerse</span>
-      </a>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="explore.html" class="navbar-link">Explore</a>
+      <a href="categories.html" class="navbar-link">Categories</a>
+      <a href="write.html" class="navbar-link navbar-link--write">Write</a>
+    </nav>
 
-      <nav class="navbar-links">
-        <a href="explore.html" class="navbar-link navbar-link--active">Explore</a>
-        <a href="categories.html" class="navbar-link">Categories</a>
-        <a href="write.html" class="navbar-link navbar-link--write">✦ Write</a>
-      </nav>
+    <div class="navbar-actions">
+      <div class="navbar-auth" id="navbarAuthButtons">
+        <a href="login.html" class="btn btn--ghost btn--sm">Sign in</a>
+      </div>
 
-      <div class="navbar-actions">
-        <button class="navbar-icon-btn" id="searchToggleBtn" aria-label="Open search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
-          </svg>
-        </button>
-        <div class="navbar-auth" id="navbarAuthButtons">
-          <a href="login.html" class="navbar-auth-link">Sign in</a>
-          <a href="register.html" class="btn btn--primary btn--sm">Get Started</a>
-        </div>
-        <button class="navbar-hamburger" id="mobileMenuBtn" aria-label="Toggle menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+      <div class="navbar-user" id="navbarUserMenu" style="display: none;">
+        <button class="navbar-avatar-btn" id="userAvatarBtn" aria-label="User menu">
+          <img src="" alt="User avatar" class="navbar-avatar" id="navbarUserAvatar" />
+          <span class="navbar-username" id="navbarUsername"></span>
         </button>
       </div>
-    </div>
-
-    <div class="navbar-mobile-menu" id="mobileMenu">
-      <nav class="mobile-nav-links">
-        <a href="explore.html" class="mobile-nav-link">Explore</a>
-        <a href="categories.html" class="mobile-nav-link">Categories</a>
-        <a href="write.html" class="mobile-nav-link">✦ Write</a>
-      </nav>
-      <div class="mobile-nav-auth">
-        <a href="login.html" class="btn btn--ghost btn--full">Sign in</a>
-        <a href="register.html" class="btn btn--primary btn--full">Get Started</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Search Overlay -->
-  <div class="search-overlay" id="searchOverlay">
-    <div class="search-overlay-container">
-      <div class="search-overlay-box">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/>
-          <path d="m21 21-4.35-4.35"/>
-        </svg>
-        <input type="text" class="search-overlay-input" id="searchOverlayInput" placeholder="Search articles, topics, authors..." autocomplete="off"/>
-        <button class="search-overlay-close" id="searchCloseBtn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
-          </svg>
-        </button>
-      </div>
-      <p class="search-overlay-hint">Press <kbd>ESC</kbd> to close</p>
     </div>
   </div>
 
-  <!-- =============================================
-       MAIN CONTENT
-       ============================================= -->
+    </div>
+   
+</header>
   <main class="main-content">
-
-    <!-- Hero header -->
     <section class="explore-hero">
       <div class="container">
-        <span class="section-label">Discover</span>
-        <h1 class="explore-hero-title">Explore Articles</h1>
-        <p class="explore-hero-subtext">
-          Find stories, tutorials, and insights from writers across every topic.
-        </p>
+        <div class="explore-hero-copy">
+          <span class="section-label">Fresh Picks</span>
+          <h1 class="explore-hero-title">Explore the Story Stack</h1>
+          <p class="explore-hero-subtext">
+            A tactile playground for essays, guides, and ideas - sorted into chunky cards, bright badges, and delightful little details.
+          </p>
 
-        <!-- Search bar -->
-        <div class="explore-search-box">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
-          </svg>
-          <input
-            type="text"
-            class="explore-search-input"
-            id="exploreSearchInput"
-            placeholder="Search articles..."
-            autocomplete="off"
-          />
+          <!-- MOVED HERE (was outside explore-hero-copy in the original) -->
+          <div class="explore-hero-card" aria-hidden="true">
+            <div class="explore-hero-card-face">
+              <svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#000" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="36" cy="36" r="32"/>
+                <circle cx="25" cy="29" r="3.5" fill="#000" stroke="none"/>
+                <circle cx="47" cy="29" r="3.5" fill="#000" stroke="none"/>
+                <path d="M23 45 Q36 58 49 45"/>
+              </svg>
+            </div>
+            <strong>pick your plot twist</strong>
+          </div>
+
+          <div class="explore-search-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input
+              type="text"
+              class="explore-search-input"
+              id="exploreSearchInput"
+              placeholder="Search articles..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="explore-filters" id="exploreFilters">
+            <button class="explore-filter-btn explore-filter-btn--active" data-category="All">All</button>
+            <button class="explore-filter-btn" data-category="Stories & Fiction">Stories & Fiction</button>
+            <button class="explore-filter-btn" data-category="Travel">Travel & Adventure</button>
+            <button class="explore-filter-btn" data-category="Technology">Technology</button>
+            <button class="explore-filter-btn" data-category="News & Current Affairs">News & Current Affairs</button>
+            <button class="explore-filter-btn" data-category="Knowledge & Learning">Education & Learning</button>
+            <button class="explore-filter-btn" data-category="Health & Wellness">Health & Wellness</button>
+            <button class="explore-filter-btn" data-category="Art & Creativity"> Arts & Culture</button>
+            <button class="explore-filter-btn" data-category="Lifestyle"> Lifestyle & Society</button>
+            <button class="explore-filter-btn" data-category="Ideas & Innovation">Ideas & Perspectives</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Filter buttons -->
-    <section class="explore-filters-section">
-      <div class="container">
-       <div class="explore-filters" id="exploreFilters">
-          <button class="explore-filter-btn explore-filter-btn--active" data-category="All">All</button>
-          <button class="explore-filter-btn" data-category="Stories & Fiction">Stories & Fiction</button>
-          <button class="explore-filter-btn" data-category="Travel"> Travel</button>
-          <button class="explore-filter-btn" data-category="Business"> Business</button>
-          <button class="explore-filter-btn" data-category="Marketing"> Marketing</button>
-          <button class="explore-filter-btn" data-category="Technology">Technology</button>
-          <button class="explore-filter-btn" data-category="News & Current Affairs"> News & Current Affairs</button>
-          <button class="explore-filter-btn" data-category="Knowledge & Learning"> Knowledge & Learning</button>
-          <button class="explore-filter-btn" data-category="Health & Wellness">  Health & Wellness </button>
-          <button class="explore-filter-btn" data-category="Art & Creativity">  Art & Creativity</button>
-          <button class="explore-filter-btn" data-category="Food & Cooking">  Food & Cooking</button>
-          <button class="explore-filter-btn" data-category="Lifestyle"> Lifestyle</button>
-          <button class="explore-filter-btn" data-category="History & Culture"> History & Culture</button>
-          <button class="explore-filter-btn" data-category="Opinions & Perspectives"> Opinions & Perspectives</button>
-          <button class="explore-filter-btn" data-category="Ideas & Innovation">  Ideas & Innovation</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Articles grid -->
     <section class="explore-articles-section">
       <div class="container">
-
-        <!-- Results count -->
         <p class="explore-results-count" id="exploreResultsCount">
           Showing 12 articles
         </p>
 
-        <!-- Grid — filled by explore.js -->
-        <div class="explore-articles-grid" id="exploreArticlesGrid">
-        </div>
+        <div class="explore-articles-grid" id="exploreArticlesGrid"></div>
 
-        <!-- Empty state — shown when no results match -->
-        <div class="explore-empty-state" id="exploreEmptyState" style="display: none;">
-          <div class="explore-empty-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.35-4.35"/>
-            </svg>
-          </div>
-          <h3>No articles found</h3>
-          <p>Try a different search term or category.</p>
-          <button class="btn btn--primary" id="clearFiltersBtn">Clear Filters</button>
-        </div>
+      <div class="explore-empty-state" id="exploreEmptyState" style="display: none;">
+  <span class="ees-badge ees-badge--top-left">Empty State V2</span>
+  <span class="ees-badge ees-badge--top-right">0 / 0</span>
+  <span class="ees-badge ees-badge--left-mid">Reset the Query</span>
+  <div class="ees-deco ees-deco--cyan-rect"></div>
+  <div class="ees-deco ees-deco--dots"></div>
+  <div class="ees-deco ees-deco--pink-rect-1"></div>
+  <div class="ees-deco ees-deco--pink-rect-2"></div>
 
-      </div>
+  <div class="explore-empty-icon">
+    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+      <circle cx="11" cy="11" r="8"/>
+      <path d="m21 21-4.35-4.35"/>
+    </svg>
+  </div>
+
+  <span class="ees-search-label">Search Returned Zero</span>
+
+  <h3>No articles found</h3>
+  <p>Try a different search term, remove a category, or smash the reset button below.</p>
+
+  <button class="btn btn--primary" id="clearFiltersBtn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;">
+      <line x1="4" y1="6" x2="20" y2="6"/>
+      <line x1="8" y1="12" x2="16" y2="12"/>
+      <line x1="11" y1="18" x2="13" y2="18"/>
+    </svg>
+    Clear Filters
+  </button>
+</div>
+
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer class="footer" id="mainFooter">
     <div class="container">
       <div class="footer-top">
@@ -184,26 +155,8 @@
           <p class="footer-tagline">
             A premium platform for writing, publishing, and discovering knowledge.
           </p>
-          <div class="footer-social">
-            <a href="#" class="footer-social-icon" aria-label="Twitter">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-              </svg>
-            </a>
-            <a href="https://github.com/SanaAslamDev" class="footer-social-icon" aria-label="GitHub">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
-              </svg>
-            </a>
-            <a href="#" class="footer-social-icon" aria-label="LinkedIn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                <rect x="2" y="9" width="4" height="12"/>
-                <circle cx="4" cy="4" r="2"/>
-              </svg>
-            </a>
-          </div>
         </div>
+
         <div class="footer-links-column">
           <h4 class="footer-links-title">Platform</h4>
           <a href="explore.html" class="footer-link">Explore</a>
@@ -211,12 +164,14 @@
           <a href="write.html" class="footer-link">Write</a>
           <a href="dashboard.html" class="footer-link">Dashboard</a>
         </div>
+
         <div class="footer-links-column">
           <h4 class="footer-links-title">Company</h4>
           <a href="#" class="footer-link">About</a>
           <a href="#" class="footer-link">Contact</a>
           <a href="#" class="footer-link">Careers</a>
         </div>
+
         <div class="footer-links-column">
           <h4 class="footer-links-title">Legal</h4>
           <a href="#" class="footer-link">Privacy</a>
@@ -224,8 +179,9 @@
           <a href="#" class="footer-link">Cookies</a>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p class="footer-copyright">© 2026 StoryVerse. Built by Sana Aslam.</p>
+        <p class="footer-copyright">&copy; 2026 StoryVerse. Built by Sana Aslam.</p>
       </div>
     </div>
   </footer>
@@ -236,6 +192,5 @@
   <script src="js/theme.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/explore.js"></script>
-
 </body>
 </html>

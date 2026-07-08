@@ -213,28 +213,35 @@ let searchTerm      = '';      /* What the user has typed */
 function buildArticleCard(article) {
   return `
     <a href="article.html" class="article-card">
-      <div class="article-card-image">
+
+      <div class="article-card-image-wrapper">
         <img src="${article.image}" alt="${article.title}" loading="lazy" />
       </div>
-      <div class="article-card-body">
-        <span class="badge badge--primary">${article.category}</span>
+
+      <div class="article-card-content">
+
+        <span class="article-card-category">${article.category}</span>
+
         <h3 class="article-card-title">${article.title}</h3>
-        <p class="article-card-excerpt line-clamp-2">${article.excerpt}</p>
-        <div class="article-card-footer">
-          <div class="article-card-author">
+
+        <p class="article-card-excerpt">${article.excerpt}</p>
+
+        <div class="article-card-meta">
+          <div class="article-card-author-pill">
             <img src="${article.authorAvatar}" alt="${article.authorName}" />
-            <span class="article-card-author-name">${article.authorName}</span>
+            <span>${article.authorName}</span>
           </div>
           <div class="article-card-stats">
-            <span class="article-card-stat">❤ ${article.likes}</span>
-            <span class="article-card-stat">💬 ${article.comments}</span>
+            <span>♡ ${article.likes}</span>
+            <span>◯ ${article.comments}</span>
           </div>
         </div>
+
       </div>
+
     </a>
   `;
 }
-
 
 /* ── FILTER AND RENDER ──
    1. Start with all articles

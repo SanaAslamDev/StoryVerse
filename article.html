@@ -23,72 +23,38 @@
   <!-- =============================================
        NAVBAR (same as every page)
        ============================================= -->
-  <header class="navbar" id="mainNavbar">
-    <div class="navbar-container">
+    <header class="navbar" id="mainNavbar">
+  <div class="navbar-container">
+    <div class="sub-container">
 
-      <a href="index.html" class="navbar-logo">
-        <div class="navbar-logo-icon"></div>
-        <span class="navbar-logo-text">StoryVerse</span>
-      </a>
+   <a href="index.html" class="navbar-logo">
+      <div class="navbar-logo-icon"></div>
+      <span class="navbar-logo-text">StoryVerse</span>
+    </a>
 
-      <nav class="navbar-links">
-        <a href="explore.html" class="navbar-link">Explore</a>
-        <a href="categories.html" class="navbar-link">Categories</a>
-        <a href="write.html" class="navbar-link navbar-link--write">✦ Write</a>
-      </nav>
+    <nav class="navbar-links" id="navbarLinks">
+      <a href="explore.html" class="navbar-link">Explore</a>
+      <a href="categories.html" class="navbar-link">Categories</a>
+      <a href="write.html" class="navbar-link navbar-link--write">Write</a>
+    </nav>
 
-      <div class="navbar-actions">
-        <button class="navbar-icon-btn" id="searchToggleBtn" aria-label="Open search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
-          </svg>
-        </button>
-        <div class="navbar-auth" id="navbarAuthButtons">
-          <a href="login.html" class="navbar-auth-link">Sign in</a>
-          <a href="register.html" class="navbar-auth-btn btn btn--primary btn--sm">Get Started</a>
-        </div>
-        <button class="navbar-hamburger" id="mobileMenuBtn" aria-label="Toggle menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+    <div class="navbar-actions">
+      <div class="navbar-auth" id="navbarAuthButtons">
+        <a href="login.html" class="btn btn--ghost btn--sm">Sign in</a>
+      </div>
+
+      <div class="navbar-user" id="navbarUserMenu" style="display: none;">
+        <button class="navbar-avatar-btn" id="userAvatarBtn" aria-label="User menu">
+          <img src="" alt="User avatar" class="navbar-avatar" id="navbarUserAvatar" />
+          <span class="navbar-username" id="navbarUsername"></span>
         </button>
       </div>
-    </div>
-
-    <div class="navbar-mobile-menu" id="mobileMenu">
-      <nav class="mobile-nav-links">
-        <a href="explore.html" class="mobile-nav-link">Explore</a>
-        <a href="categories.html" class="mobile-nav-link">Categories</a>
-        <a href="write.html" class="mobile-nav-link">✦ Write</a>
-      </nav>
-      <div class="mobile-nav-auth">
-        <a href="login.html" class="btn btn--ghost btn--full">Sign in</a>
-        <a href="register.html" class="btn btn--primary btn--full">Get Started</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Search Overlay -->
-  <div class="search-overlay" id="searchOverlay">
-    <div class="search-overlay-container">
-      <div class="search-overlay-box">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/>
-          <path d="m21 21-4.35-4.35"/>
-        </svg>
-        <input type="text" class="search-overlay-input" id="searchOverlayInput" placeholder="Search articles, topics, authors..." autocomplete="off"/>
-        <button class="search-overlay-close" id="searchCloseBtn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
-          </svg>
-        </button>
-      </div>
-      <p class="search-overlay-hint">Press <kbd>ESC</kbd> to close</p>
     </div>
   </div>
 
+    </div>
+   
+</header>
   <!-- =============================================
        ARTICLE HERO — Cover image + title
        ============================================= -->
@@ -114,7 +80,7 @@
 
         <!-- Category badge -->
         <div class="article-meta-top">
-          <span class="badge badge--primary" id="articleCategory">Artificial Intelligence</span>
+          <span class="badge badge--primary" id="articleCategory">Technology</span>
           <span class="article-read-time" id="articleReadTime">8 min read</span>
         </div>
 
@@ -237,6 +203,7 @@
         </div>
 
         <!-- Tags -->
+      <!--
         <div class="article-tags">
           <span class="article-tag">AI</span>
           <span class="article-tag">Software Engineering</span>
@@ -244,6 +211,8 @@
           <span class="article-tag">Technology</span>
         </div>
 
+      
+      -->  
         <!-- Bottom action bar -->
         <div class="article-bottom-bar">
           <div class="article-bottom-actions">

@@ -160,15 +160,3 @@ submitCommentBtn.addEventListener('click', function () {
 });
 
 
-/* ── 6. TOAST NOTIFICATION ── */
-const toastBox     = document.getElementById('toastNotification');
-const toastMessage = document.getElementById('toastMessage');
-
-function showToast(message) {
-  toastMessage.textContent = message;
-  toastBox.classList.add('toast--visible');
-
-  setTimeout(function () {
-    toastBox.classList.remove('toast--visible');
-  }, 2500);
-}

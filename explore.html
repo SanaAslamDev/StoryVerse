@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/explore.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -87,16 +89,16 @@
           </div>
 
           <div class="explore-filters" id="exploreFilters">
-            <button class="explore-filter-btn explore-filter-btn--active" data-category="All">All</button>
-            <button class="explore-filter-btn" data-category="Stories & Fiction">Stories & Fiction</button>
-            <button class="explore-filter-btn" data-category="Travel">Travel & Adventure</button>
-            <button class="explore-filter-btn" data-category="Technology">Technology</button>
-            <button class="explore-filter-btn" data-category="News & Current Affairs">News & Current Affairs</button>
-            <button class="explore-filter-btn" data-category="Knowledge & Learning">Education & Learning</button>
-            <button class="explore-filter-btn" data-category="Health & Wellness">Health & Wellness</button>
-            <button class="explore-filter-btn" data-category="Art & Creativity"> Arts & Culture</button>
-            <button class="explore-filter-btn" data-category="Lifestyle"> Lifestyle & Society</button>
-            <button class="explore-filter-btn" data-category="Ideas & Innovation">Ideas & Perspectives</button>
+            <button class="explore-filter-btn explore-filter-btn--active" data-category="All" aria-pressed="true">All</button>
+            <button class="explore-filter-btn" data-category="Stories & Fiction" aria-pressed="false">Stories & Fiction</button>
+            <button class="explore-filter-btn" data-category="Travel" aria-pressed="false">Travel & Adventure</button>
+            <button class="explore-filter-btn" data-category="Technology" aria-pressed="false">Technology</button>
+            <button class="explore-filter-btn" data-category="News & Current Affairs" aria-pressed="false">News & Current Affairs</button>
+            <button class="explore-filter-btn" data-category="Knowledge & Learning" aria-pressed="false">Education & Learning</button>
+            <button class="explore-filter-btn" data-category="Health & Wellness" aria-pressed="false">Health & Wellness</button>
+            <button class="explore-filter-btn" data-category="Art & Creativity" aria-pressed="false"> Arts & Culture</button>
+            <button class="explore-filter-btn" data-category="Lifestyle" aria-pressed="false"> Lifestyle & Society</button>
+            <button class="explore-filter-btn" data-category="Ideas & Innovation" aria-pressed="false">Ideas & Perspectives</button>
           </div>
         </div>
       </div>
@@ -189,7 +191,6 @@
   <script src="js/app.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/utils.js"></script>
-  <script src="js/theme.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/explore.js"></script>
 </body>

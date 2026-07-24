@@ -33,8 +33,7 @@ const publishBtn      = document.getElementById('publishBtn');
 const writeStatusText = document.getElementById('writeStatusText');
 const writeStatus     = document.getElementById('writeStatus');
 const readingTimeText = document.getElementById('writeReadingTime');
-const toastBox        = document.getElementById('toastNotification');
-const toastMessage    = document.getElementById('toastMessage');
+
 
 
 /* ── STEP 2: AUTO-RESIZE TEXTAREAS ──
@@ -114,18 +113,6 @@ coverImageInput.addEventListener('change', function () {
 });
 
 
-/* ── STEP 5: TOAST NOTIFICATION ──
-   Shows a small message at the bottom of the screen
-   for 2 seconds then disappears.
------------------------------------------------- */
-function showToast(message) {
-  toastMessage.textContent = message;
-  toastBox.classList.add('toast--visible');
-
-  setTimeout(function () {
-    toastBox.classList.remove('toast--visible');
-  }, 2500);
-}
 
 
 /* ── STEP 6: BUILD ARTICLE OBJECT ──

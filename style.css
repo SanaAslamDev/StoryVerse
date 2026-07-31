@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap");
-
 :root {
   --color-bg: #f8f3e6;
   --color-card: #fff8ee;
@@ -792,7 +790,7 @@ input:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  height: 480px;
+  height: 540px;
   overflow: hidden;
   padding: 10px;
   background: var(--color-yellow);
@@ -817,7 +815,7 @@ input:focus-visible {
 }
 
 .hero-marquee-card {
-  height: 150px;
+  height: 175px;
   width: 100%;
   flex-shrink: 0;
   overflow: hidden;
@@ -1060,13 +1058,13 @@ input:focus-visible {
 
 @media (max-width: 900px) {
   .box {
-    height: clamp(320px, 40vw, 400px);
+    height: clamp(360px, 46vw, 460px);
     padding: 8px;
     gap: 8px;
   }
 
   .hero-marquee-card {
-    height: clamp(90px, 11vw, 120px);
+    height: clamp(105px, 13vw, 145px);
   }
 
   .hero-heading {
@@ -1099,20 +1097,20 @@ input:focus-visible {
   }
 
   .hero-left {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 48%;
+    max-width: 48%;
   }
 
   .hero-right {
-    flex: 0 0 48%;
-    max-width: 48%;
+    flex: 0 0 50%;
+    max-width: 50%;
     justify-content: center;
     align-items: flex-start;
-    gap: 0.3rem;
+    gap: 0.6rem;
   }
 
   .box {
-    height: clamp(260px, 65vw, 320px);
+    height: clamp(320px, 78vw, 400px);
     padding: 6px;
     gap: 6px;
     border-radius: 16px;
@@ -1123,45 +1121,56 @@ input:focus-visible {
   }
 
   .hero-marquee-card {
-    height: clamp(55px, 13vw, 75px);
+    height: clamp(70px, 17vw, 100px);
     border-radius: 8px;
     border-width: 2px;
   }
 
   .hero-badge {
-    padding: 5px 10px;
-    font-size: 0.48rem;
-    line-height: 1.2;
+    white-space: normal;
+    padding: 6px 10px;
+    font-size: 0.56rem;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-align: center;
   }
 
   .hero-heading {
-    font-size: clamp(0.95rem, 4vw, 1.4rem);
-    line-height: 1.1;
-    gap: 1px;
+    gap: 4px;
+    font-size: clamp(1.15rem, 4.8vw, 1.65rem);
+    line-height: 1.2;
   }
 
   .hero-line {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   .hero-line--pink {
-    font-size: 0.9rem;
+    font-size: 0.98rem;
   }
   .hero-line--green {
-    font-size: 0.95rem;
+    font-size: 1.02rem;
   }
 
   .hero-subtext {
-    font-size: 0.7rem;
-    line-height: 1.4;
+    font-size: 0.76rem;
+    line-height: 1.55;
     max-width: 100%;
+  }
+
+  .hero-subtext span {
+    display: inline;
+  }
+
+  .hero-subtext span + span {
+    margin-top: 0;
   }
 
   .btn-start-reading {
     width: auto;
-    min-height: 36px;
-    padding: 0 16px;
-    font-size: 0.65rem;
-    margin-top: 4px;
+    min-height: 42px;
+    padding: 0 20px;
+    font-size: 0.75rem;
+    margin-top: 8px;
   }
 
   .stats-bar {
@@ -1189,37 +1198,37 @@ input:focus-visible {
   }
 
   .box {
-    height: clamp(220px, 60vw, 280px);
+    height: clamp(280px, 74vw, 340px);
     padding: 5px;
     gap: 5px;
     border-width: 3px;
   }
 
   .hero-marquee-card {
-    height: clamp(45px, 12vw, 60px);
+    height: clamp(60px, 16vw, 80px);
     border-radius: 6px;
     border-width: 2px;
   }
 
   .hero-badge {
-    padding: 4px 8px;
-    font-size: 0.4rem;
+    padding: 5px 10px;
+    font-size: 0.5rem;
   }
 
   .hero-heading {
-    font-size: 0.85rem;
-    line-height: 1.05;
+    font-size: 1rem;
+    line-height: 1.15;
   }
 
   .hero-subtext {
-    font-size: 0.62rem;
-    line-height: 1.35;
+    font-size: 0.7rem;
+    line-height: 1.45;
   }
 
   .btn-start-reading {
-    min-height: 32px;
-    padding: 0 12px;
-    font-size: 0.58rem;
+    min-height: 38px;
+    padding: 0 16px;
+    font-size: 0.65rem;
   }
 
   .stats-bar {
@@ -1632,7 +1641,7 @@ input:focus-visible {
   .story-card {
     flex: 0 0 190px;
     width: 190px;
-    height: 340px;
+    height: 375px;
   }
 
   .story-card-body {
@@ -1645,10 +1654,15 @@ input:focus-visible {
 
   .story-card-body p {
     font-size: 0.66rem;
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
   }
 
   .story-card-meta {
     font-size: 0.6rem;
+    margin-top: 8px;
   }
 
   .badge {
@@ -1761,18 +1775,22 @@ input:focus-visible {
   }
 }
 
-/* ---------- CATEGORIES (Horizontal Marquee) ---------- */
+/* ---------- CATEGORIES (Grid) ---------- */
+/* ===================================================
+   CATEGORIES SECTION
+=================================================== */
 
 .categories-section {
-  width: 95%;
+  width: min(1400px, 95%);
   margin: 55px auto 0;
 }
 
 .categories-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.8rem;
+  gap: 1rem;
 }
 
 .categories-header h2 {
@@ -1784,67 +1802,69 @@ input:focus-visible {
   text-underline-offset: 6px;
 }
 
-.categories-marquee {
-  width: 100%;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    rgba(0, 0, 0, 0.85) 12px,
-    #000 30px,
-    #000 calc(100% - 30px),
-    rgba(0, 0, 0, 0.85) calc(100% - 12px),
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    rgba(0, 0, 0, 0.85) 12px,
-    #000 30px,
-    #000 calc(100% - 30px),
-    rgba(0, 0, 0, 0.85) calc(100% - 12px),
-    transparent 100%
-  );
-}
+/* ===================================================
+   PREMIUM GRID (each card gets its own dedicated class —
+   no reliance on :nth-of-type, so nothing overlaps/collapses)
+=================================================== */
 
 .categories-grid {
-  display: flex;
-  width: max-content;
-  gap: 16px;
-  animation: categories-scroll 28s linear infinite;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "large mystery comedy drama"
+    "large thriller horror poetry";
+  grid-auto-rows: 190px;
+  gap: 18px;
 }
 
-.categories-marquee:hover .categories-grid {
-  animation-play-state: paused;
+.cat-large {
+  grid-area: large;
+}
+.cat-mystery {
+  grid-area: mystery;
+}
+.cat-comedy {
+  grid-area: comedy;
+}
+.cat-drama {
+  grid-area: drama;
+}
+.cat-thriller {
+  grid-area: thriller;
+}
+.cat-horror {
+  grid-area: horror;
+}
+.cat-poetry {
+  grid-area: poetry;
 }
 
-@keyframes categories-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
+/* ===================================================
+   CARD
+=================================================== */
 
 .category-card {
   position: relative;
   display: block;
-  flex: 0 0 auto;
-  width: 200px;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: 100%;
+
   overflow: hidden;
+
   border: var(--card-border-w) solid var(--color-black);
   border-radius: var(--card-radius);
+
   text-decoration: none;
+
   box-shadow: var(--card-shadow);
+
   transition:
-    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.25s ease;
+    transform .25s cubic-bezier(.34,1.56,.64,1),
+    box-shadow .25s ease;
 }
 
 .category-card:hover {
-  transform: translate(-4px, -4px);
+  transform: translate(-4px,-4px);
   box-shadow: var(--card-shadow-hover);
 }
 
@@ -1853,7 +1873,8 @@ input:focus-visible {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+
+  transition: transform .4s ease;
 }
 
 .category-card:hover img {
@@ -1862,58 +1883,169 @@ input:focus-visible {
 
 .category-card::after {
   content: "";
+
   position: absolute;
   inset: 0;
+
   background: linear-gradient(
-    to top,
-    rgba(23, 23, 23, 0.75),
-    rgba(23, 23, 23, 0) 55%
+      to top,
+      rgba(23,23,23,.75),
+      rgba(23,23,23,0) 55%
   );
 }
 
 .category-name {
   position: absolute;
-  left: 12px;
-  bottom: 12px;
-  z-index: 1;
+  left: 14px;
+  bottom: 14px;
+
+  z-index: 2;
+
   color: var(--color-white);
+
   font-weight: 800;
-  font-size: 0.82rem;
+  font-size: .82rem;
+
   line-height: 1.3;
 }
 
-@media (max-width: 600px) {
-  .category-card {
-    width: 150px;
-  }
+/* ===================================================
+   LARGE LAPTOP
+=================================================== */
 
-  .categories-header h2 {
-    font-size: 1.1rem;
-  }
+@media (max-width:1200px){
 
-  .view-all-link {
-    font-size: 0.7rem;
-  }
+.categories-grid{
 
-  .category-name {
-    font-size: 0.7rem;
-    left: 10px;
-    bottom: 10px;
-  }
+grid-template-columns:repeat(3,1fr);
+
+grid-template-areas:
+
+"large large mystery"
+
+"large large comedy"
+
+"drama horror horror"
+
+"thriller poetry poetry";
+
+grid-auto-rows:180px;
+
 }
 
-@media (max-width: 380px) {
-  .category-card {
-    width: 130px;
-  }
-
-  .category-name {
-    font-size: 0.65rem;
-    left: 8px;
-    bottom: 8px;
-  }
 }
 
+/* ===================================================
+   TABLET
+=================================================== */
+
+@media (max-width:850px){
+
+.categories-header{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+.categories-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+grid-template-areas:
+
+"large mystery"
+
+"large comedy"
+
+"drama thriller"
+
+"horror horror"
+
+"poetry poetry";
+
+grid-auto-rows:180px;
+
+}
+
+}
+
+/* ===================================================
+   MOBILE (stays a 2-column grid — same composition as
+   desktop, just scaled down. No collapse to single column.)
+=================================================== */
+
+@media (max-width:600px){
+
+.categories-header h2{
+
+font-size:1.1rem;
+
+}
+
+.view-all-link{
+
+font-size:.75rem;
+
+}
+
+.categories-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:12px;
+
+grid-template-areas:
+
+"large mystery"
+
+"large comedy"
+
+"drama thriller"
+
+"horror horror"
+
+"poetry poetry";
+
+grid-auto-rows:130px;
+
+}
+
+.category-name{
+
+font-size:.68rem;
+
+left:10px;
+bottom:10px;
+
+}
+
+}
+
+/* ===================================================
+   SMALL MOBILE
+=================================================== */
+
+@media (max-width:380px){
+
+.categories-grid{
+
+gap:10px;
+
+grid-auto-rows:105px;
+
+}
+
+.category-name{
+
+font-size:.6rem;
+
+left:8px;
+bottom:8px;
+
+}
+
+}
 /* ---------- CTA WRITE BANNER ---------- */
 
 .cta-write {
@@ -2598,7 +2730,7 @@ input:focus-visible {
 
   .explore-grid .story-card {
     width: 100%;
-    height: 340px;
+    height: 375px;
   }
 
   .explore-grid .story-card-body {
@@ -2611,10 +2743,15 @@ input:focus-visible {
 
   .explore-grid .story-card-body p {
     font-size: 0.66rem;
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
   }
 
   .explore-grid .story-card-meta {
     font-size: 0.6rem;
+    margin-top: 8px;
   }
 
   .explore-grid .badge {

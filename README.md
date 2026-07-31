@@ -6,7 +6,9 @@ A beautiful website to discover and read short stories. Built with HTML, CSS, an
 
 🔗 **Live:** [storyverse011.netlify.app](https://storyverse011.netlify.app)
 
-> **Note:** Completely rebuilt from scratch with better design, cleaner code, and improved features! 🚀
+> **Frontend Project** | Imaginary Demo Data | No Backend
+> 
+> Completely rebuilt from scratch with better design, cleaner code, and improved features! 🚀
 
 ---
 
@@ -34,8 +36,9 @@ A beautiful website to discover and read short stories. Built with HTML, CSS, an
 - **HTML5** - Page structure
 - **CSS3** - Styling & animations
 - **JavaScript** - Interactive features
+- **Local Storage** - Save bookmarks locally
 
-**No frameworks, no dependencies!**
+**Frontend Only | No Backend | No Frameworks | No Dependencies!**
 
 ---
 
@@ -58,6 +61,16 @@ A beautiful website to discover and read short stories. Built with HTML, CSS, an
 ✨ **Rounded Corners** - Smooth borders on cards  
 ✨ **Box Shadows** - Depth & elevation effect  
 ✨ **Hover Effects** - Interactive feedback  
+
+---
+
+## ⚠️ Note
+
+**This is a frontend-only demo project with imaginary data.**
+- No backend or database
+- All data is hardcoded (imaginary stories)
+- Bookmarks saved using Local Storage (browser only)
+- Built for learning and portfolio purposes
 
 ---
 

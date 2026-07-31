@@ -1,120 +1,166 @@
-<div align="center">
+# 📖 StoryVerse
 
-# StoryVerse
+**Read Short Stories. Big Worlds.**
 
-**A short-fiction reading platform — rebuilt from scratch with HTML, CSS, and JavaScript.**
+A beautiful website to discover and read short stories. Built with HTML, CSS, and JavaScript.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Site-ff4d8d?style=for-the-badge)](https://storyverse-blog.netlify.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-SanaAslamDev-171717?style=for-the-badge)](https://github.com/SanaAslamDev)
+🔗 **Live:** [storyverse011.netlify.app](https://storyverse011.netlify.app)
 
-</div>
-
----
-
-## Live Demo
-
-🌐 [storyverse-blog.netlify.app](https://storyverse-blog.netlify.app/)
+> **Note:** Completely rebuilt from scratch with better design, cleaner code, and improved features! 🚀
 
 ---
 
-## Overview
+## 📱 What's Inside
 
-StoryVerse is a frontend project for browsing and discovering short stories across genres like Mystery, Drama, Thriller, Horror, and more. This is a full rebuild of an earlier version, focused on a cleaner UI, a proper design system, and correct responsive behavior across desktop, tablet, and mobile.
+### Pages
+- **Homepage** - Hero section, featured stories, 7 story categories
+- **Explore Page** - Search stories, filter by 7 genres, view all stories
 
-It is a **frontend-only** project — no backend, database, or framework. Built with vanilla HTML, CSS, and JavaScript to strengthen core fundamentals.
-
----
-
-## Features
-
-- Animated hero image marquee, stats bar, and featured stories carousel
-- Explore page with live search and category filtering
-- Reusable story card component with bookmarking and category badges
-- Login / register modals with password visibility toggle
-- Responsive navbar with an animated mobile drawer
-- Newsletter signup with client-side validation
-- Accessible interactions — ARIA labels, keyboard support, focus handling, `prefers-reduced-motion` support
-
----
-
-## Tech Stack
-
-- HTML5
-- CSS3 — custom design system, Grid, Flexbox, animations
-- JavaScript (vanilla, no libraries)
+### Features
+✅ Responsive design (works on mobile, tablet, desktop)  
+✅ Search & filter stories in real-time  
+✅ 7 story categories (Children's, Mystery, Comedy, Drama, Thriller, Horror, Poetry)  
+✅ Carousel for featured stories  
+✅ Mobile menu (hamburger navigation)  
+✅ Login/Register modals  
+✅ Bookmark stories  
+✅ Newsletter signup  
+✅ Smooth animations & transitions  
 
 ---
 
-## Design System
+## 🛠️ Built With
 
-A custom bold, editorial visual style — no Tailwind or UI kits.
+- **HTML5** - Page structure
+- **CSS3** - Styling & animations
+- **JavaScript** - Interactive features
 
-| Token | Value |
-|---|---|
-| Background | `#f8f3e6` |
-| Accent pink | `#ff4d8d` |
-| Accent yellow | `#ffc928` |
-| Accent green | `#0d8a67` |
-| Accent purple | `#6c4ce8` |
-| Border | `3–4px solid #171717` |
-| Shadow | Hard offset, e.g. `6px 6px 0 #171717` |
-| Display font | Bricolage Grotesque / Anton |
-| Body font | Space Grotesk |
+**No frameworks, no dependencies!**
 
 ---
 
-## Project Structure
+## 📂 Files
 
 ```
-storyverse/
-├── index.html        # Landing page
-├── explore.html       # Explore & search page
-├── css/
-│   └── style.css       # Design system + all page styles + responsive rules
-├── js/
-│   └── app.js            # Navbar, modals, carousel, search/filter, newsletter
-└── images/
-    └── ...                 # Story covers & category images
+├── index.html        → Homepage
+├── explore.html      → Story exploration page
+├── style.css         → All styling
+├── js/app.js        → All JavaScript features
+└── images/          → Story images
 ```
 
 ---
 
-## Responsive Design
+## 🎨 Design Features
 
-Breakpoints tuned at 1024px, 900px, 768px, 600px, and 480px, including:
-
-- Footer grid rebuilt with `grid-template-areas` for clean reflow on tablet
-- Carousel navigation kept visible (resized) on mobile instead of hidden
-- Story card sizing aligned between the homepage and explore page on small screens
-- Auth modal spacing fixed so the close button never overlaps form content
+✨ **Bold Colors** - Pink, Yellow, Green, Purple  
+✨ **Modern Fonts** - Google Fonts for nice typography  
+✨ **Rounded Corners** - Smooth borders on cards  
+✨ **Box Shadows** - Depth & elevation effect  
+✨ **Hover Effects** - Interactive feedback  
 
 ---
 
-## Running Locally
+## 🧠 JavaScript Features
+
+| Feature | What It Does |
+|---------|-------------|
+| Search & Filter | Find stories by title, description, or category |
+| 7 Genres | Children's, Mystery, Comedy, Drama, Thriller, Horror, Poetry |
+| Carousel | Swipe/drag through featured stories |
+| Mobile Menu | Open/close navigation on mobile |
+| Modals | Login/Register popup forms |
+| Bookmarks | Save favorite stories |
+| Newsletter | Email subscription |
+
+---
+
+## 📱 Responsive Breakpoints
+
+- **Desktop** - 1200px+ (full width)
+- **Tablet** - 768px (2 columns)
+- **Mobile** - 600px (1-2 columns)
+- **Small Phone** - 380px (optimized layout)
+
+---
+
+## 🚀 How to Run Locally
 
 ```bash
-git clone https://github.com/SanaAslamDev/StoryVerse.git
-cd StoryVerse
+# Clone the repo
+git clone https://github.com/SanaAslamDev/StoryVerse
+
+# Open in browser
+# Option 1: Double-click index.html
+# Option 2: Use VS Code Live Server extension
 ```
 
-Open `index.html` in a browser — no build step or dependencies required.
+**No server needed - it's all static files!**
 
-Or serve locally:
+---
 
-```bash
-npx serve .
+## 💡 Key Code
+
+### Search Stories
+```javascript
+const filtered = STORIES.filter(story => {
+  return story.title.toLowerCase().includes(query);
+});
+```
+
+### Toggle Bookmark
+```javascript
+bookmarkBtn.addEventListener('click', () => {
+  const isBookmarked = btn.getAttribute('aria-pressed') === 'true';
+  btn.setAttribute('aria-pressed', !isBookmarked);
+});
+```
+
+### Mobile Menu Toggle
+```javascript
+hamburgerBtn.addEventListener('click', toggleDrawer);
+closeDrawer.addEventListener('click', closeDrawer);
 ```
 
 ---
 
-## Author
+## 📊 Sample Stories & Genres
 
-**[Sana Aslam](https://github.com/SanaAslamDev)**
+6 featured stories across 7 genres:
+1. My Magical Forest Friends (Children's Stories)
+2. The Detective's Final Case (Mystery)
+3. My Cat Thinks He's the Landlord (Comedy)
+4. Beautiful Rain (Drama)
+5. The Door That Wasn't There (Thriller)
+6. What Waits in Room 4B (Horror)
+
+**Also supported:** Poetry
 
 ---
 
-<div align="center">
+## 🎯 What I Learned
 
-StoryVerse · HTML, CSS & JavaScript
+✅ HTML Structure & Semantic Elements  
+✅ CSS Grid & Flexbox Layouts  
+✅ CSS Animations & Transitions  
+✅ Responsive Design (7 breakpoints)  
+✅ Vanilla JavaScript DOM Manipulation  
+✅ Event Listeners & State Management  
+✅ Search & Filter Functionality  
+✅ Modal Windows & Focus Management  
+✅ Accessibility (ARIA, Keyboard Navigation)  
+✅ Carousel/Slider Implementation  
 
-</div>
+---
+
+## 🔮 Future Ideas
+
+- [ ] Backend for saving bookmarks
+- [ ] Full story reading page
+- [ ] User profiles
+- [ ] Writer dashboard for publishing stories
+- [ ] Comment system
+
+---
+
+**Made by Sana Aslam | [GitHub](https://github.com/SanaAslamDev)**

@@ -4,7 +4,16 @@
 
 **A short-fiction reading platform — rebuilt from scratch with HTML, CSS, and JavaScript.**
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Site-ff4d8d?style=for-the-badge)](https://storyverse-blog.netlify.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-SanaAslamDev-171717?style=for-the-badge)](https://github.com/SanaAslamDev)
+
 </div>
+
+---
+
+## Live Demo
+
+🌐 [storyverse-blog.netlify.app](https://storyverse-blog.netlify.app/)
 
 ---
 

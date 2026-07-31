@@ -1,604 +1,1506 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="StoryVerse - A premium knowledge publishing platform for stories, tutorials, and articles." />
-  <title>StoryVerse - Where Stories Come Alive</title>
-
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-     <header class="navbar" id="mainNavbar">
-  <div class="navbar-container">
-    <div class="sub-container">
-
-   <a href="index.html" class="navbar-logo">
-      <div class="navbar-logo-icon"></div>
-      <span class="navbar-logo-text">StoryVerse</span>
-    </a>
-
-    <nav class="navbar-links" id="navbarLinks">
-      <a href="explore.html" class="navbar-link">Explore</a>
-      <a href="categories.html" class="navbar-link">Categories</a>
-      <a href="#" class="navbar-link">Trending</a>
-      <a href="write.html" class="navbar-link navbar-link--write">Write</a>
-    </nav>
-
-    <div class="navbar-actions">
-      <div class="navbar-auth" id="navbarAuthButtons">
-        <a href="login.html" class="btn btn--ghost btn--sm">Sign in</a>
-      </div>
-
-      <div class="navbar-user" id="navbarUserMenu" style="display: none;">
-        <button class="navbar-avatar-btn" id="userAvatarBtn" aria-label="User menu">
-          <img src="" alt="User avatar" class="navbar-avatar" id="navbarUserAvatar" />
-          <span class="navbar-username" id="navbarUsername"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-    </div>
-   
-</header>
-
-  <main class="main-content" id="mainContent">
-    <section class="hero-section">
-     
-      
-     <div class="hero-marquee" aria-hidden="true">
-  <div class="hero-marquee-row hero-marquee-row--1">
-    <div class="hero-marquee-track hero-marquee-track--left">
-      <img class="hero-marquee-img" src="assets/images/img1.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img2.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img3.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img4.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img5.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img6.jpg" alt="" />
-      <!-- duplicate set for seamless loop -->
-      <img class="hero-marquee-img" src="assets/images/img1.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img2.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img3.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img4.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img5.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img6.jpg" alt="" />
-    </div>
-  </div>
-
-  <div class="hero-marquee-row hero-marquee-row--2">
-    <div class="hero-marquee-track hero-marquee-track--right">
-      <img class="hero-marquee-img" src="assets/images/img1.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img2.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img3.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img4.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img5.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img6.jpg" alt="" />
-      <!-- duplicate set for seamless loop -->
-       <img class="hero-marquee-img" src="assets/images/img1.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img2.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img3.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img4.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img5.jpg" alt="" />
-      <img class="hero-marquee-img" src="assets/images/img6.jpg" alt="" />
-    </div>
-  </div>
-</div>
-
-
-      <div class="hero-content">
-       
-
-        <h1 class="hero-headline">
-  Where great ideas <br />become <span class="text-gradient">great stories</span>
-</h1>
-
-        <p class="hero-subtext">
-          StoryVerse is home to stories, ideas, experiences, and knowledge from curious minds around the world—all crafted for meaningful 5–15 minute reads.
-        </p>
-
-        <div class="hero-actions">
-          <a href="register.html" class="btn btn--primary btn--xl">Start Writing</a>
-          <a href="explore.html" class="btn btn--secondary btn--xl">Explore Articles</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="hero-stat-item">
-            <span class="hero-stat-number" data-target="50000">0</span>
-            <span class="hero-stat-label">Active Writers</span>
-          </div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-number" data-target="120000">0</span>
-            <span class="hero-stat-label">Published Articles</span>
-          </div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-number" data-target="2000000">0</span>
-            <span class="hero-stat-label">Monthly Readers</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  <!-- =============================================
-       FEATURED ARTICLES SECTION
-       ============================================= -->
-  <section class="featured-section">
-    <div class="container">
-
-      <div class="section-header">
-        <span class="section-label">Editor's Pick</span>
-        <h2 class="section-title">Featured Stories</h2>
-      </div>
-
-      <!-- 4 featured cards grid -->
-      <div class="featured-small-grid">
-
-       <a href="article.html" class="featured-small-card">
-  <div class="featured-small-card-image">
-    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80" alt="Fiction article" />
-  </div>
-
-  <div class="featured-small-card-body">
-    <div class="featured-small-card-topline">
-      <span class="featured-small-card-category">Stories & Fiction</span>
-      <span class="featured-small-card-time">6 min read</span>
-    </div>
-
-    <h3 class="featured-small-card-title">
-      Why I Quit My Job to Write Fiction Full Time
-    </h3>
-
-    <p class="featured-small-card-excerpt">
-      A personal story about choosing creative freedom and building a writing life.
-    </p>
-
-    <div class="featured-small-card-meta">
-      <div class="featured-small-card-author-pill">
-        <img src="https://i.pravatar.cc/28?img=53" alt="James Okafor" />
-        <span>James Okafor</span>
-      </div>
-
-      <div class="featured-small-card-stats">
-        <span>♡ 145</span>
-        <span>○ 9</span>
-      </div>
-    </div>
-  </div>
-</a>
-
-       <a href="article.html" class="featured-small-card">
-  <div class="featured-small-card-image">
-    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80" alt="Fiction article" />
-  </div>
-
-  <div class="featured-small-card-body">
-    <div class="featured-small-card-topline">
-      <span class="featured-small-card-category">Stories & Fiction</span>
-      <span class="featured-small-card-time">6 min read</span>
-    </div>
-
-    <h3 class="featured-small-card-title">
-      Why I Quit My Job to Write Fiction Full Time
-    </h3>
-
-    <p class="featured-small-card-excerpt">
-      A personal story about choosing creative freedom and building a writing life.
-    </p>
-
-    <div class="featured-small-card-meta">
-      <div class="featured-small-card-author-pill">
-        <img src="https://i.pravatar.cc/28?img=53" alt="James Okafor" />
-        <span>James Okafor</span>
-      </div>
-
-      <div class="featured-small-card-stats">
-        <span>♡ 145</span>
-        <span>○ 9</span>
-      </div>
-    </div>
-  </div>
-</a>
-
-      <a href="article.html" class="featured-small-card">
-  <div class="featured-small-card-image">
-    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80" alt="Fiction article" />
-  </div>
-
-  <div class="featured-small-card-body">
-    <div class="featured-small-card-topline">
-      <span class="featured-small-card-category">Stories & Fiction</span>
-      <span class="featured-small-card-time">6 min read</span>
-    </div>
-
-    <h3 class="featured-small-card-title">
-      Why I Quit My Job to Write Fiction Full Time
-    </h3>
-
-    <p class="featured-small-card-excerpt">
-      A personal story about choosing creative freedom and building a writing life.
-    </p>
-
-    <div class="featured-small-card-meta">
-      <div class="featured-small-card-author-pill">
-        <img src="https://i.pravatar.cc/28?img=53" alt="James Okafor" />
-        <span>James Okafor</span>
-      </div>
-
-      <div class="featured-small-card-stats">
-        <span>♡ 145</span>
-        <span>○ 9</span>
-      </div>
-    </div>
-  </div>
-</a>
-
-      <a href="article.html" class="featured-small-card">
-  <div class="featured-small-card-image">
-    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&q=80" alt="Fiction article" />
-  </div>
-
-  <div class="featured-small-card-body">
-    <div class="featured-small-card-topline">
-      <span class="featured-small-card-category">Stories & Fiction</span>
-      <span class="featured-small-card-time">6 min read</span>
-    </div>
-
-    <h3 class="featured-small-card-title">
-      Why I Quit My Job to Write Fiction Full Time
-    </h3>
-
-    <p class="featured-small-card-excerpt">
-      A personal story about choosing creative freedom and building a writing life.
-    </p>
-
-    <div class="featured-small-card-meta">
-      <div class="featured-small-card-author-pill">
-        <img src="https://i.pravatar.cc/28?img=53" alt="James Okafor" />
-        <span>James Okafor</span>
-      </div>
-
-      <div class="featured-small-card-stats">
-        <span>♡ 145</span>
-        <span>○ 9</span>
-      </div>
-    </div>
-  </div>
-</a>
-
-      </div>
-
-    </div>
-  </section>
-
-    <section class="categories-section">
-      <div class="container">
-       <div class="section-header categories-header">
-  <span class="section-label categories-label">Browse Topics</span>
-  <h2 class="section-title categories-title">Collect Your Next Read</h2>
-  <p class="categories-subtitle">
-    Pick a shelf, open a world. Every category is a pocket-sized magazine for stories, ideas, lessons and curiosities.
-  </p>
-  <span class="categories-title-line"></span>
-</div>
-
-   
-
-       <div class="categories-marquee">
-  <div class="categories-track">
-
-  <!-- SET 1 -->
-  <a href="categories.html?topic=stories" class="category-card">
-    <img class="category-card-bg" src="assets/images/stories.jpg" alt="" />
-    <h3 class="category-card-name">Stories & Fiction</h3>
-  </a>
-
-  <a href="categories.html?topic=travel" class="category-card">
-    <img class="category-card-bg" src="assets/images/travel.jpg" alt="" />
-    <h3 class="category-card-name">Travel & Adventure</h3>
-  </a>
-
-  <a href="categories.html?topic=technology" class="category-card">
-    <img class="category-card-bg" src="assets/images/technology.jpg" alt="" />
-    <h3 class="category-card-name">Technology</h3>
-  </a>
-
-  <a href="categories.html?topic=news" class="category-card">
-    <img class="category-card-bg" src="assets/images/news.png" alt="" />
-    <h3 class="category-card-name">News & Current Affairs</h3>
-  </a>
-
-  <a href="categories.html?topic=knowledge" class="category-card">
-    <img class="category-card-bg" src="assets/images/education.jpg" alt="" />
-    <h3 class="category-card-name">Education & Learning</h3>
-  </a>
-
-  <a href="categories.html?topic=health" class="category-card">
-    <img class="category-card-bg" src="assets/images/health.jpg" alt="" />
-    <h3 class="category-card-name">Health & Wellness</h3>
-  </a>
-
-  <a href="categories.html?topic=art" class="category-card">
-    <img class="category-card-bg" src="assets/images/arts.jpg" alt="" />
-    <h3 class="category-card-name">Arts & Culture</h3>
-  </a>
-
-  <a href="categories.html?topic=lifestyle" class="category-card">
-    <img class="category-card-bg" src="assets/images/lifestyle.jpg" alt="" />
-    <h3 class="category-card-name">Lifestyle & Society</h3>
-  </a>
-
-  <a href="categories.html?topic=ideas" class="category-card">
-    <img class="category-card-bg" src="assets/images/ideas.jpg" alt="" />
-    <h3 class="category-card-name">Ideas & Perspectives</h3>
-  </a>
-
-  <!-- SET 2 — exact duplicate for seamless loop -->
- <a href="categories.html?topic=stories" class="category-card">
-    <img class="category-card-bg" src="assets/images/stories.jpg" alt="" />
-    <h3 class="category-card-name">Stories & Fiction</h3>
-  </a>
-
-  <a href="categories.html?topic=travel" class="category-card">
-    <img class="category-card-bg" src="assets/images/travel.jpg" alt="" />
-    <h3 class="category-card-name">Travel & Adventure</h3>
-  </a>
-
-  <a href="categories.html?topic=technology" class="category-card">
-    <img class="category-card-bg" src="assets/images/technology.jpg" alt="" />
-    <h3 class="category-card-name">Technology</h3>
-  </a>
-
-  <a href="categories.html?topic=news" class="category-card">
-    <img class="category-card-bg" src="assets/images/news.png" alt="" />
-    <h3 class="category-card-name">News & Current Affairs</h3>
-  </a>
-
-  <a href="categories.html?topic=knowledge" class="category-card">
-    <img class="category-card-bg" src="assets/images/education.jpg" alt="" />
-    <h3 class="category-card-name">Education & Learning</h3>
-  </a>
-
-  <a href="categories.html?topic=health" class="category-card">
-    <img class="category-card-bg" src="assets/images/health.jpg" alt="" />
-    <h3 class="category-card-name">Health & Wellness</h3>
-  </a>
-
-  <a href="categories.html?topic=art" class="category-card">
-    <img class="category-card-bg" src="assets/images/arts.jpg" alt="" />
-    <h3 class="category-card-name">Arts & Culture</h3>
-  </a>
-
-  <a href="categories.html?topic=lifestyle" class="category-card">
-    <img class="category-card-bg" src="assets/images/lifestyle.jpg" alt="" />
-    <h3 class="category-card-name">Lifestyle & Society</h3>
-  </a>
-
-  <a href="categories.html?topic=ideas" class="category-card">
-    <img class="category-card-bg" src="assets/images/ideas.jpg" alt="" />
-    <h3 class="category-card-name">Ideas & Perspectives</h3>
-  </a>
-
-</div>
-</div>
-
-        <div class="categories-view-all">
-          <a href="categories.html" class="btn btn--outline">View All Categories</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="latest-section">
-      <div class="container">
-        <div class="section-header section-header--row">
-          <div>
-            <span class="section-label">Fresh Content</span>
-            <h2 class="section-title">Latest Articles</h2>
-          </div>
-          <a href="explore.html" class="btn btn--ghost">View All →</a>
-        </div>
-
-        <div class="articles-grid" id="latestArticlesGrid"></div>
-      </div>
-    </section>
-
-    <section class="creators-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Top Voices</span>
-          <h2 class="section-title">Featured Creators</h2>
-        </div>
-
-        <div class="creators-grid">
-          <div class="creator-card">
-            <img src="https://i.pravatar.cc/160?img=12" alt="Sarah Chen" class="creator-card-avatar" />
-            <h3 class="creator-card-name">Sarah Chen</h3>
-            <p class="creator-card-role">AI & Machine Learning Writer</p>
-            <p class="creator-card-bio">Exploring how artificial intelligence reshapes the way we build software.</p>
-            <div class="creator-card-stats">
-              <span><strong>48</strong> Articles</span>
-              <span><strong>12.4K</strong> Followers</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="StoryVerse — read short, original fiction across children's stories, mystery, comedy, drama, thriller and horror. 5–15 minute escapes."
+    />
+    <meta name="theme-color" content="#f8f3e6" />
+    <title>StoryVerse — Short Stories. Big Worlds.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navdiv">
+        <span class="nav-deco nav-deco--star-1" aria-hidden="true">✦</span>
+        <span class="nav-deco nav-deco--star-2" aria-hidden="true">✦</span>
+
+        <nav class="navbar">
+          <div class="title">
+            <span class="logo-mark" aria-hidden="true">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
+                <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
+              </svg>
+            </span>
+            <div class="logo-text-block">
+              <h1>
+                Story<span>Verse</span
+                ><span class="logo-sparkle" aria-hidden="true">✦</span>
+              </h1>
+              <p class="tagline">Short stories. Big worlds.</p>
             </div>
-            <button class="btn btn--secondary btn--full creator-follow-btn">Follow</button>
           </div>
 
-          <div class="creator-card">
-            <img src="https://i.pravatar.cc/160?img=8" alt="David Kim" class="creator-card-avatar" />
-            <h3 class="creator-card-name">David Kim</h3>
-            <p class="creator-card-role">Senior Frontend Engineer</p>
-            <p class="creator-card-bio">Writing about JavaScript fundamentals and clean code practices.</p>
-            <div class="creator-card-stats">
-              <span><strong>72</strong> Articles</span>
-              <span><strong>9.8K</strong> Followers</span>
+          <div class="navlinks" id="navLinks">
+            <div class="drawer-header">
+              <div class="drawer-brand">
+                <span class="logo-mark logo-mark--sm" aria-hidden="true">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                </span>
+                <div>
+                  <span class="drawer-brand-title">Story<em>Verse</em></span>
+                  <span class="drawer-brand-tagline">Escape Reality.</span>
+                </div>
+              </div>
+              <button
+                class="drawer-close"
+                id="drawerCloseBtn"
+                type="button"
+                aria-label="Close menu"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                >
+                  <path d="M6 6l12 12M18 6L6 18" />
+                </svg>
+              </button>
             </div>
-            <button class="btn btn--secondary btn--full creator-follow-btn">Follow</button>
+            <ul>
+              <li>
+                <a href="#home" class="nav-link is-active" aria-current="page">
+                  <span
+                    class="nav-link-icon nav-link-icon--pink"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                    >
+                      <path
+                        d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="nav-link-label">Home</span>
+                  <span class="nav-link-chevron" aria-hidden="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path d="m9 6 6 6-6 6" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="explore.html" class="nav-link">
+                  <span
+                    class="nav-link-icon nav-link-icon--purple"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                    >
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="m14.5 9.5-2 5-5 2 2-5z" />
+                    </svg>
+                  </span>
+                  <span class="nav-link-label">Explore</span>
+                  <span class="nav-link-chevron" aria-hidden="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path d="m9 6 6 6-6 6" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#categories" class="nav-link">
+                  <span
+                    class="nav-link-icon nav-link-icon--yellow"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                    >
+                      <rect x="3" y="3" width="7" height="7" rx="1" />
+                      <rect x="14" y="3" width="7" height="7" rx="1" />
+                      <rect x="3" y="14" width="7" height="7" rx="1" />
+                      <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg>
+                  </span>
+                  <span class="nav-link-label">Categories</span>
+                  <span class="nav-link-chevron" aria-hidden="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path d="m9 6 6 6-6 6" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link">
+                  <span
+                    class="nav-link-icon nav-link-icon--green"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                    >
+                      <circle cx="12" cy="8" r="4" />
+                      <path d="M4 21v-1a8 8 0 0 1 16 0v1" />
+                    </svg>
+                  </span>
+                  <span class="nav-link-label">About</span>
+                  <span class="nav-link-chevron" aria-hidden="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path d="m9 6 6 6-6 6" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#home" class="nav-link">
+                  <span
+                    class="nav-link-icon nav-link-icon--pink"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 20h9" />
+                      <path
+                        d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="nav-link-label">Write</span>
+                  <span class="nav-link-chevron" aria-hidden="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path d="m9 6 6 6-6 6" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav-drawer-divider" aria-hidden="true"></div>
+
+            <div class="buttons buttons--drawer">
+              <button
+                class="btn-login"
+                type="button"
+                data-open-modal="loginModal"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                >
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                  <path d="M10 17l5-5-5-5" />
+                  <path d="M15 12H3" />
+                </svg>
+                Login
+              </button>
+              <button
+                class="btn-register"
+                type="button"
+                data-open-modal="registerModal"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="8.5" cy="7" r="4" />
+                  <path d="M20 8v6M23 11h-6" />
+                </svg>
+                Register
+                <span class="register-star" aria-hidden="true">★</span>
+              </button>
+            </div>
           </div>
 
-          <div class="creator-card">
-            <img src="https://i.pravatar.cc/160?img=20" alt="Lena Schmidt" class="creator-card-avatar" />
-            <h3 class="creator-card-name">Lena Schmidt</h3>
-            <p class="creator-card-role">Startup Founder</p>
-            <p class="creator-card-bio">Sharing lessons on building products and leading small teams.</p>
-            <div class="creator-card-stats">
-              <span><strong>35</strong> Articles</span>
-              <span><strong>7.1K</strong> Followers</span>
-            </div>
-            <button class="btn btn--secondary btn--full creator-follow-btn">Follow</button>
+          <span class="nav-divider" aria-hidden="true"></span>
+
+          <div class="buttons">
+            <button
+              class="btn-login"
+              type="button"
+              data-open-modal="loginModal"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+              >
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                <path d="M10 17l5-5-5-5" />
+                <path d="M15 12H3" />
+              </svg>
+              Login
+            </button>
+            <button
+              class="btn-register"
+              type="button"
+              data-open-modal="registerModal"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="8.5" cy="7" r="4" />
+                <path d="M20 8v6M23 11h-6" />
+              </svg>
+              Register
+              <span class="register-star" aria-hidden="true">★</span>
+            </button>
           </div>
 
-          <div class="creator-card">
-            <img src="https://i.pravatar.cc/160?img=33" alt="Tom Becker" class="creator-card-avatar" />
-            <h3 class="creator-card-name">Tom Becker</h3>
-            <p class="creator-card-role">Travel Writer</p>
-            <p class="creator-card-bio">Documenting remote work and travel across 40+ countries.</p>
-            <div class="creator-card-stats">
-              <span><strong>91</strong> Articles</span>
-              <span><strong>21.6K</strong> Followers</span>
-            </div>
-            <button class="btn btn--secondary btn--full creator-follow-btn">Follow</button>
-          </div>
-        </div>
+          <button
+            class="hamburger"
+            id="hamburgerBtn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
       </div>
-    </section>
 
-    <section class="testimonials-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Loved By Writers</span>
-          <h2 class="section-title">What Our Community Says</h2>
-        </div>
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <div class="hero">
+          <div class="hero-left">
+            <div class="box" aria-hidden="true">
+              <div class="hero-marquee-col hero-marquee-col--up">
+                <div class="hero-marquee-card">
+                  <img src="images/img1.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img2.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img3.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/drama1.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img5.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/comedy3.png" alt="" loading="lazy" />
+                </div>
 
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "StoryVerse completely changed how I share my technical writing.
-              The editor is fast, clean, and the community is genuinely engaged."
-            </p>
-            <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/80?img=25" alt="Anita Roy" />
-              <div>
-                <span class="testimonial-author-name">Anita Roy</span>
-                <span class="testimonial-author-role">Software Engineer</span>
+                <div class="hero-marquee-card">
+                  <img src="images/img1.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img2.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img3.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/drama1.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img5.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/comedy3.png" alt="" loading="lazy" />
+                </div>
+              </div>
+
+              <div class="hero-marquee-col hero-marquee-col--down">
+                <div class="hero-marquee-card">
+                  <img src="images/img7.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img8.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img9.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img10.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img11.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img12.png" alt="" loading="lazy" />
+                </div>
+
+                <div class="hero-marquee-card">
+                  <img src="images/img7.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img8.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img9.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img10.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img11.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img12.png" alt="" loading="lazy" />
+                </div>
+              </div>
+
+              <div class="hero-marquee-col hero-marquee-col--up">
+                <div class="hero-marquee-card">
+                  <img src="images/img13.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img14.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img15.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/childrenstory1.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/thriller2.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/category7.png" alt="" loading="lazy" />
+                </div>
+
+                <div class="hero-marquee-card">
+                  <img src="images/img13.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img14.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/img15.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/childrenstory1.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/thriller2.png" alt="" loading="lazy" />
+                </div>
+                <div class="hero-marquee-card">
+                  <img src="images/category7.png" alt="" loading="lazy" />
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "I moved my entire blog here. The reading experience is on another level
-              compared to anything else I've used."
+          <div class="hero-right">
+            <span class="hero-badge">5–15 Minute Escapes</span>
+            <h1 class="hero-heading">
+              <span class="hero-line">Read Stories.</span>
+              <span class="hero-line hero-line--pink">Take a Break.</span>
+              <span class="hero-line hero-line--green">Feel Alive.</span>
+            </h1>
+            <p class="hero-subtext">
+              <span
+                >Need a short break? Maybe all you need is a good story.</span
+              >
+              <span
+                >Breathe in, let go of the stress, and set your imagination
+                free.</span
+              >
             </p>
-            <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/80?img=31" alt="Mark Johnson" />
-              <div>
-                <span class="testimonial-author-name">Mark Johnson</span>
-                <span class="testimonial-author-role">Tech Blogger</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-quote">
-              "As a reader, the dark mode and typography make long articles actually
-              enjoyable instead of tiring on the eyes."
-            </p>
-            <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/80?img=44" alt="Hana Suzuki" />
-              <div>
-                <span class="testimonial-author-name">Hana Suzuki</span>
-                <span class="testimonial-author-role">Product Designer</span>
-              </div>
-            </div>
+            <a href="explore.html" class="btn-start-reading">Start Reading</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="newsletter-section">
-      <div class="container--md">
-        <div class="newsletter-card">
-          <h2 class="newsletter-title">Never miss a great story</h2>
-          <p class="newsletter-subtext">
-            Get the best articles delivered to your inbox every week. No spam, ever.
-          </p>
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-icon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </span>
+            <div class="stat-text">
+              <strong>10,000+ Readers</strong>
+              <span>Growing community of story lovers</span>
+            </div>
+          </div>
 
-          <form class="newsletter-form" id="newsletterForm">
-            <input
-              type="email"
-              class="newsletter-input"
-              id="newsletterEmailInput"
-              placeholder="Enter your email"
-              required
+          <div class="stat-item">
+            <span class="stat-icon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+              >
+                <path
+                  d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"
+                />
+              </svg>
+            </span>
+            <div class="stat-text">
+              <strong>500+ Stories</strong>
+              <span>Fresh, original &amp; diverse fiction</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-icon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+              >
+                <path
+                  d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+                />
+              </svg>
+            </span>
+            <div class="stat-text">
+              <strong>New Stories Weekly</strong>
+              <span>Always something new to discover</span>
+            </div>
+          </div>
+
+          <a href="explore.html" class="btn-explore-now">Explore Now →</a>
+        </div>
+      </section>
+
+      <section class="featured-stories">
+        <div class="featured-section">
+          <div class="featured-header">
+            <h2>Featured Stories</h2>
+            <a href="explore.html" class="view-all-link">View All Stories →</a>
+          </div>
+
+          <div
+            class="featured-marquee-wrapper at-start"
+            id="featuredMarqueeWrapper"
+          >
+            <button
+              class="marquee-nav-btn marquee-nav-btn--prev"
+              id="marqueePrev"
+              type="button"
+              aria-label="Scroll left"
+              disabled
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+              >
+                <path d="m15 6-6 6 6 6" />
+              </svg>
+            </button>
+
+            <div class="featured-marquee" id="featuredMarquee">
+              <div class="featured-track">
+                <article class="story-card">
+                  <div class="story-card-image">
+                    <img
+                      src="images/childrenstory1.png"
+                      alt="Illustration of a child with forest animal friends"
+                      loading="lazy"
+                    />
+                    <span class="badge badge--green">Children Stories</span>
+                  </div>
+                  <div class="story-card-body">
+                    <h3>My Magical Forest Friends</h3>
+                    <p>
+                      A little girl and her forest friends learn the true
+                      meaning of kindness.
+                    </p>
+                    <div class="story-card-meta">
+                      <span>⏱ 4 min read</span>
+                      <button
+                        class="bookmark-btn"
+                        type="button"
+                        aria-label="Bookmark My Magical Forest Friends"
+                        aria-pressed="false"
+                      >
+                        🔖
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="story-card">
+                  <div class="story-card-image">
+                    <img
+                      src="images/mystery1.png"
+                      alt="A detective examining evidence at a desk"
+                      loading="lazy"
+                    />
+                    <span class="badge badge--mustard">Mystery</span>
+                  </div>
+                  <div class="story-card-body">
+                    <h3>The Detective's Final Case</h3>
+                    <p>
+                      Some puzzles are never meant to be solved — until now.
+                    </p>
+                    <div class="story-card-meta">
+                      <span>⏱ 7 min read</span>
+                      <button
+                        class="bookmark-btn"
+                        type="button"
+                        aria-label="Bookmark The Detective's Final Case"
+                        aria-pressed="false"
+                      >
+                        🔖
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="story-card">
+                  <div class="story-card-image">
+                    <img
+                      src="images/comedy3.png"
+                      alt="A cat lounging on a couch"
+                      loading="lazy"
+                    />
+                    <span class="badge badge--yellow">Comedy</span>
+                  </div>
+                  <div class="story-card-body">
+                    <h3>My Cat Thinks He's the Landlord</h3>
+                    <p>
+                      A hilarious take on who really owns the house — spoiler,
+                      it's not you.
+                    </p>
+                    <div class="story-card-meta">
+                      <span>⏱ 5 min read</span>
+                      <button
+                        class="bookmark-btn"
+                        type="button"
+                        aria-label="Bookmark My Cat Thinks He's the Landlord"
+                        aria-pressed="false"
+                      >
+                        🔖
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="story-card">
+                  <div class="story-card-image">
+                    <img
+                      src="images/drama1.png"
+                      alt="Rain falling against a windowpane"
+                      loading="lazy"
+                    />
+                    <span class="badge badge--purple">Drama</span>
+                  </div>
+                  <div class="story-card-body">
+                    <h3>Beautiful Rain</h3>
+                    <p>
+                      Sometimes the hardest goodbyes happen in the quietest
+                      moments.
+                    </p>
+                    <div class="story-card-meta">
+                      <span>⏱ 6 min read</span>
+                      <button
+                        class="bookmark-btn"
+                        type="button"
+                        aria-label="Bookmark Beautiful Rain"
+                        aria-pressed="false"
+                      >
+                        🔖
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="story-card">
+                  <div class="story-card-image">
+                    <img
+                      src="images/thriller2.png"
+                      alt="A mysterious old door appearing inside a quiet library."
+                      loading="lazy"
+                    />
+                    <span class="badge badge--navy">Thriller</span>
+                  </div>
+                  <div class="story-card-body">
+                    <h3>The Door That Wasn't There</h3>
+                    <p>
+                      Every morning, a mysterious door appeared in a different
+                      place.
+                    </p>
+                    <div class="story-card-meta">
+                      <span>⏱ 8 min read</span>
+                      <button
+                        class="bookmark-btn"
+                        type="button"
+                        aria-label="Bookmark The Door That Wasn't There"
+                        aria-pressed="false"
+                      >
+                        🔖
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="story-card">
+                  <div class="story-card-image">
+                    <img
+                      src="images/horror2.png"
+                      alt="A mysterious door labeled 4B glowing in a dark, abandoned hallway."
+                      loading="lazy"
+                    />
+                    <span class="badge badge--pink">Horror</span>
+                  </div>
+                  <div class="story-card-body">
+                    <h3>What Waits in Room 4B</h3>
+                    <p>
+                      Some doors are better left unopened. She opened it anyway.
+                    </p>
+                    <div class="story-card-meta">
+                      <span>⏱ 6 min read</span>
+                      <button
+                        class="bookmark-btn"
+                        type="button"
+                        aria-label="Bookmark What Waits in Room 4B"
+                        aria-pressed="false"
+                      >
+                        🔖
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button
+              class="marquee-nav-btn marquee-nav-btn--next"
+              id="marqueeNext"
+              type="button"
+              aria-label="Scroll right"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+              >
+                <path d="m9 6 6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <ul class="features-list">
+          <li class="feature-item">
+            <span class="feature-icon" aria-hidden="true">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.3"
+              >
+                <path
+                  d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"
+                />
+              </svg>
+            </span>
+            <div>
+              <strong>Short Reads</strong>
+              <span>Stories you can finish in 5–15 minutes.</span>
+            </div>
+          </li>
+
+          <li class="feature-item">
+            <span class="feature-icon" aria-hidden="true">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.3"
+              >
+                <path
+                  d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                />
+                <path
+                  d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                />
+              </svg>
+            </span>
+            <div>
+              <strong>Original Fiction</strong>
+              <span>Unique stories from amazing writers.</span>
+            </div>
+          </li>
+
+          <li class="feature-item">
+            <span class="feature-icon" aria-hidden="true">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.3"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>
+            </span>
+            <div>
+              <strong>Join Community</strong>
+              <span>Connect with readers and writers.</span>
+            </div>
+          </li>
+
+          <li class="feature-item">
+            <span class="feature-icon" aria-hidden="true">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.3"
+              >
+                <path
+                  d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"
+                />
+              </svg>
+            </span>
+            <div>
+              <strong>Share &amp; Inspire</strong>
+              <span>Your story could inspire someone today.</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="categories-section" id="categories">
+        <div class="categories-header">
+          <h2>Browse by Categories</h2>
+          <a href="explore.html" class="view-all-link">View All Categories →</a>
+        </div>
+
+        <div class="categories-marquee">
+          <div class="categories-grid">
+            <a
+              href="explore.html?category=Children+Stories"
+              class="category-card"
+            >
+              <img
+                src="images/category1.png"
+                alt="Children Stories category"
+                loading="lazy"
+              />
+              <span class="category-name">Children Stories</span>
+            </a>
+
+            <a href="explore.html?category=Mystery" class="category-card">
+              <img
+                src="images/category2.png"
+                alt="Mystery category"
+                loading="lazy"
+              />
+              <span class="category-name">Mystery</span>
+            </a>
+
+            <a href="explore.html?category=Comedy" class="category-card">
+              <img
+                src="images/category3.png"
+                alt="Comedy category"
+                loading="lazy"
+              />
+              <span class="category-name">Comedy</span>
+            </a>
+
+            <a href="explore.html?category=Thriller" class="category-card">
+              <img
+                src="images/thriller3.png"
+                alt="Thriller category"
+                loading="lazy"
+              />
+              <span class="category-name">Thriller</span>
+            </a>
+
+            <a href="explore.html?category=Drama" class="category-card">
+              <img
+                src="images/category4.png"
+                alt="Drama category"
+                loading="lazy"
+              />
+              <span class="category-name">Drama</span>
+            </a>
+
+            <a href="explore.html?category=Horror" class="category-card">
+              <img
+                src="images/horror3.png"
+                alt="Horror category"
+                loading="lazy"
+              />
+              <span class="category-name">Horror</span>
+            </a>
+
+            <a href="explore.html?category=Poetry" class="category-card">
+              <img
+                src="images/category6.png"
+                alt="Poetry category"
+                loading="lazy"
+              />
+              <span class="category-name">Poetry</span>
+            </a>
+
+            <a
+              href="explore.html?category=Children+Stories"
+              class="category-card"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <img src="images/category1.png" alt="" loading="lazy" />
+              <span class="category-name">Children Stories</span>
+            </a>
+
+            <a
+              href="explore.html?category=Mystery"
+              class="category-card"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <img src="images/category2.png" alt="" loading="lazy" />
+              <span class="category-name">Mystery</span>
+            </a>
+
+            <a
+              href="explore.html?category=Comedy"
+              class="category-card"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <img src="images/category3.png" alt="" loading="lazy" />
+              <span class="category-name">Comedy</span>
+            </a>
+
+            <a
+              href="explore.html?category=Thriller"
+              class="category-card"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <img src="images/thriller3.png" alt="" loading="lazy" />
+              <span class="category-name">Thriller</span>
+            </a>
+
+            <a
+              href="explore.html?category=Drama"
+              class="category-card"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <img src="images/category4.png" alt="" loading="lazy" />
+              <span class="category-name">Drama</span>
+            </a>
+
+            <a
+              href="explore.html?category=Horror"
+              class="category-card"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <img src="images/horror3.png" alt="" loading="lazy" />
+              <span class="category-name">Horror</span>
+            </a>
+
+            <a
+              href="explore.html?category=Poetry"
+              class="category-card"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <img src="images/category6.png" alt="" loading="lazy" />
+              <span class="category-name">Poetry</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-write">
+        <div class="cta-write-icon" aria-hidden="true">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"
             />
-            <button type="submit" class="btn btn--primary newsletter-submit-btn">Subscribe</button>
-          </form>
-
-          <p class="newsletter-success" id="newsletterSuccessMessage">
-            Thanks for subscribing! Check your inbox soon.
+          </svg>
+        </div>
+        <div class="cta-write-body">
+          <span class="cta-write-eyebrow">Have a story to tell?</span>
+          <h2>Share Your Imagination With the World.</h2>
+          <p>
+            Join StoryVerse and become part of a community that celebrates
+            creativity and storytelling.
           </p>
         </div>
-      </div>
-    </section>
-  </main>
+        <a href="#home" class="btn-write-now">Start Writing Now ✎</a>
+      </section>
 
-  <footer class="footer" id="mainFooter">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
+      <section class="how-it-works">
+        <h2>How StoryVerse Works</h2>
+
+        <ol class="steps-row">
+          <li class="step-item">
+            <span class="step-number step-number--yellow" aria-hidden="true"
+              >1</span
+            >
+            <div>
+              <strong>Write</strong>
+              <p>Write your story in a simple and beautiful editor.</p>
+            </div>
+          </li>
+          <span class="step-connector" aria-hidden="true">⇢</span>
+          <li class="step-item">
+            <span class="step-number step-number--pink" aria-hidden="true"
+              >2</span
+            >
+            <div>
+              <strong>Publish</strong>
+              <p>Publish your story for the world to discover.</p>
+            </div>
+          </li>
+          <span class="step-connector" aria-hidden="true">⇢</span>
+          <li class="step-item">
+            <span class="step-number step-number--green" aria-hidden="true"
+              >3</span
+            >
+            <div>
+              <strong>Connect</strong>
+              <p>Engage with readers through likes, comments and follows.</p>
+            </div>
+          </li>
+          <span class="step-connector" aria-hidden="true">⇢</span>
+          <li class="step-item">
+            <span class="step-number step-number--purple" aria-hidden="true"
+              >4</span
+            >
+            <div>
+              <strong>Inspire</strong>
+              <p>Inspire others with your words and imagination.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="about-banner" id="about">
+        <div class="about-brand">
           <div class="footer-logo">
-            <div class="navbar-logo-icon"></div>
-            <span class="navbar-logo-text">StoryVerse</span>
+            <span class="logo-mark logo-mark--sm" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
+                <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
+              </svg>
+            </span>
+            <span class="footer-logo-text">Story<em>Verse</em></span>
           </div>
-          <p class="footer-tagline">
-            A premium platform for writing, publishing, and discovering knowledge.
+          <p>
+            A place where imagination finds its readers. Thoughtfully crafted
+            stories, all in one cozy corner.
+          </p>
+        </div>
+
+        <div class="about-copy">
+          <h3>About StoryVerse</h3>
+          <p>
+            Life is full of little pauses—waiting for your coffee, standing in
+            line, catching a bus, or simply taking a moment for yourself.
+            StoryVerse turns those everyday moments into opportunities to slow
+            down, escape the noise, and enjoy a good story.
+            <br />
+            Every story begins somewhere—a notebook, a diary, or a note on your
+            phone. StoryVerse celebrates the idea that every imagination has a
+            story worth sharing.
+          </p>
+        </div>
+
+        <ul class="about-checks">
+          <li>Made for life's little pauses</li>
+          <li>Stories across every genre</li>
+          <li>Every idea has a place</li>
+          <li>Explore. Read. Escape.</li>
+        </ul>
+      </section>
+
+      <footer class="site-footer" id="contact">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-mark logo-mark--sm" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </span>
+              <span class="footer-logo-text">Story<em>Verse</em></span>
+            </div>
+            <p>
+              A cozy corner for readers who believe every break deserves a good
+              story.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <path d="M17.5 6.5h.01" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Twitter / X">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="M4 4l16 16" />
+                  <path d="M20 4 4 20" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="Pinterest">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 12 3a7 7 0 0 1 7 6.5C19 14.9 12 21 12 21z"
+                  />
+                  <circle cx="12" cy="9.5" r="2.3" />
+                </svg>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="5" width="20" height="14" rx="4" />
+                  <path
+                    d="M10 9.5v5l4.5-2.5z"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <a href="explore.html">Explore</a>
+            <a href="#categories">Categories</a>
+            <a href="dashboard.html">Write</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Careers</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>NEVER MISS A STORY</h4>
+            <p>
+              Be the first to discover new stories, featured collections, and
+              updates.
+            </p>
+            <form id="newsletterForm" novalidate>
+              <label for="newsletterEmail" class="visually-hidden"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="newsletterEmail"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+              />
+              <button type="submit" aria-label="Subscribe">→</button>
+            </form>
+            <p
+              class="newsletter-status"
+              id="newsletterStatus"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <button
+            class="btn-back-to-top"
+            id="backToTop"
+            aria-label="Back to top"
+          >
+            ↑ Back to Top
+          </button>
+          <p class="footer-quote">
+            Escape the everyday, one unforgettable story at a time.
+          </p>
+        </div>
+      </footer>
+    </main>
+
+    <div class="modal-overlay" id="loginModal">
+      <div class="modal">
+        <button
+          class="close-btn"
+          id="loginCloseBtn"
+          type="button"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+
+        <div class="modal-form">
+          <h2 class="modal-form-title">Sign In</h2>
+          <p class="modal-form-subtitle">
+            Don't have an account?
+            <a href="#" id="switchToRegister">Register</a>
           </p>
 
-          <div class="footer-social">
-            <a href="#" class="footer-social-icon" aria-label="Twitter">t</a>
-            <a href="#" class="footer-social-icon" aria-label="GitHub">g</a>
-            <a href="#" class="footer-social-icon" aria-label="LinkedIn">in</a>
-          </div>
-        </div>
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="loginEmail">Email Address</label>
+              <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
 
-        <div class="footer-links-column">
-          <h4 class="footer-links-title">Platform</h4>
-          <a href="explore.html" class="footer-link">Explore</a>
-          <a href="categories.html" class="footer-link">Categories</a>
-          <a href="write.html" class="footer-link">Write</a>
-          <a href="dashboard.html" class="footer-link">Dashboard</a>
-        </div>
+            <div class="form-group">
+              <div class="form-label-row">
+                <label for="loginPassword">Password</label>
+                <a href="#" class="forgot-link">Forgot password?</a>
+              </div>
+              <div class="password-field">
+                <input
+                  type="password"
+                  id="loginPassword"
+                  name="password"
+                  placeholder="Your password"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="loginPasswordToggle"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.3"
+                  >
+                    <path
+                      d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"
+                    />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
 
-        <div class="footer-links-column">
-          <h4 class="footer-links-title">Company</h4>
-          <a href="#" class="footer-link">About</a>
-          <a href="#" class="footer-link">Contact</a>
-          <a href="#" class="footer-link">Careers</a>
-          <a href="#" class="footer-link">Blog</a>
+            <button type="submit" class="btn-auth-submit">Sign In</button>
+          </form>
         </div>
-
-        <div class="footer-links-column">
-          <h4 class="footer-links-title">Legal</h4>
-          <a href="#" class="footer-link">Privacy Policy</a>
-          <a href="#" class="footer-link">Terms of Service</a>
-          <a href="#" class="footer-link">Cookie Policy</a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copyright">© 2026 StoryVerse. All rights reserved.</p>
-        
       </div>
     </div>
-  </footer>
 
-  <script src="js/app.js"></script>
-  <script src="js/storage.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/home.js"></script>
-</body>
+    <div class="modal-overlay" id="registerModal">
+      <div class="modal">
+        <button
+          class="close-btn"
+          id="registerCloseBtn"
+          type="button"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+
+        <div class="modal-form">
+          <h2 class="modal-form-title">Register</h2>
+          <p class="modal-form-subtitle">
+            Already have an account? <a href="#" id="switchToLogin">Sign in</a>
+          </p>
+
+          <form id="registerForm" novalidate>
+            <div class="form-group">
+              <label for="registerName">Full Name</label>
+              <input
+                type="text"
+                id="registerName"
+                name="name"
+                placeholder="Your full name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="registerEmail">Email Address</label>
+              <input
+                type="email"
+                id="registerEmail"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="registerPassword">Password</label>
+              <div class="password-field">
+                <input
+                  type="password"
+                  id="registerPassword"
+                  name="password"
+                  placeholder="At least 6 characters"
+                  autocomplete="new-password"
+                  minlength="6"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="registerPasswordToggle"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.3"
+                  >
+                    <path
+                      d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"
+                    />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-auth-submit">
+              Create Account
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js" defer></script>
+  </body>
 </html>

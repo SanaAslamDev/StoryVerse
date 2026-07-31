@@ -1,197 +1,371 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Explore - StoryVerse</title>
-
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/typography.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/explore.css" />
-
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-   <header class="navbar" id="mainNavbar">
-  <div class="navbar-container">
-    <div class="sub-container">
-
-   <a href="index.html" class="navbar-logo">
-      <div class="navbar-logo-icon"></div>
-      <span class="navbar-logo-text">StoryVerse</span>
-    </a>
-
-    <nav class="navbar-links" id="navbarLinks">
-      <a href="explore.html" class="navbar-link">Explore</a>
-      <a href="categories.html" class="navbar-link">Categories</a>
-      <a href="write.html" class="navbar-link navbar-link--write">Write</a>
-    </nav>
-
-    <div class="navbar-actions">
-      <div class="navbar-auth" id="navbarAuthButtons">
-        <a href="login.html" class="btn btn--ghost btn--sm">Sign in</a>
-      </div>
-
-      <div class="navbar-user" id="navbarUserMenu" style="display: none;">
-        <button class="navbar-avatar-btn" id="userAvatarBtn" aria-label="User menu">
-          <img src="" alt="User avatar" class="navbar-avatar" id="navbarUserAvatar" />
-          <span class="navbar-username" id="navbarUsername"></span>
-        </button>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore all StoryVerse short stories. Search and filter by category: children's stories, mystery, comedy, drama, thriller and horror."
+    />
+    <meta name="theme-color" content="#ffc928" />
+    <title>Explore Stories — StoryVerse</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="explore-page">
+    <div class="explore-banner" aria-label="Announcements">
+      <div class="ticker-track">
+        <div class="ticker-content">
+          <span class="star" aria-hidden="true">★</span>
+          <span class="ticker-item">READ. IMAGINE. ESCAPE.</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="ticker-item">DISCOVER 1,000+ STORIES.</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="ticker-item">WRITE. PUBLISH. INSPIRE.</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="ticker-item">JOIN 10,000+ READERS.</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="ticker-item">NEW STORIES EVERY WEEK.</span>
+        </div>
+        <div class="ticker-content" aria-hidden="true">
+          <span class="star">★</span>
+          <span class="ticker-item">READ. IMAGINE. ESCAPE.</span>
+          <span class="star">★</span>
+          <span class="ticker-item">DISCOVER 1,000+ STORIES.</span>
+          <span class="star">★</span>
+          <span class="ticker-item">WRITE. PUBLISH. INSPIRE.</span>
+          <span class="star">★</span>
+          <span class="ticker-item">JOIN 10,000+ READERS.</span>
+          <span class="star">★</span>
+          <span class="ticker-item">NEW STORIES EVERY WEEK.</span>
+        </div>
       </div>
     </div>
-  </div>
 
-    </div>
-   
-</header>
-  <main class="main-content">
-    <section class="explore-hero">
-      <div class="container">
+    <main>
+      <section class="explore-hero">
+        <a href="index.html" class="btn-back-home">← Back to Home</a>
+
         <div class="explore-hero-copy">
-          <span class="section-label">Fresh Picks</span>
-          <h1 class="explore-hero-title">Explore the Story Stack</h1>
-          <p class="explore-hero-subtext">
-            A tactile playground for essays, guides, and ideas - sorted into chunky cards, bright badges, and delightful little details.
+          <span class="explore-badge">+ Fresh Picks</span>
+          <h1 class="explore-title">
+            Explore the Story Stack
+            <span class="title-sparkle" aria-hidden="true">✦</span>
+          </h1>
+          <span class="explore-subbadge">6 genres. Zero boring scrolls.</span>
+          <p class="explore-desc">
+            For the moments when you want to slow down and read something
+            meaningful. Explore stories and poems that make every break feel a
+            little different.
           </p>
 
-          <!-- MOVED HERE (was outside explore-hero-copy in the original) -->
+          <form class="search-box" role="search" id="searchForm">
+            <span class="search-icon" aria-hidden="true">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </span>
+            <label for="searchInput" class="visually-hidden"
+              >Search stories</label
+            >
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search stories..."
+              autocomplete="off"
+            />
+          </form>
+
+          <div
+            class="filter-pills"
+            id="filterPills"
+            role="group"
+            aria-label="Filter stories by category"
+          >
+            <button
+              class="filter-pill is-active"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="filter-pill"
+              type="button"
+              data-filter="Children Stories"
+              aria-pressed="false"
+            >
+              Children Stories
+            </button>
+            <button
+              class="filter-pill"
+              type="button"
+              data-filter="Mystery"
+              aria-pressed="false"
+            >
+              Mystery
+            </button>
+            <button
+              class="filter-pill"
+              type="button"
+              data-filter="Comedy"
+              aria-pressed="false"
+            >
+              Comedy
+            </button>
+            <button
+              class="filter-pill"
+              type="button"
+              data-filter="Drama"
+              aria-pressed="false"
+            >
+              Drama
+            </button>
+            <button
+              class="filter-pill"
+              type="button"
+              data-filter="Thriller"
+              aria-pressed="false"
+            >
+              Thriller
+            </button>
+            <button
+              class="filter-pill"
+              type="button"
+              data-filter="Horror"
+              aria-pressed="false"
+            >
+              Horror
+            </button>
+            <button
+              class="filter-pill"
+              type="button"
+              data-filter="Poetry"
+              aria-pressed="false"
+            >
+              Poetry
+            </button>
+          </div>
+
           <div class="explore-hero-card" aria-hidden="true">
             <div class="explore-hero-card-face">
-              <svg width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#000" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="36" cy="36" r="32"/>
-                <circle cx="25" cy="29" r="3.5" fill="#000" stroke="none"/>
-                <circle cx="47" cy="29" r="3.5" fill="#000" stroke="none"/>
-                <path d="M23 45 Q36 58 49 45"/>
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 72 72"
+                fill="none"
+                stroke="#171717"
+                stroke-width="4.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="36" cy="36" r="32" />
+                <circle cx="25" cy="29" r="3.5" fill="#171717" stroke="none" />
+                <circle cx="47" cy="29" r="3.5" fill="#171717" stroke="none" />
+                <path d="M23 45 Q36 58 49 45" />
               </svg>
             </div>
             <strong>pick your plot twist</strong>
           </div>
-
-          <div class="explore-search-box">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.35-4.35"/>
-            </svg>
-            <input
-              type="text"
-              class="explore-search-input"
-              id="exploreSearchInput"
-              placeholder="Search articles..."
-              autocomplete="off"
-            />
-          </div>
-
-          <div class="explore-filters" id="exploreFilters">
-            <button class="explore-filter-btn explore-filter-btn--active" data-category="All" aria-pressed="true">All</button>
-            <button class="explore-filter-btn" data-category="Stories & Fiction" aria-pressed="false">Stories & Fiction</button>
-            <button class="explore-filter-btn" data-category="Travel" aria-pressed="false">Travel & Adventure</button>
-            <button class="explore-filter-btn" data-category="Technology" aria-pressed="false">Technology</button>
-            <button class="explore-filter-btn" data-category="News & Current Affairs" aria-pressed="false">News & Current Affairs</button>
-            <button class="explore-filter-btn" data-category="Knowledge & Learning" aria-pressed="false">Education & Learning</button>
-            <button class="explore-filter-btn" data-category="Health & Wellness" aria-pressed="false">Health & Wellness</button>
-            <button class="explore-filter-btn" data-category="Art & Creativity" aria-pressed="false"> Arts & Culture</button>
-            <button class="explore-filter-btn" data-category="Lifestyle" aria-pressed="false"> Lifestyle & Society</button>
-            <button class="explore-filter-btn" data-category="Ideas & Innovation" aria-pressed="false">Ideas & Perspectives</button>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="explore-articles-section">
-      <div class="container">
-        <p class="explore-results-count" id="exploreResultsCount">
-          Showing 12 articles
+      <section class="explore-results">
+        <p
+          class="results-count"
+          id="resultsCount"
+          role="status"
+          aria-live="polite"
+        >
+          Showing 6 stories
         </p>
+        <div class="explore-grid" id="exploreGrid"></div>
+      </section>
+    </main>
 
-        <div class="explore-articles-grid" id="exploreArticlesGrid"></div>
-
-      <div class="explore-empty-state" id="exploreEmptyState" style="display: none;">
-  <span class="ees-badge ees-badge--top-left">Empty State V2</span>
-  <span class="ees-badge ees-badge--top-right">0 / 0</span>
-  <span class="ees-badge ees-badge--left-mid">Reset the Query</span>
-  <div class="ees-deco ees-deco--cyan-rect"></div>
-  <div class="ees-deco ees-deco--dots"></div>
-  <div class="ees-deco ees-deco--pink-rect-1"></div>
-  <div class="ees-deco ees-deco--pink-rect-2"></div>
-
-  <div class="explore-empty-icon">
-    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-      <circle cx="11" cy="11" r="8"/>
-      <path d="m21 21-4.35-4.35"/>
-    </svg>
-  </div>
-
-  <span class="ees-search-label">Search Returned Zero</span>
-
-  <h3>No articles found</h3>
-  <p>Try a different search term, remove a category, or smash the reset button below.</p>
-
-  <button class="btn btn--primary" id="clearFiltersBtn">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0;">
-      <line x1="4" y1="6" x2="20" y2="6"/>
-      <line x1="8" y1="12" x2="16" y2="12"/>
-      <line x1="11" y1="18" x2="13" y2="18"/>
-    </svg>
-    Clear Filters
-  </button>
-</div>
-
-    </section>
-  </main>
-
-  <footer class="footer" id="mainFooter">
-    <div class="container">
+    <footer class="site-footer">
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="navbar-logo-icon"></div>
-            <span class="navbar-logo-text">StoryVerse</span>
+            <span class="logo-mark logo-mark--sm" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z" />
+                <path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z" />
+              </svg>
+            </span>
+            <span class="footer-logo-text">Story<em>Verse</em></span>
           </div>
-          <p class="footer-tagline">
-            A premium platform for writing, publishing, and discovering knowledge.
+          <p>
+            A premium platform for writing, publishing, and discovering short
+            fiction.
           </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <path d="M17.5 6.5h.01" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter / X">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
+                <path d="M4 4l16 16" />
+                <path d="M20 4 4 20" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 12 3a7 7 0 0 1 7 6.5C19 14.9 12 21 12 21z"
+                />
+                <circle cx="12" cy="9.5" r="2.3" />
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="5" width="20" height="14" rx="4" />
+                <path
+                  d="M10 9.5v5l4.5-2.5z"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div class="footer-links-column">
-          <h4 class="footer-links-title">Platform</h4>
-          <a href="explore.html" class="footer-link">Explore</a>
-          <a href="categories.html" class="footer-link">Categories</a>
-          <a href="write.html" class="footer-link">Write</a>
-          <a href="dashboard.html" class="footer-link">Dashboard</a>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="explore.html">Explore</a>
+          <a href="index.html#categories">Categories</a>
+          <a href="dashboard.html">Write</a>
+          <a href="dashboard.html">Dashboard</a>
         </div>
 
-        <div class="footer-links-column">
-          <h4 class="footer-links-title">Company</h4>
-          <a href="#" class="footer-link">About</a>
-          <a href="#" class="footer-link">Contact</a>
-          <a href="#" class="footer-link">Careers</a>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#about">About Us</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="#">Careers</a>
         </div>
 
-        <div class="footer-links-column">
-          <h4 class="footer-links-title">Legal</h4>
-          <a href="#" class="footer-link">Privacy</a>
-          <a href="#" class="footer-link">Terms</a>
-          <a href="#" class="footer-link">Cookies</a>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay in the Loop</h4>
+          <p>Get story picks, writing tips, and updates in your inbox.</p>
+          <form id="newsletterForm" novalidate>
+            <label for="newsletterEmail" class="visually-hidden"
+              >Email address</label
+            >
+            <input
+              type="email"
+              id="newsletterEmail"
+              name="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            />
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+          <p
+            class="newsletter-status"
+            id="newsletterStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 StoryVerse. Built by Sana Aslam.</p>
+        <button class="btn-back-to-top" id="backToTop" aria-label="Back to top">
+          ↑ Back to Top
+        </button>
+        <p class="footer-quote">
+          "Every story has the power to change someone." Made with ❤️ for story
+          lovers.
+        </p>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/app.js"></script>
-  <script src="js/storage.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/explore.js"></script>
-</body>
+    <script src="js/app.js" defer></script>
+  </body>
 </html>

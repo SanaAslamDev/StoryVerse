@@ -97,26 +97,6 @@ input:focus-visible {
   overflow: visible;
 }
 
-.nav-deco {
-  position: absolute;
-  font-size: 1.1rem;
-  color: var(--color-yellow);
-  pointer-events: none;
-  animation: navTwinkle 3s ease-in-out infinite;
-}
-
-.nav-deco--star-1 {
-  top: -10px;
-  left: 6%;
-  color: var(--color-pink);
-  animation-delay: 0.4s;
-}
-.nav-deco--star-2 {
-  bottom: -8px;
-  right: 10%;
-  color: var(--color-yellow);
-}
-
 @keyframes navTwinkle {
   0%,
   100% {
@@ -326,17 +306,6 @@ input:focus-visible {
 .btn-register {
   background: var(--color-pink);
   color: var(--color-white);
-  padding-right: 34px;
-}
-
-.register-star {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.8rem;
-  color: var(--color-yellow);
-  animation: navTwinkle 2s ease-in-out infinite;
 }
 
 .buttons button:hover {
@@ -1812,7 +1781,7 @@ input:focus-visible {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     "large mystery comedy drama"
-    "large thriller horror poetry";
+    "large thriller horror fantasy";
   grid-auto-rows: 190px;
   gap: 18px;
 }
@@ -1835,8 +1804,8 @@ input:focus-visible {
 .cat-horror {
   grid-area: horror;
 }
-.cat-poetry {
-  grid-area: poetry;
+.cat-fantasy {
+  grid-area: fantasy;
 }
 
 /* ===================================================
@@ -1927,7 +1896,7 @@ grid-template-areas:
 
 "drama horror horror"
 
-"thriller poetry poetry";
+"thriller fantasy fantasy";
 
 grid-auto-rows:180px;
 
@@ -1962,7 +1931,7 @@ grid-template-areas:
 
 "horror horror"
 
-"poetry poetry";
+"fantasy fantasy";
 
 grid-auto-rows:180px;
 
@@ -2005,7 +1974,7 @@ grid-template-areas:
 
 "horror horror"
 
-"poetry poetry";
+"fantasy fantasy";
 
 grid-auto-rows:130px;
 
@@ -3101,9 +3070,7 @@ bottom:8px;
     scroll-behavior: auto;
   }
 
-  .nav-deco,
   .logo-sparkle,
-  .register-star,
   .hero-marquee-col {
     animation: none !important;
   }

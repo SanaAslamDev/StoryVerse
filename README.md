@@ -21,7 +21,7 @@ A beautiful website to discover and read short stories. Built with HTML, CSS, an
 ### Features
 ✅ Responsive design (works on mobile, tablet, desktop)  
 ✅ Search & filter stories in real-time  
-✅ 7 story categories (Children's, Mystery, Comedy, Drama, Thriller, Horror, Poetry)  
+✅ 7 story categories (Children's, Mystery, Comedy, Drama, Thriller, Horror, Fantasy)  
 ✅ Carousel for featured stories  
 ✅ Mobile menu (hamburger navigation)  
 ✅ Login/Register modals  
@@ -79,7 +79,7 @@ A beautiful website to discover and read short stories. Built with HTML, CSS, an
 | Feature | What It Does |
 |---------|-------------|
 | Search & Filter | Find stories by title, description, or category |
-| 7 Genres | Children's, Mystery, Comedy, Drama, Thriller, Horror, Poetry |
+| 7 Genres | Children's, Mystery, Comedy, Drama, Thriller, Horror, Fantasy |
 | Carousel | Swipe/drag through featured stories |
 | Mobile Menu | Open/close navigation on mobile |
 | Modals | Login/Register popup forms |

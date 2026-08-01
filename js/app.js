@@ -9,7 +9,7 @@
       category: "Children Stories",
       badgeClass: "badge--green",
       minutes: 4,
-      image: "images/childrenstory1.png",
+      image: "images/childrenstory1.jpg",
     },
     {
       title: "The Detective's Final Case",
@@ -17,7 +17,7 @@
       category: "Mystery",
       badgeClass: "badge--mustard",
       minutes: 7,
-      image: "images/mystery1.png",
+      image: "images/mystery1.jpg",
     },
     {
       title: "My Cat Thinks He's the Landlord",
@@ -26,7 +26,7 @@
       category: "Comedy",
       badgeClass: "badge--yellow",
       minutes: 5,
-      image: "images/comedy3.png",
+      image: "images/comedy3.jpg",
     },
     {
       title: "Beautiful Rain",
@@ -34,24 +34,24 @@
       category: "Drama",
       badgeClass: "badge--purple",
       minutes: 6,
-      image: "images/drama1.png",
+      image: "images/drama1.jpg",
     },
     {
-      title: "The Door That Wasn't There",
+      title: "The Mask Left Behind",
       excerpt:
-        "Every morning, a mysterious door appeared in a different place.",
+        "The killer vanished into the darkness, leaving only one clue behind.",
       category: "Thriller",
       badgeClass: "badge--navy",
       minutes: 8,
-      image: "images/thriller2.png",
+      image: "images/thriller4.jpg",
     },
     {
-      title: "What Waits in Room 4B",
-      excerpt: "Some doors are better left unopened. She opened it anyway.",
+      title: "The Last Visitor",
+      excerpt: "Everyone who entered vanished. She wanted to know why.",
       category: "Horror",
       badgeClass: "badge--pink",
       minutes: 6,
-      image: "images/horror2.png",
+      image: "images/img7.jpg",
     },
   ];
 

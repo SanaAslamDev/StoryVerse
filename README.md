@@ -147,7 +147,7 @@ closeDrawer.addEventListener('click', closeDrawer);
 5. The Door That Wasn't There (Thriller)
 6. What Waits in Room 4B (Horror)
 
-**Also supported:** Poetry
+**Also supported:** Fantasy 
 
 ---
 

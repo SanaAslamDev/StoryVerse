@@ -753,6 +753,7 @@ input:focus-visible {
   flex: 1;
   min-width: 0;
   margin-top: 15px;
+  margin-left: 25px;
 }
 
 .box {
@@ -844,7 +845,8 @@ input:focus-visible {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.1rem;
+  gap: 1.5rem;
+  margin-left: 15px;
 }
 
 .hero-badge {
@@ -869,7 +871,7 @@ input:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-size: clamp(2.1rem, 4.4vw, 3.3rem);
   font-weight: 900;
   line-height: 1;
   font-family: "Bricolage Grotesque", sans-serif;
@@ -888,7 +890,7 @@ input:focus-visible {
 .hero-subtext {
   max-width: 46ch;
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--color-text-muted);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -1026,139 +1028,140 @@ input:focus-visible {
 /* ---------- HERO RESPONSIVE ---------- */
 
 
-
 @media (max-width: 900px) {
   .box {
     height: clamp(360px, 46vw, 460px);
     padding: 8px;
     gap: 8px;
   }
- 
+
+  .hero-left{
+    margin-left: 1px;
+  }
+  .hero-right{
+    margin-left: 0px;
+  }
   .hero-marquee-card {
     height: clamp(105px, 13vw, 145px);
   }
- 
+
   .hero-heading {
     font-size: clamp(1.6rem, 5vw, 2.2rem);
   }
- 
+
   .stats-bar {
     gap: 1.5rem;
     padding: 1.1rem 1.4rem;
   }
- 
+
   .stat-icon {
     width: 40px;
     height: 40px;
   }
- 
+
   .stat-text strong {
     font-size: 0.88rem;
   }
- 
+
   .stat-text span {
     font-size: 0.7rem;
   }
 }
- 
+
 @media (max-width: 600px) {
   .hero {
     align-items: center;
     gap: 16px;
   }
- 
+
   .hero-left {
     flex: 0 0 48%;
     max-width: 48%;
   }
- 
+
   .hero-right {
     flex: 0 0 50%;
     max-width: 50%;
     justify-content: center;
     align-items: flex-start;
-    gap: 1.4rem;
+    gap: 0.9rem;
   }
- 
+
   .box {
     height: clamp(320px, 78vw, 400px);
     padding: 6px;
     gap: 6px;
     border-radius: 16px;
   }
- 
+
   .hero-marquee-col {
     gap: 6px;
   }
- 
+
   .hero-marquee-card {
     height: clamp(70px, 17vw, 100px);
     border-radius: 8px;
     border-width: 2px;
   }
- 
+
   .hero-badge {
     white-space: normal;
-    padding: 6px 12px;
-    font-size: 0.58rem;
-    line-height: 1.4;
+    padding: 6px 10px;
+    font-size: 0.56rem;
+    line-height: 1.3;
     letter-spacing: 0.02em;
     text-align: center;
-    margin-bottom: 2px;
   }
- 
+
   .hero-heading {
-    gap: 0px;
-    font-size: clamp(1.35rem, 5.2vw, 1.85rem);
+    gap: 4px;
+    font-size: clamp(1.15rem, 4.8vw, 1.65rem);
     line-height: 1.2;
-    margin-bottom: 2px;
   }
- 
+
   .hero-line {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
   }
   .hero-line--pink {
-    font-size: 1.3rem;
+    font-size: 0.98rem;
   }
   .hero-line--green {
-    font-size: 1.3rem;
+    font-size: 1.02rem;
   }
- 
+
   .hero-subtext {
-    font-size: 0.78rem;
-    line-height: 1.7;
+    font-size: 0.76rem;
+    line-height: 1.6;
     max-width: 100%;
-    margin-bottom: 2px;
-   
   }
- 
+
   .hero-subtext span {
     display: inline;
   }
- 
+
   .hero-subtext span + span {
     margin-top: 0;
   }
- 
+
   .btn-start-reading {
     width: auto;
-    min-height: 44px;
-    padding: 0 22px;
-    font-size: 0.77rem;
-    margin-top: 2px;
+    min-height: 42px;
+    padding: 0 20px;
+    font-size: 0.75rem;
+    margin-top: 8px;
   }
- 
+
   .stats-bar {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.9rem;
     padding: 1rem;
   }
- 
+
   .stat-item {
     width: 100%;
   }
- 
+
   .btn-explore-now {
     margin-left: 0;
     width: 100%;
@@ -1166,93 +1169,76 @@ input:focus-visible {
     min-height: 40px;
   }
 }
- 
+
 @media (max-width: 360px) {
   .hero {
     gap: 10px;
   }
- 
+
   .box {
     height: clamp(280px, 74vw, 340px);
     padding: 5px;
     gap: 5px;
     border-width: 3px;
   }
- 
+
   .hero-marquee-card {
     height: clamp(60px, 16vw, 80px);
     border-radius: 6px;
     border-width: 2px;
   }
- 
+
   .hero-badge {
     padding: 5px 10px;
-    font-size: 0.52rem;
-    line-height: 1.3;
-    margin-bottom: 2px;
+    font-size: 0.5rem;
   }
- 
+
   .hero-heading {
-    font-size: 1.15rem;
-    line-height: 1.2;
-    gap: 0px;
-    margin-bottom: 2px;
+    font-size: 1rem;
+    line-height: 1.15;
   }
- 
-  .hero-line {
-    font-size: 1.15rem;
-  }
-  .hero-line--pink {
-    font-size: 1.15rem;
-  }
-  .hero-line--green {
-    font-size: 1.15rem;
-  }
- 
+
   .hero-subtext {
-    font-size: 0.72rem;
-    line-height: 1.6;
-    margin-bottom: 4px;
+    font-size: 0.7rem;
+    line-height: 1.58;
   }
- 
+
   .btn-start-reading {
-    min-height: 40px;
+    min-height: 38px;
     padding: 0 16px;
-    font-size: 0.67rem;
-    margin-top: 2px;
+    font-size: 0.65rem;
   }
- 
+
   .stats-bar {
     gap: 0.6rem;
     padding: 0.8rem;
     border-width: 3px;
   }
- 
+
   .stat-icon {
     width: 36px;
     height: 36px;
   }
- 
+
   .stat-icon svg {
     width: 16px;
     height: 16px;
   }
- 
+
   .stat-text strong {
     font-size: 0.7rem;
   }
- 
+
   .stat-text span {
     font-size: 0.55rem;
   }
- 
+
   .btn-explore-now {
     min-height: 36px;
     padding: 0 14px;
     font-size: 0.65rem;
   }
 }
- 
 
 /* ---------- FEATURED STORIES ---------- */
 .featured-section {
